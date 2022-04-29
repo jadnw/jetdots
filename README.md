@@ -1,5 +1,6 @@
 <h1 align="center">JETDOTS</h1>
 
+<br /><br />
 <div align="center">
   <img
     width="196px"
@@ -8,6 +9,7 @@
     alt="Jetdots Logo"
   />
 </div>
+<br /><br />
 
 <p align="center">
   <a href="https://github.com/j4d3nw/jetdots/stargazers"><img src="https://img.shields.io/github/stars/j4d3nw/jetdots?colorA=1b2125&colorB=a7c080&style=for-the-badge"></a>
@@ -30,6 +32,22 @@
 - [Acknowledgements](#acknowledgements)
 
 ## Overview
+
+Some fancy screenshots. They look cool, right?
+
+<div align="center">
+  <img
+    src="https://raw.githubusercontent.com/j4d3nw/jetdots/main/media/screenshots/idle.png"
+    alt="Idle - No apps opened"
+  />
+</div>
+
+<div align="center">
+  <img
+    src="https://raw.githubusercontent.com/j4d3nw/jetdots/main/media/screenshots/busy.png"
+    alt="Busy - Apps opened"
+  />
+</div>
 
 ## Applications
 
