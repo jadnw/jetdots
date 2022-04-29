@@ -246,8 +246,8 @@ sleep 1
 # Set greeting wallpaper
 mkdir -p ~/.config/wallpapers
 sudo rsync ./wallpapers/wallpaper9.jpg /usr/share/sddm/themes/sugar-candy/greeting.jpg
-rsync ./wallpapers/wallpaper17.jpg ~/.config/wallpapers/lockscreen.jpg
-rsync ./wallpapers/wallpaper2.jpg ~/.config/wallpapers/wallpaper.jpg
+rsync ./wallpapers/wallpaper2.jpg ~/.config/wallpapers/lockscreen.jpg
+rsync ./wallpapers/wallpaper11.jpg ~/.config/wallpapers/wallpaper.jpg
 
 # Install node v17
 fnm install v17
