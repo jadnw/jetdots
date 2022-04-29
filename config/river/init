@@ -179,7 +179,7 @@ riverctl focus-follows-cursor normal
 riverctl spawn "$HOME/.config/river/theme"
 
 # Set keyboard repeat rate
-riverctl set-repeat 50 250
+riverctl set-repeat 40 350
 
 # Set cursor theme
 riverctl xcursor-theme "Breeze_Snow"
