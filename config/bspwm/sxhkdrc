@@ -15,6 +15,10 @@ super + shift + Return
 super + shift + b
   qutebrowser
 
+# Chromium
+super + shift + w
+  chromium --no-default-browser-check
+
 # Power menu
 super + shift + q
   $HOME/.config/polybar/scripts/power
