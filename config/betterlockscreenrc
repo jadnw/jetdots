@@ -15,7 +15,7 @@ fx_list=(dim blur dimblur pixel dimpixel color)
 dim_level=40
 blur_level=1
 pixel_scale=10,1000
-solid_color=#20262a
+solid_color=20262a
 wallpaper_cmd="feh --bg-fill"
 # i3lockcolor_bin="i3lock-color" # Manually set command for i3lock-color
 

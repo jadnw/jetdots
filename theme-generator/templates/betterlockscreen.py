@@ -1,7 +1,8 @@
 from classes.module import Module
+from lib.util import remove_hash_from_pal
 
 def gen_template(theme):
-    pal = theme["palette"]
+    pal = remove_hash_from_pal(theme["palette"])
     template = f"""# ▄▄▄▄· ▄▄▄ .▄▄▄▄▄▄▄▄▄▄▄▄▄ .▄▄▄  ▄▄▌         ▄▄· ▄ •▄ .▄▄ ·  ▄▄· ▄▄▄  ▄▄▄ .▄▄▄ . ▐ ▄ 
 # ▐█ ▀█▪▀▄.▀·•██  •██  ▀▄.▀·▀▄ █·██•  ▪     ▐█ ▌▪█▌▄▌▪▐█ ▀. ▐█ ▌▪▀▄ █·▀▄.▀·▀▄.▀·•█▌▐█
 # ▐█▀▀█▄▐▀▀▪▄ ▐█.▪ ▐█.▪▐▀▀▪▄▐▀▀▄ ██▪   ▄█▀▄ ██ ▄▄▐▀▀▄·▄▀▀▀█▄██ ▄▄▐▀▀▄ ▐▀▀▪▄▐▀▀▪▄▐█▐▐▌

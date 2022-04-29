@@ -103,7 +103,7 @@ sleep 1
 # Copy common configs
 rm -rf ~/.config
 mkdir -p ~/.config
-rsync --recursive ./config/{alacritty,btop,dunst,fish,fontconfig,qutebrowser,rofi,zathura,starship.toml} ~/.config/
+rsync --recursive ./config/{alacritty,btop,dunst,fish,fontconfig,gtk-3.0,gtk-4.0,qutebrowser,rofi,zathura,starship.toml} ~/.config/
 echo "Copy configurations to ~/.config ... DONE"
 
 # Copy common extra configs
@@ -202,7 +202,7 @@ function install_bspwm
     sxhkd \
    
   # Copy X11 configurations to $HOME/.config/
-  rsync --recursive ./config/{alacritty,bspwm,picom,polybar} ~/.config/
+  rsync --recursive ./config/{alacritty,bspwm,picom,polybar,betterlockscreenrc} ~/.config/
 
   # Extra configurations
   sudo rsync --recursive ./extras/sddm.conf.d /etc/
