@@ -26,6 +26,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Generate Your Own Theme](#generate-your-own-theme)
+- [FAQ](#faq)
 - [Acknowledgements](#acknowledgements)
 
 ## Overview
@@ -200,6 +201,16 @@ sudo rsync/cp path/to/your-greeting-wallpaper.jpg /usr/share/sddm/themes/sugar-c
 ```
 
 > Note: All wallpaper files with extension **.jpg**
+
+## FAQ
+
+1. I lock my screen on BSPWM and boom, blank screen. How can I fix it?
+Betterlockscreen needs a cached image to show as background. You can run this command
+only once to create it.
+
+```bash
+betterlockscreen --update ~/.config/wallpapers/lockscreen.jpg
+```
 
 ## Acknowledgements
 
