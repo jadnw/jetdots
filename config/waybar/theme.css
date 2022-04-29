@@ -1,0 +1,27 @@
+/* Gemstones Colorscheme for GTK CSS */
+
+ /* ~/.config/waybar/colors.css */
+
+@define-color accent #93c68c;
+@define-color bg0 #15191c;
+@define-color bg1 #20262a;
+@define-color bg2 #2b3339;
+@define-color bg3 #3c4750;
+@define-color bg4 #4e5c67;
+
+@define-color fg0 #d2d9de;
+@define-color fg1 #c6ced4;
+@define-color fg2 #b3bec7;
+@define-color fg3 #a5b2bd;
+@define-color black #53605c;
+@define-color red #f08789;
+@define-color orange #f4a582;
+@define-color yellow #e8ce9b;
+@define-color green #93c68c;
+@define-color teal #6dc5aa;
+@define-color cyan #80c2c5;
+@define-color blue #80b1d6;
+@define-color magenta #e397bb;
+@define-color purple #b3a8f9;
+@define-color white #c6ced4;
+@define-color gray #667a8a;

@@ -1,0 +1,33 @@
+#!/bin/fish
+
+set theme $HOME/.config/rofi/x11/power.rasi
+set uptime (uptime -p | sed -e 's/up //g')
+
+# options
+set shutdown ""
+set reboot ""
+set logout ""
+set lock ""
+set suspend ""
+
+# variables passed to dmenu
+set options "$shutdown\n$reboot\n$logout\n$lock\n$suspend"
+
+set opt (echo -e $options | rofi -x11 -dmenu -p "Uptime: $uptime" -theme $theme -selected-row 2)
+
+if test -z $opt
+  exit 0
+end
+
+switch $opt
+  case $shutdown
+    poweroff
+  case $reboot
+    reboot
+  case $logout
+    bspc quit
+  case $lock
+    betterlockscreen -l -w blur
+  case $suspend
+    systemctl suspend
+end

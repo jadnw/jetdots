@@ -1,0 +1,259 @@
+@import url("theme.css");
+
+* {
+  all: unset;
+}
+
+window#waybar {
+  background-color: @bg0;
+}
+
+tooltip {
+  font-family: "Iosevka Nerd Font";
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid @bg4;
+  background-color: @bg0;
+}
+
+tooltip label {
+  color: @fg1;
+}
+
+/* River Tags */
+#tags button {
+  min-width: 50px;
+  padding-top: 2px;
+  font-family: "Material Icons Outlined";
+  font-size: 22px;
+  color: @bg4;
+}
+
+#tags button.occupied {
+  font-family: "Material Icons Outlined";
+  color: @yellow;
+}
+
+#tags button.urgent {
+  font-family: "Material Icons Outlined";
+  color: @red;
+}
+
+#tags button.focused {
+  font-family: "Material Icons Round";
+  color: @accent;
+}
+
+/* Sway Workspaces */
+#workspaces button {
+  min-width: 50px;
+  padding-top: 2px;
+  font-family: "Material Icons Outlined";
+  font-size: 22px;
+  color: @bg4;
+}
+
+#workspaces button.urgent {
+  font-family: "Material Icons Outlined";
+  color: @red;
+}
+
+#workspaces button.focused {
+  font-family: "Material Icons Round";
+  color: @accent;
+}
+
+/* Sway Window */
+#window {
+  margin-left: 20px;
+  padding-top: 2px;
+  font-family: "Iosevka Nerd Font";
+  font-weight: 600;
+  color: @green;
+}
+
+/* CPU & Memory */
+#cpu,
+#memory {
+  min-width: 90px;
+  padding-top: 6px;
+  font-family: "Iosevka Nerd Font";
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#cpu {
+  border-left: 1px solid @bg2;
+  color: @green;
+}
+
+#memory {
+  border-right: 1px solid @bg2;
+  color: @red;
+}
+
+/* Clock */
+#clock {
+  min-width: 60px;
+  padding-top: 6px;
+  font-family: "Iosevka Nerd Font";
+  font-size: 16px;
+  font-weight: 800;
+  color: @fg1;
+}
+
+/* Idle Inhibitor */
+#idle_inhibitor {
+  color: @bg4;
+}
+
+#idle_inhibitor.activated {
+  color: @cyan;
+}
+
+/* Network */
+#network,
+#network.linked,
+#network.ethernet,
+#network.wifi {
+  color: @magenta;
+}
+
+#network.disabled,
+#network.disconnected {
+  color: @bg4;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+  color: @fg1;
+}
+
+#pulseaudio.bluetooth {
+  color: @blue;
+}
+
+#pulseaudio.muted {
+  color: @bg4;
+}
+
+/* CUSTOM MODULES */
+#idle_inhibitor,
+#network,
+#pulseaudio,
+#custom-colorpicker,
+#custom-documents,
+#custom-idle-inhibitor,
+#custom-launcher,
+#custom-nightlight,
+#custom-notifications,
+#custom-power,
+#custom-recorder,
+#custom-screenshot,
+#custom-windows {
+  min-width: 50px;
+  padding-top: 6px;
+  font-family: "Material Icons Round";
+  font-size: 18px;
+}
+
+/* Color Picker */
+.colorpicker {
+  color: @cyan;
+}
+
+.colorpicker-active {
+  background-color: @cyan;
+  color: @bg0;
+}
+
+/* Documents */
+.documents {
+  color: @purple;
+}
+
+.documents-active {
+  background-color: @purple;
+  color: @bg0;
+}
+
+/* Idle Inhibitor (River)*/
+.custom_idle_inhibitor {
+  color: @bg4;
+}
+
+.custom_idle_inhibitor-active {
+  color: @cyan;
+}
+
+/* Launcher */
+.launcher {
+  color: @accent;
+}
+
+.launcher-active {
+  background-color: @accent;
+  color: @bg0;
+}
+
+/* Nightlight */
+.nightlight {
+  color: @bg4;
+}
+
+.nightlight-active {
+  color: @teal;
+}
+
+/* Notifications */
+.notification {
+  color: @yellow;
+}
+
+.none {
+  color: @orange;
+}
+
+.dnd {
+  color: @bg4;
+}
+
+/* Power Menu */
+.power {
+  color: @red;
+}
+
+.power-active {
+  background-color: @red;
+  color: @bg0;
+}
+
+/* Recorder */
+.recorder {
+  color: @red;
+}
+
+.recorder-active {
+  background-color: @red;
+  color: @bg0;
+}
+
+/* Screenshot */
+.screenshot {
+  color: @yellow;
+}
+
+.screenshot-active {
+  background-color: @yellow;
+  color: @bg0;
+}
+
+/* Windows */
+.windows {
+  color: @teal;
+}
+
+.windows-active {
+  background-color: @teal;
+  color: @bg0;
+}

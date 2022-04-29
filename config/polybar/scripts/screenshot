@@ -1,0 +1,23 @@
+#!/bin/fish
+
+set theme $HOME/.config/rofi/x11/screenshot.rasi
+set savepath (xdg-user-dir PICTURES)/screenshots
+mkdir -p $savepath
+
+# Options
+set normal ""
+set crop ""
+
+# Variables passed to rofi
+set options "$normal\n$crop"
+
+set opt (echo -e "$options" | rofi -x11 -dmenu -theme $theme -p "Flameshot" -selected-row 1)
+
+# Create directory if needed
+
+switch $opt
+  case $normal
+    flameshot screen -p ~/Pictures/screenshots/(date +screenshot_current_%Y%m%d-%H%M%S.png)
+  case $crop
+    flameshot gui -p ~/Pictures/screenshots/(date +screenshot_crop_%Y%m%d-%H%M%S.png)
+end

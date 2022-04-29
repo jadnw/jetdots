@@ -1,0 +1,64 @@
+#!/bin/fish
+
+set installed_wms (cat ~/.config/jetdots.txt)
+
+# Remove common packages
+paru -R \
+  alacritty \
+  sddm \
+  sddm-sugar-candy-git \
+  btop \
+  dunst \
+  fnm-bin \
+  papirus-icon-theme \
+  pdfjs \
+  qutebrowser \
+  rofi-lbonn-wayland-git \
+  zathura \
+  zathura-pdf-poppler
+
+# Remove tiling window managers with their dependencies
+if contains bspwm $installed_wms
+   paru -R --noconfirm \
+    betterlockscreen \
+    bspwm \
+    feh \
+    flameshot \
+    picom-jonaburg-git \
+    polybar \
+    redshift \
+    xclip \
+    xcolor \
+    sxhkd
+end
+
+if contains riverwm $installed_wms
+  paru -R --noconfirm river-git
+end
+
+if test -e ~/.cache/installed_wms/sway 
+  paru -R --noconfirm sway
+end
+
+if contains swaywm $installed_wms
+  or contains riverwm $installed_wms
+  paru -R --noconfirm \
+    glfw-wayland \
+    grim \
+    imagemagick \
+    imv \
+    slurp \
+    swaybg \
+    swaylock-effects-git \
+    waybar \
+    wf-recorder \
+    wlr-randr \
+    wlsunset \
+    wl-clipboard
+end
+
+# Remove configs and other relational files
+rm -rf ~/{.config,Pictures/screenshots,Videos/recordings,.local/share/fonts,.local/share/themes,.fehbg}
+
+# Disable SDDM login manager
+sudo systemctl disable sddm.service

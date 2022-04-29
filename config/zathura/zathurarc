@@ -1,0 +1,39 @@
+# ·▄▄▄▄• ▄▄▄· ▄▄▄▄▄ ▄ .▄▄• ▄▌▄▄▄   ▄▄▄· 
+# ▪▀·.█▌▐█ ▀█ •██  ██▪▐██▪██▌▀▄ █·▐█ ▀█ 
+# ▄█▀▀▀•▄█▀▀█  ▐█.▪██▀▐██▌▐█▌▐▀▀▄ ▄█▀▀█ 
+# █▌▪▄█▀▐█ ▪▐▌ ▐█▌·██▌▐▀▐█▄█▌▐█•█▌▐█ ▪▐▌
+# ·▀▀▀ • ▀  ▀  ▀▀▀ ▀▀▀ · ▀▀▀ .▀  ▀ ▀  ▀ 
+# Created by: Jaden Wu
+# Github: @j4d3nw
+# Email: jadenwu137@protonmail.com
+
+# read "man zathurarc"
+
+# KEYMAPS
+map i toggle_index
+map g goto
+map h navigate previous
+map l navigate next
+map m mark_add
+map n mark_evaluate
+map r reload
+map R rotate
+map <C-m> change_mode
+map <C-p> print
+map <C-j> zoom in
+map <C-k> zoom out 
+
+# OPTIONS
+# fonts
+set font "Iosevka Nerd Font 14"
+
+# fit width
+set adjust-open "best-fit"
+
+# other options
+set scroll-step 60
+set guioptions ""
+set zoom-min 50
+
+# colorscheme 
+include theme

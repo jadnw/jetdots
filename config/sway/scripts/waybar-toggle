@@ -1,0 +1,9 @@
+#!/bin/fish
+
+set pid (pgrep waybar)
+
+if test -n "$pid"
+  killall -SIGUSR1 waybar
+else
+  $HOME/.config/waybar/launch-sway
+end

@@ -1,0 +1,49 @@
+#  ▄▄▄· ▄▄▌   ▄▄▄·  ▄▄· ▄▄▄  ▪  ▄▄▄▄▄▄▄▄▄▄ ▄· ▄▌
+# ▐█ ▀█ ██•  ▐█ ▀█ ▐█ ▌▪▀▄ █·██ •██  •██  ▐█▪██▌
+# ▄█▀▀█ ██▪  ▄█▀▀█ ██ ▄▄▐▀▀▄ ▐█· ▐█.▪ ▐█.▪▐█▌▐█▪
+# ▐█ ▪▐▌▐█▌▐▌▐█ ▪▐▌▐███▌▐█•█▌▐█▌ ▐█▌· ▐█▌· ▐█▀·.
+#  ▀  ▀ .▀▀▀  ▀  ▀ ·▀▀▀ .▀  ▀▀▀▀ ▀▀▀  ▀▀▀   ▀ • 
+# Created by: Jaden Wu
+# Github: @j4d3nw
+# Email: jadenwu137@protonmail.com
+
+import:
+  - ~/.config/alacritty/theme.yml
+
+window:
+  title: alacritty
+  dynamic_title: true
+  class:
+    instance: alacritty
+    general: alacritty
+  padding:
+    x: 0
+    y: 0
+
+scrolling:
+  history: 2000
+  multiplier: 3
+
+font:
+  normal:
+    family: Iosevka Nerd Font
+    style: Semibold
+  bold:
+    family: Iosevka Nerd Font
+    style: Extrabold
+  italic:
+    family: Iosevka Nerd Font
+    style: Semibold Italic
+  bold_italic:
+    family: Iosevka Nerd Font
+    style: Extrabold Italic
+  size: 11.0
+  offset:
+    x: 0
+    y: 2
+
+shell:
+  program: /bin/fish
+
+mouse:
+  hide_when_typing: true

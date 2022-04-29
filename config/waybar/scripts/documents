@@ -1,0 +1,43 @@
+#!/bin/fish
+
+set marker /tmp/waybar-documents
+set theme ~/.config/rofi/wayland/documents.rasi
+set zathura_history_loc ~/.local/share/zathura/history 
+
+function markup
+  if test -e $marker
+    echo '{ "text": "", "tooltip": "Close Overlay", "class": "documents-active" }'
+  else
+    echo '{ "text": "", "tooltip": "Zathura Recent Documents", "class": "documents" }'
+  end
+end
+
+function toggle
+  if test -e $marker
+    rm -f $marker; and pkill -SIGRTMIN+7 waybar
+    killall -q rofi
+  else
+    touch $marker; and pkill -SIGRTMIN+7 waybar
+    killall -q rofi
+
+    set docs (cat ~/.local/share/zathura/history | grep -Po "\[\K[^\]]*" | grep "/home/")
+
+    set opt (printf "%s\n" $docs | rofi -dmenu -p "zathura" -theme $theme)
+
+    if test -z $opt
+      rm -f $marker; and pkill -SIGRTMIN+7 waybar
+      exit 0
+    end
+
+    zathura $opt
+    rm -f $marker; and pkill -SIGRTMIN+7 waybar
+    exit 0
+  end
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

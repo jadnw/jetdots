@@ -1,0 +1,44 @@
+#!/bin/fish
+
+set dir (xdg-user-dir VIDEOS)/recordings
+set -l CONFIG_RES 1920x1080
+set -l CONFIG_FRAMERATE 60
+set -l CONFIG_AUDIO pulse
+set -l CONFIG_MIC_LEVEL 25
+
+set recorder_pids (ps x | grep 'ffmpeg -f x11grab -video_size' | grep -v grep | awk '{print $1}')
+set count (count $recorder_pids)
+
+if test $count -eq 0
+  set theme "$HOME/.config/rofi/x11/recorder.rasi"
+
+  # Options
+  set sound ""
+  set soundmic ""
+  set silent ""
+
+  # Variables passed to rofi
+  set options "$sound\n$soundmic\n$silent"
+
+  set selected (echo -e "$options" | rofi -x11 -dmenu -theme $theme -p "ffmpeg" -selected-row 1)
+
+  # Create directory if needed
+  if not test -e $dir
+    mkdir -p $dir
+  end
+
+  switch $selected
+    case $sound
+      ffmpeg -f x11grab -video_size $CONFIG_RES -framerate $CONFIG_FRAMERATE -i $DISPLAY -f $CONFIG_AUDIO -i default -c:v libx264 -preset ultrafast -c:a aac $dir/(date +%Y%m%d-%H%M%S.mp4) &
+      notify-send "Start recording (only sound) ..."
+    case $soundmic
+      ffmpeg -f x11grab -video_size $CONFIG_RES -framerate $CONFIG_FRAMERATE -i $DISPLAY -f $CONFIG_AUDIO -i default -c:v libx264 -preset ultrafast -c:a aac $dir/(date +%Y%m%d-%H%M%S.mp4) &
+      notify-send "Start recording (sound and microphone) ..."
+    case $silent
+      ffmpeg -f x11grab -video_size $CONFIG_RES -framerate $CONFIG_FRAMERATE -i $DISPLAY -c:v libx264 -preset ultrafast -c:a aac $dir/(date +%Y%m%d-%H%M%S.mp4) &
+      notify-send "Start recording silently ..."
+  end
+else
+  killall -q ffmpeg
+  notify-send "Stop recording. File saved in $dir."
+end

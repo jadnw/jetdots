@@ -1,0 +1,7 @@
+#!/bin/fish
+
+set savepath (xdg-user-dir PICTURES)/screenshots
+mkdir -p $savepath
+
+flameshot screen -p ~/Pictures/screenshots/(date +screenshot_current_%Y%m%d-%H%M%S.png)
+notify-send "Screenshot saved ~/Pictures/screenshots"

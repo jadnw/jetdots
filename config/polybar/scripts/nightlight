@@ -1,0 +1,28 @@
+#!/bin/fish
+
+set gamma (string trim -lr (xrandr --verbose | grep -i "Gamma:"))
+
+function markup
+  if test "$gamma" = "Gamma:      1.0:1.0:1.0"
+    echo ""
+  else
+    echo ""
+  end
+end
+
+function toggle
+  if test "$gamma" = "Gamma:      1.0:1.0:1.0"
+    redshift -P -O 4500
+    notify-send -i ~/.config/dunst/icons/nightlight_enabled.svg "Nightlight: ENABLED"
+  else
+    redshift -x
+    notify-send -i ~/.config/dunst/icons/nightlight_disabled.svg "Nightlight: DISABLED"
+  end
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

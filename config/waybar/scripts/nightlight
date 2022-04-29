@@ -1,0 +1,28 @@
+#!/bin/fish
+
+set pid (pgrep wlsunset)
+
+function markup
+  if test -n "$pid"
+    echo '{ "text": "", "tooltip": "Nightlight: ON", "class": "nightlight-active" }'
+  else
+    echo '{ "text": "", "tooltip": "Nightlight: OFF", "class": "nightlight" }'
+  end
+end
+
+function toggle
+  if test -n "$pid"
+    pkill -SIGKILL wlsunset
+  else
+    wlsunset -t 4500 -T 5500 &
+  end
+ 
+  pkill -SIGRTMIN+4 waybar
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

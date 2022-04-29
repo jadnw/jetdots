@@ -1,0 +1,28 @@
+#!/bin/fish
+
+set idle_state (pgrep swayidle)
+
+function markup
+  if test -n "$idle_state"
+    echo '{ "text": "", "tooltip": "Idle Inhibitor: OFF", "class": "custom_idle_inhibitor" }'
+  else
+    echo '{ "text": "", "tooltip": "Idle Inhibitor: ON", "class": "custom_idle_inhibitor-active" }'
+  end
+end
+
+function toggle
+  if test -n "$idle_state"
+    pkill -SIGTERM swayidle
+  else
+    swayidle -w timeout 30 "swaylock -f" before-sleep "swaylock -f" &
+  end
+
+  pkill -SIGRTMIN+10 waybar
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

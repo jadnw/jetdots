@@ -1,0 +1,35 @@
+#!/bin/fish
+
+set marker /tmp/waybar-launcher
+set theme ~/.config/rofi/wayland/launcher.rasi
+
+function markup
+  if test -e $marker
+    echo '{ "text": "", "tooltip": "Close Overlay", "class": "launcher-active" }'
+  else
+    echo '{ "text": "", "tooltip": "Power Menu", "class": "launcher" }'
+  end
+end
+
+function toggle
+  if test -e $marker
+    rm -f $marker; and pkill -SIGRTMIN+2 waybar
+    killall -q rofi
+  else
+    touch $marker; and pkill -SIGRTMIN+2 waybar
+    killall -q rofi
+    set opt (rofi -show drun -theme $theme)
+
+    if test -z $opt
+      rm -f $marker; and pkill -SIGRTMIN+2 waybar
+      exit 0
+    end
+  end
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

@@ -1,0 +1,130 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@protonmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ * Customized by Jaden Wu - @j4d3nw
+ *
+ */
+
+configuration {
+  show-icons:                     false;
+  font:                           "Iosevka Nerd Font Semibold 11";
+  disable-history:                false;
+  sidebar-mode:                   false;
+}
+
+@import "../theme.rasi"
+
+* {
+  background-color:               @bg0;
+  text-color:                     @gray;
+}
+
+window {
+  transparency:                   "real";
+  border-radius:                  8px;
+  border:                         1px;
+  border-color:                   @bg2;
+  location:                       southeast;
+  width:                          300px;
+  x-offset:                       -5px;
+  y-offset:                       -5px;
+}
+
+prompt {
+  enabled:                        true;
+  padding:                        10px 10px;
+  background-color:               @bg1;
+  text-color:                     @cyan;
+  border:                         0px 2px 0px 2px;
+  border-radius:                  10px;
+  border-color:                   @cyan;
+}
+
+textbox-prompt-colon {
+  expand:                         false;
+  str:                            "Colorpicker";
+  background-color:               @cyan;
+  text-color:                     @bg0;
+  padding:                        10px;
+  border-radius:                  10px;
+}
+
+inputbar {
+  children:                       [ textbox-prompt-colon, prompt ];
+  spacing:                        12px;
+  background-color:               @bg0;
+  text-color:                     @gray;
+  expand:                         false;
+  border:                         0px;
+  border-radius:                  0px;
+  border-color:                   @cyan;
+  margin:                         0px 0px 0px 0px;
+  padding:                        0px;
+  position:                       center;
+}
+
+listview {
+  columns:                        3;
+  lines:                          1;
+  spacing:                        12px;
+  cycle:                          true;
+  dynamic:                        true;
+  layout:                         vertical;
+}
+
+mainbox {
+  background-color:               @bg0;
+  children:                       [ inputbar, listview ];
+  spacing:                        12px;
+  margin:                         12px;
+}
+
+element {
+  background-color:               @bg1;
+  text-color:                     @gray;
+  orientation:                    vertical;
+  border-radius:                  12px;
+}
+
+element-text {
+  background-color:               inherit;
+  text-color:                     inherit;
+  font:                           "Material Icons Round 20";
+  expand:                         true;
+  horizontal-align:               0.5;
+  vertical-align:                 0.5;
+  margin:                         19px 10px 19px 10px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+  text-color:                     @bg0;
+  border-radius:                  12px;
+}
+
+element normal.active,
+element alternate.active {
+  background-color:               @cyan;
+  text-color:                     @bg0;
+}
+
+element selected {
+  background-color:               @cyan;
+  text-color:                     @bg0;
+  border:                         0px 2px 0px 2px;
+  border-radius:                  12px;
+  border-color:                   @cyan;
+}
+
+element selected.urgent {
+  background-color:               @cyan;
+  text-color:                     @bg0;
+}
+
+element selected.active {
+  color:                          @bg0;
+}

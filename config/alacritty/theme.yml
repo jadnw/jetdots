@@ -1,0 +1,55 @@
+# Gemstones for Alacritty
+# ~/.config/alacritty/theme.yml
+colors:
+  primary:
+    background: '#20262a'
+    foreground: '#c6ced4'
+    dim_foreground: '#b3bec7'
+    bright_foreground: '#d2d9de'
+  cursor:
+    text: '#20262a'
+    cursor: '#93c68c'
+  vi_mode_cursor:
+    text: '#20262a'
+    cursor: '#93c68c'
+  search:
+    matches:
+      foreground: '#3c4750'
+      background: '#b3a8f9'
+    focused_match:
+      foreground: '#b3a8f9'
+      background: '#3c4750'
+    bar:
+      foreground: '#3c4750'
+      background: '#b3a8f9'
+  hints:
+    start:
+      foreground: '#3c4750'
+      background: '#e8ce9b'
+    end:
+      foreground: '#e8ce9b'
+      background: '#3c4750'
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: '#c6ced4'
+    background: '#4e5c67'
+  normal:
+    black: '#53605c'
+    red: '#f08789'
+    green: '#93c68c'
+    yellow: '#e8ce9b'
+    blue: '#80b1d6'
+    magenta: '#e397bb'
+    cyan: '#80c2c5'
+    white: '#c6ced4'
+  bright:
+    black: '#53605c'
+    red: '#f08789'
+    green: '#93c68c'
+    yellow: '#e8ce9b'
+    blue: '#80b1d6'
+    magenta: '#e397bb'
+    cyan: '#80c2c5'
+    white: '#c6ced4'

@@ -1,0 +1,15 @@
+/*
+ * ▄▄▄        ·▄▄▄▪  
+ * ▀▄ █·▪     ▐▄▄·██ 
+ * ▐▀▀▄  ▄█▀▄ ██▪ ▐█·
+ * ▐█•█▌▐█▌.▐▌██▌.▐█▌
+ * .▀  ▀ ▀█▄▀▪▀▀▀ ▀▀▀
+ * Created by: Jaden Wu
+ * Github: @j4d3nw
+ * Email: jadenwu137@protonmail.com
+ */
+
+configuration {
+  show-icons:         true;
+  icon-theme:         "Papirus-Dark";
+}

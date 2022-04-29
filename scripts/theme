@@ -1,0 +1,48 @@
+#!/bin/fish
+
+function list_themes
+  set themes (ls ./themes)
+  for i in (seq (count $themes))
+    echo "$i - $themes[$i]"
+  end
+end
+
+function check_then_copy
+  if test -e $argv[2]
+    cp $argv[1] $argv[2]
+  end
+end
+
+function install_theme
+  set theme $argv[1]
+  set theme_dir ./themes/$theme
+  set config_dir ~/.config
+  mkdir -p ~/.config/wallpapers
+
+  # Copy theme files to their locations
+  check_then_copy $theme_dir/alacritty $config_dir/alacritty/theme.yml
+  check_then_copy $theme_dir/betterlockscreen $config_dir/betterlockscreenrc
+  check_then_copy $theme_dir/btop $config_dir/btop/themes/theme.theme
+  check_then_copy $theme_dir/bspwm $config_dir/bspwm/theme
+  chmod +x $config_dir/bspwm/theme
+  check_then_copy $theme_dir/dunstrc-wl $config_dir/dunst/
+  check_then_copy $theme_dir/dunstrc-x $config_dir/dunst/
+  check_then_copy $theme_dir/fish $config_dir/fish/conf.d/theme.fish
+  check_then_copy $theme_dir/foot $config_dir/foot/theme.ini
+  check_then_copy $theme_dir/imv $config_dir/imv/config
+  check_then_copy $theme_dir/polybar $config_dir/polybar/theme.ini
+  check_then_copy $theme_dir/qutebrowser $config_dir/qutebrowser/theme.py
+  check_then_copy $theme_dir/river $config_dir/river/theme
+  chmod +x $config_dir/river/theme
+  sudo check_then_copy $theme_dir/sugar-candy /usr/share/sddm/themes/sugar-candy/theme.conf
+  check_then_copy $theme_dir/sway $config_dir/sway/theme
+  check_then_copy $theme_dir/swaylock $config_dir/swaylock/config 
+  check_then_copy $theme_dir/zathura $config_dir/zathura/theme
+end
+
+switch $argv[1]
+  case "list"
+    list_themes
+  case "*"
+    install_theme $argv[2]
+end

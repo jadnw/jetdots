@@ -1,0 +1,269 @@
+#!/bin/fish
+
+sudo pacman -S --noconfirm --needed base-devel git fish rustup
+
+# Install rustup toolchain
+echo "Installing rustup toolchain (to build paru) ..."
+rustup install stable
+rustup default stable
+echo "Rustup installed!"
+
+sleep 1
+
+# Install Paru
+if which paru
+  echo "Paru AUR package manager detected ... DONE"
+else
+  echo "Installing AUR package manager: paru ..."
+  git clone https://aur.archlinux.org/paru.git
+  pushd paru
+  makepkg -si
+  popd
+  rm -rf paru
+  echo "Installing AUR package manager: paru ... DONE"
+end
+
+sleep 1
+
+echo "Update system & Installing necessary packages with paru ..."
+paru -Syyu --noconfirm
+paru -Sy --noconfirm archlinux-keyring
+
+read -l -P "Install and enable ZRAM? [y/N]: " zram_opt
+set zram_opt (string lower $zram_opt)
+set -q zram_opt; set zram_opt y
+
+if test $zram_opt = "y"
+  paru -S --noconfirm zramd
+  sudo systemctl enable --now zramd
+end
+
+paru -S --noconfirm --needed \
+  alacritty \
+  base-devel \
+  btop \
+  breeze-snow-cursor-theme \
+  chromium \
+  curl \
+  docker \
+  docker-compose \
+  docker-machine \
+  dunst \
+  fd \
+  fish \
+  fnm-bin \
+  git \
+  glow \
+  go \
+  gtk3 \
+  gtk4 \
+  jq \
+  luacheck \
+  man \
+  neovim \
+  nnn \
+  noto-fonts \
+  papirus-icon-theme \
+  pdfjs \
+  python-pip \
+  qutebrowser \
+  ripgrep \
+  rofi-lbonn-wayland-git \
+  rsync \
+  rustup \
+  sddm \
+  sddm-sugar-candy-git \
+  stylua \
+  tree \
+  unzip \
+  vscode \
+  xdg-utils \
+  xdg-user-dirs \
+  zathura \
+  zathura-pdf-poppler \
+ 
+echo "Update system & Installing necessary packages with paru ... DONE"
+
+sleep 1
+
+# Enable systemd services
+sudo systemctl enable sddm.service
+echo "Enable services ... DONE"
+
+sleep 1
+
+mkdir -p ~/.local/share/{themes,fonts}
+# Fonts
+rsync ./fonts/* ~/.local/share/fonts/
+fc-cache -r
+echo "Copy fonts to ~/.local/share/fonts ... DONE"
+
+sleep 1
+
+# Copy common configs
+rm -rf ~/.config
+mkdir -p ~/.config
+rsync --recursive ./config/{alacritty,btop,dunst,fish,fontconfig,qutebrowser,rofi,zathura,starship.toml} ~/.config/
+echo "Copy configurations to ~/.config ... DONE"
+
+# Copy common extra configs
+rsync ./extras/.gitconfig ~/
+
+# Install GTK themes
+git clone https://github.com/j4d3nw/gemstones-gtk.git
+cp -R gemstones-gtk/themes/* ~/.local/share/themes/
+rm -rf gemstones-gtk
+
+sleep 1
+
+# Starship Prompt
+echo "Installing starship ..."
+sh -c "curl -sS https://starship.rs/install.sh | sh"
+echo "Installing starship ... DONE"
+
+sleep 1
+
+# Create a file to save installer metadata
+set metadata_file ~/.config/jetdots.txt
+touch $metadata_file
+
+# Install one of tiling window managers [ riverwm (Wayland), swaywm (Wayland), bspwm (X11) ]
+function install_river
+  echo "riverwm" >> $metadata_file
+  # Needed packages for Wayland (River)
+  paru -S --noconfirm --needed \
+    glfw-wayland \
+    grim \
+    imagemagick \
+    imv \
+    qt5-wayland \
+    qt6-wayland \
+    river-git \
+    slurp \
+    swaybg \
+    swayidle \
+    swaylock-effects-git \
+    waybar \
+    wf-recorder \
+    wlr-randr \
+    wlsunset \
+    wl-clipboard \
+    xorg-xwayland \
+    xorg-xlsclients \
+  
+  # Copy Wayland configs to $HOME/.config/
+  rsync --recursive ./config/{alacritty,river,imv,swaylock,waybar} ~/.config/
+end
+
+function install_sway
+  echo "swaywm" >> $metadata_file
+  # Needed packages for Wayland (Sway)
+  paru -S --noconfirm --needed \
+    glfw-wayland \
+    grim \
+    imagemagick \
+    imv \
+    qt5-wayland \
+    qt6-wayland \
+    slurp \
+    sway \
+    swaybg \
+    swaylock-effects-git \
+    waybar \
+    wf-recorder \
+    wlr-randr \
+    wlsunset \
+    wl-clipboard \
+    xorg-xwayland \
+    xorg-xlsclients \
+  
+  # Copy Wayland configs to $HOME/.config/
+  rsync --recursive ./config/{alacritty,imv,sway,swaylock,waybar} ~/.config/
+end
+
+function install_bspwm
+  echo "bspwm" >> $metadata_file
+  # Needed packages for X11 (bspwm)
+  paru -S --noconfirm --needed \
+    betterlockscreen \
+    bspwm \
+    feh \
+    flameshot \
+    picom-jonaburg-git \
+    polybar \
+    redshift \
+    xclip \
+    xf86-video-amdgpu \
+    xorg-server \
+    xorg-xrandr \
+    xorg-xsetroot \
+    xcolor \
+    sxhkd \
+   
+  # Copy X11 configurations to $HOME/.config/
+  rsync --recursive ./config/{alacritty,bspwm,picom,polybar} ~/.config/
+
+  # Extra configurations
+  sudo rsync --recursive ./extras/sddm.conf.d /etc/
+  sudo rsync ./config/sddm-sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/
+  sudo rsync ./extras/xorg.conf.d/20-amdgpu.conf /etc/X11/xorg.conf.d/
+  rsync --recursive ./extras/.icons ~/
+end
+
+# Choose a tiling windows manager
+# You can completely install another WM by run this script again
+echo -e "Choose your tiling windows manager that you want to install?\n\t1 - RiverWM (Wayland)\n\t2 - SwayWM (Wayland)\n\t3 - BSPWM (X11)\n\t4 - RiverWM (Wayland) & BSPWM (X11)\n\t5 - SwayWM (Wayland) & BSPWM (X11)\n\t6 - RiverWM, SwayWM (Wayland) & BSPWM (X11)"
+read -l -P "Your option? (default=1): " wm
+echo "Install tiling window managers ..."
+
+switch $wm
+  case 1
+    install_river
+  case 2
+    install_sway
+  case 3
+    install_bspwm
+  case 4
+    install_river
+    install_bspwm
+  case 5
+    install_sway
+    install_bspwm
+  case 6
+    install_river
+    install_sway
+    install_bspwm
+  case '*'
+    echo "You donot want to install a tiling window manager. That's fine!"
+    exit 1
+end
+
+echo "Install tiling window managers ... DONE"
+
+sleep 1
+
+# Set greeting wallpaper
+mkdir -p ~/.config/wallpapers
+sudo rsync ./wallpapers/wallpaper9.jpg /usr/share/sddm/themes/sugar-candy/greeting.jpg
+rsync ./wallpapers/wallpaper17.jpg ~/.config/wallpapers/lockscreen.jpg
+rsync ./wallpapers/wallpaper2.jpg ~/.config/wallpapers/wallpaper.jpg
+
+# Install node v17
+fnm install v17
+
+# Install pylint
+python -m pip install pylint
+
+# Remove build dependencies
+set i3_installed (paru -Qs i3-wm | grep "local/")
+if test -n "$i3_installed"
+  paru -Rns --noconfirm i3-wm
+end
+echo "Remove i3-wm ... DONE"
+
+sleep 1
+
+paru -Rns --noconfirm (paru -Qdtq)
+echo "Remove unused packages ... DONE"
+
+sleep 1

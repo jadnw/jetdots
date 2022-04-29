@@ -1,0 +1,6 @@
+#!/bin/fish
+
+set savepath (xdg-user-dir PICTURES)/screenshots
+mkdir -p $savepath
+grim $savepath/(date +%Y%m%d_%H%M%S.png)
+notify-send "Screenshot saved $savepath"

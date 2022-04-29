@@ -1,0 +1,27 @@
+{
+  "name": "Gemstones",
+  "palette": {
+    "bg0": "#15191c",
+    "bg1": "#20262a",
+    "bg2": "#2b3339",
+    "bg3": "#3c4750",
+    "bg4": "#4e5c67",
+    "fg0": "#d2d9de",
+    "fg1": "#c6ced4",
+    "fg2": "#b3bec7",
+    "fg3": "#a5b2bd",
+    "accent": "#93c68c",
+    "black": "#53605c",
+    "white": "#c6ced4",
+    "red": "#f08789",
+    "green": "#93c68c",
+    "blue": "#80b1d6",
+    "orange": "#f4a582",
+    "yellow": "#e8ce9b",
+    "cyan": "#80c2c5",
+    "teal": "#6dc5aa",
+    "magenta": "#e397bb",
+    "purple": "#b3a8f9",
+    "gray": "#667a8a"
+  }
+}

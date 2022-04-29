@@ -1,0 +1,4 @@
+#!/bin/fish
+
+set time (TZ=Asia/Ho_Chi_Minh date +%H:%M)
+echo $time

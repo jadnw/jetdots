@@ -1,0 +1,10 @@
+#!/bin/fish
+
+function toggle_mute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+end
+
+switch $argv[1]
+  case toggle_mute
+    toggle_mute
+end

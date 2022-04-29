@@ -1,0 +1,146 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 40,
+  "modules-left": ["river/tags"],
+  "modules-center": [],
+  "modules-right": ["custom/launcher", "custom/documents", "custom/colorpicker", "custom/screenshot", "custom/recorder", "cpu", "memory", "network", "pulseaudio", "custom/idle-inhibitor", "custom/nightlight", "custom/notifications", "clock", "custom/power"],
+  "margin": 0,
+  "spacing": 0,
+  "name": "panel",
+  "mode": "dock",
+  "clock": {
+    "timezone": "Asia/Ho_Chi_Minh",
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "max-length": 25,
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "CPU: {usage}%",
+    "on-click": "alacritty -a btop -e btop"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
+    },
+  },
+  "memory": {
+    "interval": 2,
+    "format": "MEM: {percentage}%",
+    "on-click": "alacritty -a btop -e btop"
+  },
+  "network": {
+    "format": "",
+    "format-ethernet": "",
+    "format-wifi": "",
+    "format-linked": "",
+    "format-disconnected": "",
+    "format-disable": "",
+    "tooltip-format-ethernet": "Ethernet {ifname} - IP: {ipaddr} | {bandwidthUpBits} - {bandwidthDownBits}",
+    "tooltip-format-wifi": "Wifi {essid} - Strength: {signalStrength}",
+    "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "headset": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "~/.config/waybar/scripts/pulseaudio toggle_mute"
+  },
+   "river/tags": {
+    "num-tags": 6,
+    "tag-labels": [ "", "", "", "", "", "" ],
+    "disable-click": false
+  }, 
+  "custom/colorpicker": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 3,
+    "exec": "~/.config/waybar/scripts/colorpicker",
+    "exec-if": "which rofi",
+    "on-click": "~/.config/waybar/scripts/colorpicker toggle"
+  },
+  "custom/documents": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 7,
+    "exec": "~/.config/waybar/scripts/documents",
+    "exec-if": "which rofi",
+    "on-click": "~/.config/waybar/scripts/documents toggle"
+  },
+  "custom/idle-inhibitor": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 10,
+    "exec": "~/.config/waybar/scripts/idle-inhibitor",
+    "exec-if": "which swayidle",
+    "on-click": "~/.config/waybar/scripts/idle-inhibitor toggle"
+  },
+  "custom/launcher": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 2,
+    "exec": "~/.config/waybar/scripts/launcher",
+    "exec-if": "which rofi",
+    "on-click": "~/.config/waybar/scripts/launcher toggle"
+  },
+  "custom/nightlight": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 4,
+    "exec": "~/.config/waybar/scripts/nightlight",
+    "exec-if": "which wlsunset",
+    "on-click": "~/.config/waybar/scripts/nightlight toggle"
+  },
+  "custom/notifications": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 8,
+    "exec": "~/.config/waybar/scripts/notifications",
+    "exec-if": "which dunst",
+    "on-click": "~/.config/waybar/scripts/notifications toggle",
+    "on-click-right": "~/.config/waybar/scripts/notifications toggle-dnd"
+  },
+  "custom/power": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 1,
+    "exec": "~/.config/waybar/scripts/power-river",
+    "exec-if": "which rofi",
+    "on-click": "~/.config/waybar/scripts/power-river toggle"
+  },
+  "custom/recorder": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 6,
+    "exec": "~/.config/waybar/scripts/recorder",
+    "exec-if": "which rofi",
+    "on-click": "~/.config/waybar/scripts/recorder toggle"
+  },
+  "custom/screenshot": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 5,
+    "exec": "~/.config/waybar/scripts/screenshot",
+    "exec-if": "which rofi",
+    "on-click": "~/.config/waybar/scripts/screenshot toggle"
+  }
+}

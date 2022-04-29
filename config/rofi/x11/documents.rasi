@@ -1,0 +1,128 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@protonmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ * Customized by Jaden Wu - @j4d3nw
+ *
+ */
+
+configuration {
+  font:                           "Iosevka Nerd Font Semibold 11";
+  show-icons:                     true;
+  icon-theme:                     "Papirus-Dark";
+  display-drun:                   "Launcher";
+  drun-display-format:            "{name}";
+  disable-history:                false;
+  sidebar-mode:                   false;
+}
+
+@import "../theme.rasi"
+
+window {
+  transparency:                   "real";
+  background-color:               @bg0;
+  text-color:                     @gray;
+  border:                         1px;
+  border-color:                   @bg0;
+  border-radius:                  10px;
+  width:                          360px;
+  location:                       southeast;
+  x-offset:                       -5px;
+  y-offset:                       -45px;
+}
+
+prompt {
+  enabled:                        true;
+  padding:                        1% 0.75% 1% 0.75%;
+  background-color:               @magenta;
+  text-color:                     @bg1;
+  border-radius:                  10px;
+  font:                           "Iosevka Nerd Font Semibold 11";
+}
+
+textbox-prompt-colon {
+  padding:                        10px;
+  background-color:               @bg0;
+  text-color:                     @gray;
+  expand:                         false;
+  str:                            " :: ";
+}
+
+entry {
+  background-color:               @none;
+  text-color:                     @gray;
+  placeholder-color:              @gray;
+  expand:                         true;
+  horizontal-align:               0;
+  placeholder:                    "Search...";
+  padding:                        1.15% 0.5% 1% 0.5%;
+  blink:                          true;
+}
+
+inputbar {
+  children:                       [ prompt, entry ];
+  background-color:               @bg1;
+  text-color:                     @gray;
+  expand:                         false;
+  border:                         0% 0% 0% 0%;
+  border-radius:                  10px;
+  border-color:                   @magenta;
+}
+
+listview {
+  background-color:               @none;
+  padding:                        0px;
+  columns:                        1;
+  lines:                          8;
+  spacing:                        1%;
+  cycle:                          false;
+  dynamic:                        true;
+  layout:                         vertical;
+}
+
+mainbox {
+  background-color:               @none;
+  border:                         0% 0% 0% 0%;
+  border-radius:                  0% 0% 0% 0%;
+  border-color:                   @magenta;
+  children:                       [ inputbar, listview ];
+  spacing:                        12px;
+  padding:                        12px;
+}
+
+element {
+  background-color:               @bg1;
+  text-color:                     @gray;
+  orientation:                    horizontal;
+  border-radius:                  12px;
+  padding:                        10px 20px;
+}
+
+element-icon {
+  background-color:               inherit;
+  text-color:                     inherit;
+  horizontal-align:               0.5;
+  vertical-align:                 0.5;
+  size:                           16px;
+  border:                         0px;
+}
+
+element-text {
+  background-color:               @none;
+  text-color:                     inherit;
+  expand:                         true;
+  horizontal-align:               0;
+  vertical-align:                 0.5;
+  margin:                         0 10px;
+}
+
+element selected {
+  background-color:               @magenta;
+  text-color:                     @bg0;
+  border:                         0% 0.3% 0% 0.3%;
+  border-radius:                  12px;
+  border-color:                   @magenta;
+}

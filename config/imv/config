@@ -1,0 +1,27 @@
+# ▪  • ▌ ▄ ·.  ▌ ▐·
+# ██ ·██ ▐███▪▪█·█▌
+# ▐█·▐█ ▌▐▌▐█·▐█▐█•
+# ▐█▌██ ██▌▐█▌ ███ 
+# ▀▀▀▀▀  █▪▀▀▀. ▀  
+# Created by: Jaden Wu
+# Github: @j4d3nw
+# Email: jadenwu137@protonmail.com
+
+# ~/.config/imv/config
+
+# styling
+[options]
+background = #15191c
+fullscreen = false
+overlay = true
+overlay_text_color = #c6ced4
+overlay_background_color = #2b3339
+overlay_background_alpha = ff
+overlay_font = Iosevka Nerd Font:11
+overlay_position_bottom = false
+
+# bindings
+[binds]
+j = next
+k = prev
+    

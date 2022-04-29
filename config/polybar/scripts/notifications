@@ -1,0 +1,31 @@
+#!/bin/fish
+
+set paused (dunstctl is-paused)
+set waiting (dunstctl count waiting)
+
+function markup
+  if test $paused = "false"
+    if test $waiting -gt 0
+      echo ""
+    else
+      echo ""
+    end
+  else
+    echo ""
+  end
+end
+
+function toggle
+  if test $paused = "false"
+    dunstctl set-paused true
+  else
+    dunstctl set-paused false
+  end
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

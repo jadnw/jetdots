@@ -1,0 +1,63 @@
+#!/bin/fish
+
+set marker /tmp/waybar-power
+set theme ~/.config/rofi/wayland/power.rasi
+set uptime (uptime -p | sed -e 's/up //g')
+
+function markup
+  if test -e $marker
+    echo '{ "text": "", "tooltip": "Close Overlay", "class": "power-active" }'
+  else
+    echo '{ "text": "", "tooltip": "Power Menu", "class": "power" }'
+  end
+end
+
+function toggle
+  if test -e $marker
+    rm -f $marker; and pkill -SIGRTMIN+1 waybar
+    killall -q rofi
+  else
+    touch $marker; and pkill -SIGRTMIN+1 waybar
+    killall -q rofi
+
+    # options
+    set shutdown ""
+    set reboot ""
+    set logout ""
+    set lock ""
+    set suspend ""
+
+    # variables passed to dmenu
+    set options "$shutdown\n$reboot\n$logout\n$lock\n$suspend"
+
+    set opt (echo -e $options | rofi -dmenu -p "Uptime: $uptime" -theme $theme -selected-row 2)
+
+    if test -z $opt
+      rm -f $marker; and pkill -SIGRTMIN+1 waybar
+      exit 0
+    end
+
+    switch $opt
+      case $shutdown
+        poweroff
+      case $reboot
+        reboot
+      case $logout
+        # swaymsg exit # Uncomment this line if you use Sway
+        riverctl exit
+      case $lock
+        swaylock
+      case $suspend
+        systemctl suspend
+    end
+
+    rm -f $marker; and pkill -SIGRTMIN+1 waybar
+  end
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

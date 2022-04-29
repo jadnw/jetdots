@@ -1,0 +1,4 @@
+#!/bin/fish
+
+killall -q polybar
+polybar &
