@@ -125,6 +125,7 @@ sleep 1
 
 # Create a file to save installer metadata
 set metadata_file ~/.config/jetdots.txt
+rm -rf $metadata_file # for re-installing
 touch $metadata_file
 
 # Install one of tiling window managers [ riverwm (Wayland), swaywm (Wayland), bspwm (X11) ]
