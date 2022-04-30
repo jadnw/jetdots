@@ -31,6 +31,10 @@ super + o
 super + slash
   $HOME/.config/polybar/scripts/windows
 
+# Toggle bar
+super + shift + x
+  $HOME/.config/bspwm/scripts/bar-toggle
+
 # Take a screenshot
 super + p
   $HOME/.config/bspwm/scripts/screenshot

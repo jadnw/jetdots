@@ -1,0 +1,10 @@
+#!/bin/fish
+
+set pid (pgrep polybar)
+
+if test -n "$pid"
+  killall -9 polybar
+  bspc config bottom_padding 0
+else
+  $HOME/.config/polybar/launch &
+end
