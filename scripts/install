@@ -62,7 +62,6 @@ paru -S --noconfirm --needed \
   man \
   neovim \
   nnn \
-  noto-fonts \
   papirus-icon-theme \
   pdfjs \
   python-pip \
@@ -75,6 +74,7 @@ paru -S --noconfirm --needed \
   sddm-sugar-candy-git \
   stylua \
   tree \
+  ttf-roboto \
   unzip \
   vscode \
   xdg-utils \
