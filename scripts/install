@@ -45,6 +45,7 @@ paru -S --noconfirm --needed \
   breeze-snow-cursor-theme \
   chromium \
   curl \
+  delve \
   docker \
   docker-compose \
   docker-machine \
@@ -55,6 +56,7 @@ paru -S --noconfirm --needed \
   git \
   glow \
   go \
+  golangci-lint \
   gtk3 \
   gtk4 \
   jq \
