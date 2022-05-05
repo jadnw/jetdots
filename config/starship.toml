@@ -10,7 +10,7 @@
 ## FIRST LINE/ROW: Info & Status
 # First param
 [username]
-format = " [╭ ]($style) "
+format = " [ ]($style) "
 style_user = "bold red"
 style_root = "bold red"
 show_always = true
@@ -41,7 +41,7 @@ deleted = "x"
 # Last param in the first line/row
 [cmd_duration]
 min_time = 1
-format = " ﲊ [$duration]($style)"
+format = " 羽[$duration]($style)"
 disabled = false
 
 ## SECOND LINE/ROW: Prompt
@@ -76,8 +76,8 @@ disabled = true
 
 # Prompt: param 2
 [character]
-success_symbol = " [╰↣ ](bold red)"
-error_symbol = " [╰↛ ](bold red)"
+success_symbol = " [► ](bold red)"
+error_symbol = " [▻ ](bold red)"
 
 # # SYMBOLS
 # [status]
@@ -87,7 +87,7 @@ error_symbol = " [╰↛ ](bold red)"
 # disabled = false
 
 [aws]
-symbol = " "
+symbol = " "
 
 [conda]
 symbol = "🐍"
@@ -96,10 +96,10 @@ symbol = "🐍"
 symbol = " "
 
 [docker_context]
-symbol = "🐳 "
+symbol = " "
 
 [elixir]
-symbol = " "
+symbol = " "
 
 [elm]
 symbol = " "
@@ -108,7 +108,7 @@ symbol = " "
 symbol = " "
 
 [golang]
-symbol = " "
+symbol = "ﳑ "
 
 [hg_branch]
 symbol = " "
@@ -126,13 +126,13 @@ symbol = " "
 symbol = " "
 
 [nix_shell]
-symbol = " "
+symbol = " "
 
 [nodejs]
 symbol = " "
 
 [package]
-symbol = " "
+symbol = " "
 
 [perl]
 symbol = " "
