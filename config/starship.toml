@@ -10,7 +10,7 @@
 ## FIRST LINE/ROW: Info & Status
 # First param
 [username]
-format = " [ ]($style) "
+format = " [╭ﮛ ]($style) "
 style_user = "bold red"
 style_root = "bold red"
 show_always = true
@@ -76,8 +76,8 @@ disabled = true
 
 # Prompt: param 2
 [character]
-success_symbol = " [► ](bold red)"
-error_symbol = " [▻ ](bold red)"
+success_symbol = " [╰↣ ](bold red)"
+error_symbol = " [╰↛ ](bold red)"
 
 # # SYMBOLS
 # [status]
