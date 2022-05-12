@@ -3,7 +3,7 @@ from classes.module import Module
 def gen_template_by_protocol(protocol):
     def gen_template(theme):
         pal = theme["palette"]
-        padding_bottom = 5 if protocol == "wayland" else 45
+        padding_bottom = 5 if protocol == "wayland" else 50
         template = f"""# ·▄▄▄▄  ▄• ▄▌ ▐ ▄ .▄▄ · ▄▄▄▄▄
 # ██▪ ██ █▪██▌•█▌▐█▐█ ▀. •██  
 # ▐█· ▐█▌█▌▐█▌▐█▐▐▌▄▀▀▀█▄ ▐█.▪
