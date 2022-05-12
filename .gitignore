@@ -1,5 +1,6 @@
 # Ignore themes directory
-themes/
+/themes
+
 # LunarVim plugins
 **/lvim/plugin
 
