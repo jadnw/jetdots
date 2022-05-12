@@ -92,6 +92,11 @@ sleep 1
 sudo systemctl enable sddm.service
 echo "Enable services ... DONE"
 
+# SDDM
+sudo rsync --recursive ./extras/sddm.conf.d /etc/
+sudo rsync ./config/sddm-sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/
+
+
 sleep 1
 
 mkdir -p ~/.local/share/{themes,fonts}
@@ -207,9 +212,7 @@ function install_bspwm
   rsync --recursive ./config/{alacritty,bspwm,picom,polybar,betterlockscreenrc} ~/.config/
 
   # Extra configurations
-  sudo rsync --recursive ./extras/sddm.conf.d /etc/
-  sudo rsync ./config/sddm-sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/
-  sudo rsync ./extras/xorg.conf.d/20-amdgpu.conf /etc/X11/xorg.conf.d/
+   sudo rsync ./extras/xorg.conf.d/20-amdgpu.conf /etc/X11/xorg.conf.d/
   rsync --recursive ./extras/.icons ~/
 end
 
