@@ -7,9 +7,9 @@ mkdir -p $savepath
 
 function markup
   if test -e $marker
-    echo '{ "text": "", "tooltip": "Close Overlay", "class": "recorder-active" }'
+    echo '{ "text": "", "tooltip": "Close Overlay", "class": "recorder-active" }'
   else
-    echo '{ "text": "", "tooltip": "Recorder", "class": "recorder" }'
+    echo '{ "text": "", "tooltip": "Recorder", "class": "recorder" }'
   end
 end
 

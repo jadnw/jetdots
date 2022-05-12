@@ -82,10 +82,10 @@ tooltip label {
 /* CPU & Memory */
 #cpu,
 #memory {
-  min-width: 90px;
-  padding-top: 6px;
+  min-width: 80px;
+  padding-top: 4px;
   font-family: "Iosevka Nerd Font";
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -104,8 +104,8 @@ tooltip label {
   min-width: 60px;
   padding-top: 4px;
   font-family: "Iosevka Nerd Font";
-  font-size: 16px;
-  font-weight: 800;
+  font-size: 18px;
+  font-weight: 700;
   color: @fg3;
 }
 

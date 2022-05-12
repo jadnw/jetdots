@@ -20,7 +20,7 @@
   },
   "cpu": {
     "interval": 2,
-    "format": "CPU: {usage}%",
+    "format": "<span size='14pt'> </span> {usage}%",
     "on-click": "alacritty -a btop -e btop"
   },
   "idle_inhibitor": {
@@ -32,7 +32,7 @@
   },
   "memory": {
     "interval": 2,
-    "format": "MEM: {percentage}%",
+    "format": "<span size='14pt'></span>  {percentage}%",
     "on-click": "alacritty -a btop -e btop"
   },
   "network": {
