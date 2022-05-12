@@ -7,7 +7,7 @@ function markup
   if test -e $marker
     echo '{ "text": "", "tooltip": "Close Overlay", "class": "launcher-active" }'
   else
-    echo '{ "text": "", "tooltip": "Power Menu", "class": "launcher" }'
+    echo '{ "text": "", "tooltip": "Power Menu", "class": "launcher" }'
   end
 end
 

@@ -226,6 +226,11 @@ tooltip label {
 }
 
 /* Power Menu */
+.power,
+.power-active {
+  border-radius: 0px 6px 6px 0px;
+}
+
 .power {
   color: @red;
 }
