@@ -5,6 +5,7 @@
 }
 
 window#waybar {
+  border-radius: 6px;
   background-color: @bg0;
 }
 
@@ -21,11 +22,14 @@ tooltip label {
 }
 
 /* River Tags */
+#tags {
+  margin-left: 16px;
+}
+
 #tags button {
-  min-width: 50px;
-  padding-top: 2px;
+  min-width: 40px;
   font-family: "Material Icons Outlined";
-  font-size: 22px;
+  font-size: 24px;
   color: @bg4;
 }
 
@@ -45,11 +49,14 @@ tooltip label {
 }
 
 /* Sway Workspaces */
+#workspaces {
+  margin-left: 16px;
+}
+
 #workspaces button {
-  min-width: 50px;
-  padding-top: 2px;
+  min-width: 40px;
   font-family: "Material Icons Outlined";
-  font-size: 22px;
+  font-size: 24px;
   color: @bg4;
 }
 
@@ -95,11 +102,11 @@ tooltip label {
 /* Clock */
 #clock {
   min-width: 60px;
-  padding-top: 6px;
+  padding-top: 4px;
   font-family: "Iosevka Nerd Font";
   font-size: 16px;
   font-weight: 800;
-  color: @fg1;
+  color: @fg3;
 }
 
 /* Idle Inhibitor */
@@ -152,7 +159,7 @@ tooltip label {
 #custom-screenshot,
 #custom-windows {
   min-width: 50px;
-  padding-top: 6px;
+  padding-top: 2px;
   font-family: "Material Icons Round";
   font-size: 18px;
 }

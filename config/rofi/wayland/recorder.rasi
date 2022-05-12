@@ -102,8 +102,8 @@ element-text {
 
 element normal.urgent,
 element alternate.urgent {
-  background-color:               @inactive;
-  text-color:                     @bg0;
+  background-color:               @bg4;
+  text-color:                     @fg3;
   border-radius:                  12px;
 }
 

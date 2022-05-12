@@ -5,7 +5,10 @@
   "modules-left": ["river/tags"],
   "modules-center": [],
   "modules-right": ["custom/launcher", "custom/documents", "custom/colorpicker", "custom/screenshot", "custom/recorder", "cpu", "memory", "network", "pulseaudio", "custom/idle-inhibitor", "custom/nightlight", "custom/notifications", "clock", "custom/power"],
-  "margin": 0,
+  "margin-top": 0,
+  "margin-left": 5,
+  "margin-right": 5,
+  "margin-bottom": 5,
   "spacing": 0,
   "name": "panel",
   "mode": "dock",
@@ -33,12 +36,12 @@
     "on-click": "alacritty -a btop -e btop"
   },
   "network": {
-    "format": "",
-    "format-ethernet": "",
+    "format": "",
+    "format-ethernet": "",
     "format-wifi": "",
     "format-linked": "",
-    "format-disconnected": "",
-    "format-disable": "",
+    "format-disconnected": "",
+    "format-disable": "",
     "tooltip-format-ethernet": "Ethernet {ifname} - IP: {ipaddr} | {bandwidthUpBits} - {bandwidthDownBits}",
     "tooltip-format-wifi": "Wifi {essid} - Strength: {signalStrength}",
     "on-click": "nm-connection-editor"
@@ -58,7 +61,7 @@
   },
    "river/tags": {
     "num-tags": 6,
-    "tag-labels": [ "", "", "", "", "", "" ],
+    "tag-labels": [ " ", " ", " ", " ", " ", " " ],
     "disable-click": false
   }, 
   "custom/colorpicker": {
