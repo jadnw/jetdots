@@ -7,30 +7,18 @@
 # Github: @j4d3nw
 # Email: jadenwu137@protonmail.com
 
-## FIRST LINE/ROW: Info & Status
-# First param
 [username]
-format = " [╭ﮛ ]($style) "
+format = " [ ]($style) "
 style_user = "bold red"
 style_root = "bold red"
 show_always = true
 
-# Second param
-# [hostname]
-# format = "[⚡️]($style) in "
-# style = "bold dimmed red"
-# trim_at = "-"
-# ssh_only = false
-# disabled = false
-
-# Third param
 [directory]
 style = "cyan"
 truncation_length = 0
 truncate_to_repo = true
 truncation_symbol = "  "
 
-# Before all the version info (python, nodejs, php, etc.)
 [git_status]
 style = "white"
 ahead = "⇡${count}"
@@ -76,15 +64,8 @@ disabled = true
 
 # Prompt: param 2
 [character]
-success_symbol = " [╰↣ ](bold red)"
-error_symbol = " [╰↛ ](bold red)"
-
-# # SYMBOLS
-# [status]
-# symbol = "💩"
-# format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
-# map_symbol = true
-# disabled = false
+success_symbol = " [↣ ](bold red)"
+error_symbol = " [↛ ](bold red)"
 
 [aws]
 symbol = " "
