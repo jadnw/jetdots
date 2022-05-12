@@ -5,9 +5,9 @@ set theme ~/.config/rofi/wayland/colorpicker.rasi
 
 function markup
   if test -e $marker
-    echo '{ "text": "", "tooltip": "Close Overlay", "class": "colorpicker-active" }'
+    echo '{ "text": "", "tooltip": "Close Overlay", "class": "colorpicker-active" }'
   else
-    echo '{ "text": "", "tooltip": "Color Picker", "class": "colorpicker" }'
+    echo '{ "text": "", "tooltip": "Color Picker", "class": "colorpicker" }'
   end
 end
 
