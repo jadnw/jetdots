@@ -29,15 +29,6 @@ echo "Update system & Installing necessary packages with paru ..."
 paru -Syyu --noconfirm
 paru -Sy --noconfirm archlinux-keyring
 
-read -l -P "Install and enable ZRAM? [y/N]: " zram_opt
-set zram_opt (string lower $zram_opt)
-set -q zram_opt; set zram_opt y
-
-if test $zram_opt = "y"
-  paru -S --noconfirm zramd
-  sudo systemctl enable --now zramd
-end
-
 paru -S --noconfirm --needed \
   alacritty \
   base-devel \
@@ -253,11 +244,11 @@ mkdir -p ~/.config/wallpapers
 rsync ./wallpapers/{wallpaper.jpg,lockscreen.jpg} ~/.config/wallpapers/
 sudo rsync ./wallpapers/greeting.jpg /usr/share/sddm/themes/sugar-candy/
 
-# Install node v17
-fnm install v17
+# Install node
+fnm install v18
 
 # Install pylint
-python -m pip install pylint
+# python -m pip install pylint
 
 # Remove build dependencies
 set i3_installed (paru -Qs i3-wm | grep "local/")
