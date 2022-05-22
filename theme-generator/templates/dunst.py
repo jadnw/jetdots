@@ -10,7 +10,7 @@ def gen_template_by_protocol(protocol):
 # ██. ██ ▐█▄█▌██▐█▌▐█▄▪▐█ ▐█▌·
 # ▀▀▀▀▀•  ▀▀▀ ▀▀ █▪ ▀▀▀▀  ▀▀▀ 
 # Created by: Jaden Wu
-# Github: @j4d3nw
+# Github: @jadnw
 # Email: jadenwu137@protonmail.com
 
 # See dunst(5) for all configuration options

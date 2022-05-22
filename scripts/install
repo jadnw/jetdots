@@ -108,7 +108,7 @@ echo "Copy configurations to ~/.config ... DONE"
 rsync ./extras/.gitconfig ~/
 
 # Install GTK themes
-git clone https://github.com/j4d3nw/gemstones-gtk.git
+git clone https://github.com/jadnw/gemstones-gtk.git
 cp -R gemstones-gtk/themes/* ~/.local/share/themes/
 rm -rf gemstones-gtk
 

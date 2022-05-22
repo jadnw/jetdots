@@ -8,7 +8,7 @@ def gen_template(theme):
 # ▐█▌██ ██▌▐█▌ ███ 
 # ▀▀▀▀▀  █▪▀▀▀. ▀  
 # Created by: Jaden Wu
-# Github: @j4d3nw
+# Github: @jadnw
 # Email: jadenwu137@protonmail.com
 
 # ~/.config/imv/config

@@ -5,17 +5,17 @@
   <img
     width="196px"
     height="196px"
-    src="https://raw.githubusercontent.com/j4d3nw/jetdots/main/media/logo.svg"
+    src="https://raw.githubusercontent.com/jadnw/jetdots/main/media/logo.svg"
     alt="Jetdots Logo"
   />
 </div>
 <br /><br />
 
 <p align="center">
-  <a href="https://github.com/j4d3nw/jetdots/stargazers"><img src="https://img.shields.io/github/stars/j4d3nw/jetdots?colorA=1b2125&colorB=a7c080&style=for-the-badge"></a>
-  <a href="https://github.com/j4d3nw/jetdots/issues"><img src="https://img.shields.io/github/issues/j4d3nw/jetdots?colorA=1b2125&colorB=f08789&style=for-the-badge"></a>
-  <a href="https://github.com/j4d3nw/jetdots/contributors"><img src="https://img.shields.io/github/contributors/j4d3nw/jetdots?colorA=1b2125&colorB=60b69f&style=for-the-badge"></a>
-  <a href="https://github.com/j4d3nw/jetdots/network/members"><img src="https://img.shields.io/github/forks/j4d3nw/jetdots?colorA=1b2125&colorB=b3a8f9&style=for-the-badge"></a>
+  <a href="https://github.com/jadnw/jetdots/stargazers"><img src="https://img.shields.io/github/stars/jadnw/jetdots?colorA=1b2125&colorB=a7c080&style=for-the-badge"></a>
+  <a href="https://github.com/jadnw/jetdots/issues"><img src="https://img.shields.io/github/issues/jadnw/jetdots?colorA=1b2125&colorB=f08789&style=for-the-badge"></a>
+  <a href="https://github.com/jadnw/jetdots/contributors"><img src="https://img.shields.io/github/contributors/jadnw/jetdots?colorA=1b2125&colorB=60b69f&style=for-the-badge"></a>
+  <a href="https://github.com/jadnw/jetdots/network/members"><img src="https://img.shields.io/github/forks/jadnw/jetdots?colorA=1b2125&colorB=b3a8f9&style=for-the-badge"></a>
 </p>
 
 <p align="center">
@@ -37,14 +37,14 @@ Some fancy screenshots. They look cool, right?
 
 <div align="center">
   <img
-    src="https://raw.githubusercontent.com/j4d3nw/jetdots/main/media/screenshots/idle.png"
+    src="https://raw.githubusercontent.com/jadnw/jetdots/main/media/screenshots/idle.png"
     alt="Idle - No apps opened"
   />
 </div>
 
 <div align="center">
   <img
-    src="https://raw.githubusercontent.com/j4d3nw/jetdots/main/media/screenshots/busy.png"
+    src="https://raw.githubusercontent.com/jadnw/jetdots/main/media/screenshots/busy.png"
     alt="Busy - Apps opened"
   />
 </div>
@@ -111,7 +111,7 @@ Bars:
 1. Clone this repository
 
 ```bash
-git clone https://github.com/j4d3nw/jetdots.git
+git clone https://github.com/jadnw/jetdots.git
 ```
 
 2. Make scripts executable
@@ -232,6 +232,6 @@ betterlockscreen --update ~/.config/wallpapers/lockscreen.jpg
 
 ## Acknowledgements
 
-- [j4d3nw/gemstones](https://github.com/j4d3nw/gemstones)
-- [j4d3nw/gemstones-gtk](https://github.com/j4d3nw/gemstones-gtk)
-- [j4d3nw/nvim](https://github.com/j4d3nw/nvim)
+- [jadnw/gemstones](https://github.com/jadnw/gemstones)
+- [jadnw/gemstones-gtk](https://github.com/jadnw/gemstones-gtk)
+- [jadnw/nvim](https://github.com/jadnw/nvim)
