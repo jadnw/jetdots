@@ -22,8 +22,8 @@ set term alacritty
 set launcher "$HOME/.config/waybar/scripts/launcher toggle"
 set powermenu "$HOME/.config/waybar/scripts/power toggle"
 set browser qutebrowser
-# set firefox "MOZ_ENABLE_WAYLAND=1 firefox-developer-edition"
-set chromium "chromium --ozone-platform-hint=auto --no-default-browser-check"
+set firefox "MOZ_ENABLE_WAYLAND=1 firefox-developer-edition"
+# set chromium "chromium --ozone-platform-hint=auto --no-default-browser-check"
 set waybartoggle "$HOME/.config/river/scripts/waybar-toggle"
 set screenshot "$HOME/.config/river/scripts/screenshot"
 
@@ -37,7 +37,7 @@ riverctl map normal Super+Shift B spawn $browser
 # riverctl map normal Super+Shift F spawn $firefox
 
 # Super+Shift+F to start Chromium
-riverctl map normal Super+Shift W spawn $chromium
+riverctl map normal Super+Shift W spawn $firefox
 
 # Super+Shift+X to toggle waybar
 riverctl map normal Super+Shift X spawn $waybartoggle
