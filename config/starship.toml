@@ -4,7 +4,7 @@
 # ▐█▄▪▐█ ▐█▌·▐█ ▪▐▌▐█•█▌▐█▄▪▐███▌▐▀▐█▌▐█▪·•
 #  ▀▀▀▀  ▀▀▀  ▀  ▀ .▀  ▀ ▀▀▀▀ ▀▀▀ ·▀▀▀.▀   
 # Created by: Jaden Wu
-# Github: @jadnw
+# Github: @j4d3nw
 # Email: jadenwu137@protonmail.com
 
 [username]
@@ -21,15 +21,15 @@ truncation_symbol = "  "
 
 [git_status]
 style = "white"
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "⇣${count}"
+ahead = " {count}"
+diverged = " {ahead_count}  {behind_count}"
+behind = " {count}"
 deleted = "x"
 
 # Last param in the first line/row
 [cmd_duration]
 min_time = 1
-format = " 羽[$duration]($style)"
+format = " ﲊ [$duration]($style)"
 disabled = false
 
 ## SECOND LINE/ROW: Prompt
@@ -64,8 +64,8 @@ disabled = true
 
 # Prompt: param 2
 [character]
-success_symbol = " [ ](bold red)"
-error_symbol = " [ ](bold red)"
+success_symbol = " [理](bold red)"
+error_symbol = " [ﲅ ](bold red)"
 
 [aws]
 symbol = " "
@@ -110,7 +110,7 @@ symbol = " "
 symbol = " "
 
 [nodejs]
-symbol = " "
+symbol = " "
 
 [package]
 symbol = " "
