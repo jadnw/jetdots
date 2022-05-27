@@ -6,7 +6,7 @@
 # ▐█•█▌▐█▌ ███ ▐█▄▄▌▐█•█▌▐█▌██▐█▌██ ██▌▐█▌
 # .▀  ▀▀▀▀. ▀   ▀▀▀ .▀  ▀ ▀▀▀▀ ▀▪▀▀  █▪▀▀▀
 # Created by: Jaden Wu
-# Github: @jadnw
+# Github: @j4d3nw
 # Email: jadenwu137@protonmail.com
 
 # This is the example configuration file for river.
@@ -203,4 +203,4 @@ riverctl csd-filter-add app-id "gedit"
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-exec rivertile -view-padding 3 -outer-padding 2
+exec rivertile -main-ratio 0.7 -view-padding 3 -outer-padding 2
