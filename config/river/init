@@ -203,4 +203,4 @@ riverctl csd-filter-add app-id "gedit"
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-exec rivertile -main-ratio 0.7 -view-padding 3 -outer-padding 2
+exec rivertile -main-ratio 0.6 -view-padding 3 -outer-padding 2
