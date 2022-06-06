@@ -57,6 +57,7 @@ paru -S --noconfirm --needed \
   nnn \
   papirus-icon-theme \
   pdfjs \
+  python-adblock \
   python-pip \
   qutebrowser \
   ripgrep \
