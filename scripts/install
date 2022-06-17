@@ -33,8 +33,8 @@ paru -S --noconfirm --needed \
   alacritty \
   base-devel \
   btop \
-  brave-bin \
   breeze-snow-cursor-theme \
+  chromium \
   curl \
   delve \
   docker \
@@ -42,6 +42,7 @@ paru -S --noconfirm --needed \
   docker-machine \
   dunst \
   fd \
+  firefox-developer-edition \
   fish \
   fnm-bin \
   git \

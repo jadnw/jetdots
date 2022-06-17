@@ -62,9 +62,8 @@ set $right l
 # Programs
 set $term alacritty
 set $browser qutebrowser
-# set $firefox MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
-# set $chromium chromium --ozone-platform-hint=auto --no-default-browser-check
-set $brave brave --ozone-platform-hint=auto --no-default-browser-check
+set $firefox MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
+set $chromium chromium --ozone-platform-hint=auto --no-default-browser-check
 set $launcher $HOME/.config/waybar/scripts/launcher toggle
 set $powermenu $HOME/.config/waybar/scripts/power toggle
 set $waybartoggle $HOME/.config/sway/scripts/waybar-toggle
@@ -125,11 +124,11 @@ input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
     # Start web browser
     bindsym $mod+Shift+b exec $browser
 
-    # Start Dev Browser
-    bindsym $mod+Shift+w exec $brave
+    # Start Firefox DE
+    bindsym $mod+Shift+f exec $firefox
 
     # Start Chromium
-    # bindsym $mod+Shift+f exec $chromium
+    bindsym $mod+Shift+w exec $chromium
 
     # Open Launcher
     bindsym $mod+o exec $launcher

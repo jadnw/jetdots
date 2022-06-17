@@ -15,9 +15,13 @@ super + shift + Return
 super + shift + b
   qutebrowser
 
-# Dev Browser
+# Firefox DE
+super + shift + f
+  firefox-developer-edition
+
+# Chromium
 super + shift + w
-  brave --ozone-platform-hint=auto --no-default-browser-check
+  chromium --no-default-browser-check
 
 # Power menu
 super + shift + q
