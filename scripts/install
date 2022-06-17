@@ -30,7 +30,6 @@ paru -Syyu --noconfirm
 paru -Sy --noconfirm archlinux-keyring
 
 paru -S --noconfirm --needed \
-  alacritty \
   base-devel \
   btop \
   breeze-snow-cursor-theme \
@@ -134,6 +133,7 @@ function install_river
   echo "riverwm" >> $metadata_file
   # Needed packages for Wayland (River)
   paru -S --noconfirm --needed \
+    foot \
     glfw-wayland \
     grim \
     imagemagick \
@@ -154,13 +154,14 @@ function install_river
     xorg-xlsclients \
   
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{alacritty,river,imv,swaylock,waybar} ~/.config/
+  rsync --recursive ./config/{foot,river,imv,swaylock,waybar} ~/.config/
 end
 
 function install_sway
   echo "swaywm" >> $metadata_file
   # Needed packages for Wayland (Sway)
   paru -S --noconfirm --needed \
+    foot \
     glfw-wayland \
     grim \
     imagemagick \
@@ -180,13 +181,14 @@ function install_sway
     xorg-xlsclients \
   
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{alacritty,imv,sway,swaylock,waybar} ~/.config/
+  rsync --recursive ./config/{foot,imv,sway,swaylock,waybar} ~/.config/
 end
 
 function install_bspwm
   echo "bspwm" >> $metadata_file
   # Needed packages for X11 (bspwm)
   paru -S --noconfirm --needed \
+    alacritty \
     betterlockscreen \
     bspwm \
     feh \

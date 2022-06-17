@@ -21,7 +21,7 @@
   "cpu": {
     "interval": 2,
     "format": "<span size='14pt'> </span> {usage}%",
-    "on-click": "alacritty -t btop -e btop"
+    "on-click": "foot -t btop btop"
   },
   "idle_inhibitor": {
     "format": "{icon}",
