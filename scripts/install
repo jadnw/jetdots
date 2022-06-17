@@ -107,6 +107,7 @@ echo "Copy configurations to ~/.config ... DONE"
 
 # Copy common extra configs
 rsync ./extras/.gitconfig ~/
+sudo rsync --recursive ./extras/reflector /etc/xdg/
 
 # Install GTK themes
 git clone https://github.com/jadnw/gemstones-gtk.git
