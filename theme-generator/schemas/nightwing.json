@@ -1,0 +1,27 @@
+{
+  "name": "Nightwing",
+  "palette": {
+    "bg0": "#0c0314",
+    "bg1": "#14161f",
+    "bg2": "#1e212f",
+    "bg3": "#282d3e",
+    "bg4": "#3c435d",
+    "fg0": "#e0e2eb",
+    "fg1": "#c1c6d7",
+    "fg2": "#b1b7cd",
+    "fg3": "#a2a9c3",
+    "accent": "#73cfdd",
+    "black": "#464e6d",
+    "white": "#c1c6d7",
+    "red": "#f4676a",
+    "green": "#93c68c",
+    "blue": "#88a2ff",
+    "orange": "#f4a582",
+    "yellow": "#e8ce9b",
+    "cyan": "#73cfdd",
+    "teal": "#68dfbb",
+    "magenta": "#e397bb",
+    "purple": "#a293ff",
+    "gray": "#5a648c"
+  }
+}

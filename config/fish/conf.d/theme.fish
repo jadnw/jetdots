@@ -1,24 +1,24 @@
-# Gemstones colorscheme for Fish
+# Nightwing colorscheme for Fish
 # ~/.config/fish/conf.d/theme.fish
 
 # --> special
-set -l fg c6ced4
-set -l sel 4e5c67
+set -l fg c1c6d7
+set -l sel 3c435d
 
 # --> palette
-set -l red f08789
+set -l red f4676a
 set -l green 93c68c
 set -l yellow e8ce9b
 set -l orange f4a582
-set -l blue 80b1d6
+set -l blue 88a2ff
 set -l magenta e397bb
-set -l purple b3a8f9
-set -l cyan 80c2c5
-set -l gray 667a8a
+set -l purple a293ff
+set -l cyan 73cfdd
+set -l gray 5a648c
 
 # Syntax Highlighting
 set -g fish_color_normal $fg
-set -g fish_color_command $green
+set -g fish_color_command $blue
 set -g fish_color_param $fg
 set -g fish_color_keyword $red
 set -g fish_color_quote $green

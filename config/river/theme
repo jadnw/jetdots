@@ -1,6 +1,6 @@
 #!/bin/fish
 
-riverctl background-color 0x20262a
-riverctl border-color-focused 0x93c68c
-riverctl border-color-unfocused 0x3c4750
+riverctl background-color 0x14161f
+riverctl border-color-focused 0x73cfdd
+riverctl border-color-unfocused 0x282d3e
     

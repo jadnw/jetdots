@@ -109,9 +109,9 @@ rsync ./extras/.gitconfig ~/
 sudo rsync --recursive ./extras/reflector /etc/xdg/
 
 # Install GTK themes
-git clone https://github.com/jadnw/gemstones-gtk.git
-cp -R gemstones-gtk/themes/* ~/.local/share/themes/
-rm -rf gemstones-gtk
+git clone https://github.com/jadnw/nightwing-gtk.git
+cp -R nightwing-gtk/themes/* ~/.local/share/themes/
+rm -rf nightwing-gtk
 
 sleep 1
 
