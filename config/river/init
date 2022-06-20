@@ -23,7 +23,7 @@ set launcher "$HOME/.config/waybar/scripts/launcher toggle"
 set powermenu "$HOME/.config/waybar/scripts/power toggle"
 set browser qutebrowser
 set firefox "MOZ_ENABLE_WAYLAND=1 firefox-developer-edition"
-set chromium "chromium --ozone-platform-hint=auto --no-default-browser-check"
+set chromium "chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check"
 set waybartoggle "$HOME/.config/river/scripts/waybar-toggle"
 set screenshot "$HOME/.config/river/scripts/screenshot"
 

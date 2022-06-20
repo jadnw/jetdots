@@ -35,6 +35,7 @@ for_window [window_role="About"] floating enable
 for_window [title="File Operation Progress"] floating enable, border pixel 2, sticky enable, resize set width 40 ppt height 30 ppt
 for_window [title="Picture in picture"] floating enable, sticky enable
 for_window [title="Save File"] floating enable
+for_window [title="btop"] floating enable, resize set height 960px, resize width 1280px
 
 # App id
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 2, sticky enable, resize set width 30 ppt height 40 ppt
@@ -45,6 +46,8 @@ for_window [app_id="pavucontrol"] floating enable, resize set height 600px, resi
 
 # Idle inhibit
 for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
+for_window [app_id="firefoxdeveloperedition"] inhibit_idle fullscreen
+for_window [app_id="chromium"] inhibit_idle fullscreen
 
 ############################################################
 ### VARIABLES
@@ -63,7 +66,7 @@ set $right l
 set $term foot
 set $browser qutebrowser
 set $firefox MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
-set $chromium chromium --ozone-platform-hint=auto --no-default-browser-check
+set $chromium chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check
 set $launcher $HOME/.config/waybar/scripts/launcher toggle
 set $powermenu $HOME/.config/waybar/scripts/power toggle
 set $waybartoggle $HOME/.config/sway/scripts/waybar-toggle
