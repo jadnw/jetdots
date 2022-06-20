@@ -32,7 +32,7 @@ paru -Sy --noconfirm archlinux-keyring
 paru -S --noconfirm --needed \
   base-devel \
   btop \
-  breeze-snow-cursor-theme \
+  breeze-blue-cursor-theme \
   chromium \
   curl \
   delve \

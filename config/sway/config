@@ -18,7 +18,7 @@ exec_always $HOME/.config/waybar/launch-sway
 # Background
 exec swaybg -i $HOME/.config/wallpapers/wallpaper.jpg -m fill
 # Cursor
-seat seat0 xcursor_theme Breeze_Snow
+seat seat0 xcursor_theme Breeze_Blue
 
 ############################################################
 ### RULES
