@@ -26,7 +26,7 @@ end
 sleep 1
 
 echo "Update system & Installing necessary packages with paru ..."
-paru -Syyu --noconfirm
+paru -Syy --noconfirm
 paru -Sy --noconfirm archlinux-keyring
 
 paru -S --noconfirm --needed \
@@ -45,7 +45,6 @@ paru -S --noconfirm --needed \
   fish \
   fnm-bin \
   git \
-  glow \
   go \
   golangci-lint \
   gtk3 \
@@ -68,7 +67,6 @@ paru -S --noconfirm --needed \
   sddm-sugar-candy-git \
   stylua \
   tree \
-  ttf-roboto \
   unzip \
   vscode \
   xdg-utils \
