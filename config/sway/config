@@ -35,14 +35,13 @@ for_window [window_role="About"] floating enable
 for_window [title="File Operation Progress"] floating enable, border pixel 2, sticky enable, resize set width 40 ppt height 30 ppt
 for_window [title="Picture in picture"] floating enable, sticky enable
 for_window [title="Save File"] floating enable
-for_window [title="btop"] floating enable, resize set height 960px, resize width 1280px
+for_window [title="btop"] floating enable, border pixel 2, resize set height 960px, resize width 1280px
 
 # App id
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 2, sticky enable, resize set width 30 ppt height 40 ppt
-for_window [app_id="btop"] floating enable, resize set height 768px, resize set width 1366px
-for_window [app_id="imv"] floating enable, resize set height 768px, resize set width 1366px
+for_window [app_id="imv"] floating enable, border pixel 2, resize set height 768px, resize set width 1366px
 for_window [app_id="nm-connection-editor"] floating enable, resize set height 400px, resize set width 600px
-for_window [app_id="pavucontrol"] floating enable, resize set height 600px, resize set width 960px
+for_window [app_id="pavucontrol"] floating enable, border pixel 2, resize set height 600px, resize set width 960px
 
 # Idle inhibit
 for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
