@@ -93,7 +93,8 @@ sleep 1
 
 mkdir -p ~/.local/share/{themes,fonts}
 # Fonts
-rsync ./fonts/* ~/.local/share/fonts/
+rsync ./fonts/local/* ~/.local/share/fonts/
+sudo rsync ./fonts/system/* /usr/share/fonts/TTF/
 fc-cache -r
 echo "Copy fonts to ~/.local/share/fonts ... DONE"
 
