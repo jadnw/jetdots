@@ -182,7 +182,7 @@ riverctl spawn "$HOME/.config/river/theme"
 riverctl set-repeat 40 350
 
 # Set cursor theme
-riverctl xcursor-theme "Breeze_Blue"
+riverctl xcursor-theme "Breeze_Snow"
 
 # Import Gsettings
 riverctl spawn "$HOME/.config/river/scripts/import-gsettings"
