@@ -16,7 +16,8 @@ end
 function install_theme
   set theme $argv[1]
   set theme_dir ./themes/$theme
-  set config_dir ~/.config
+  set config_dir $argv[2]
+  set -q config_dir; set config_dir ~/.config
   mkdir -p ~/.config/wallpapers
 
   # Copy theme files to their locations
