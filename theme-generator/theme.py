@@ -35,7 +35,7 @@ def write_template(theme, module, dest_path):
         f.close()
 
 def generate(modules):
-    SCHEMA_NAME = "nightwing"
+    SCHEMA_NAME = "batwing"
     SCHEMA_PATH = path.abspath("theme-generator/schemas/" + SCHEMA_NAME + ".json")
     theme = read_theme_from_schema(SCHEMA_PATH)
     GEN_DIRNAME = "themes/" + theme["name"].lower()

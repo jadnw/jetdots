@@ -9,15 +9,15 @@ end
 
 function check_then_copy
   if test -e $argv[2]
-    cp $argv[1] $argv[2]
+    sudo cp $argv[1] $argv[2]
   end
 end
 
 function install_theme
   set theme $argv[1]
   set theme_dir ./themes/$theme
-  set config_dir $argv[2]
-  set -q config_dir; set config_dir ~/.config
+  set config_dir $argv[2]; or set config_dir ~/.config
+  set -q config_dir
   mkdir -p ~/.config/wallpapers
 
   # Copy theme files to their locations
@@ -35,9 +35,11 @@ function install_theme
   check_then_copy $theme_dir/qutebrowser $config_dir/qutebrowser/theme.py
   check_then_copy $theme_dir/river $config_dir/river/theme
   chmod +x $config_dir/river/theme
-  sudo check_then_copy $theme_dir/sugar-candy /usr/share/sddm/themes/sugar-candy/theme.conf
+  check_then_copy $theme_dir/rofi $config_dir/rofi/theme.rasi
+  check_then_copy $theme_dir/sugar-candy /usr/share/sddm/themes/sugar-candy/theme.conf
   check_then_copy $theme_dir/sway $config_dir/sway/theme
   check_then_copy $theme_dir/swaylock $config_dir/swaylock/config 
+  check_then_copy $theme_dir/waybar $config_dir/waybar/theme.css
   check_then_copy $theme_dir/zathura $config_dir/zathura/theme
 end
 
@@ -45,5 +47,5 @@ switch $argv[1]
   case "list"
     list_themes
   case "*"
-    install_theme $argv[2]
+    install_theme $argv[1] $argv[2]
 end

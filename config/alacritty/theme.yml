@@ -1,55 +1,55 @@
-# Nightwing for Alacritty
+# Batwing for Alacritty
 # ~/.config/alacritty/theme.yml
 colors:
   primary:
-    background: '#14161f'
-    foreground: '#c1c6d7'
-    dim_foreground: '#b1b7cd'
-    bright_foreground: '#e0e2eb'
+    background: '#1a1e22'
+    foreground: '#c5ccd3'
+    dim_foreground: '#b7bfc8'
+    bright_foreground: '#e2e6e9'
   cursor:
-    text: '#14161f'
-    cursor: '#73cfdd'
+    text: '#1a1e22'
+    cursor: '#5ed6bc'
   vi_mode_cursor:
-    text: '#14161f'
-    cursor: '#73cfdd'
+    text: '#1a1e22'
+    cursor: '#5ed6bc'
   search:
     matches:
-      foreground: '#282d3e'
-      background: '#a293ff'
+      foreground: '#374048'
+      background: '#aea7fd'
     focused_match:
-      foreground: '#a293ff'
-      background: '#282d3e'
+      foreground: '#aea7fd'
+      background: '#374048'
     bar:
-      foreground: '#282d3e'
-      background: '#a293ff'
+      foreground: '#374048'
+      background: '#aea7fd'
   hints:
     start:
-      foreground: '#282d3e'
+      foreground: '#374048'
       background: '#e8ce9b'
     end:
       foreground: '#e8ce9b'
-      background: '#282d3e'
+      background: '#374048'
   line_indicator:
     foreground: None
     background: None
   selection:
-    text: '#c1c6d7'
-    background: '#3c435d'
+    text: '#c5ccd3'
+    background: '#434d56'
   normal:
-    black: '#464e6d'
-    red: '#f4676a'
+    black: '#647482'
+    red: '#df8284'
     green: '#93c68c'
     yellow: '#e8ce9b'
-    blue: '#88a2ff'
+    blue: '#76a8f9'
     magenta: '#e397bb'
-    cyan: '#73cfdd'
-    white: '#c1c6d7'
+    cyan: '#83dde8'
+    white: '#c5ccd3'
   bright:
-    black: '#464e6d'
-    red: '#f4676a'
+    black: '#647482'
+    red: '#df8284'
     green: '#93c68c'
     yellow: '#e8ce9b'
-    blue: '#88a2ff'
+    blue: '#76a8f9'
     magenta: '#e397bb'
-    cyan: '#73cfdd'
-    white: '#c1c6d7'
+    cyan: '#83dde8'
+    white: '#c5ccd3'

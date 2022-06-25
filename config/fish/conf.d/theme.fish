@@ -1,20 +1,20 @@
-# Nightwing colorscheme for Fish
+# Batwing colorscheme for Fish
 # ~/.config/fish/conf.d/theme.fish
 
 # --> special
-set -l fg c1c6d7
-set -l sel 3c435d
+set -l fg c5ccd3
+set -l sel 434d56
 
 # --> palette
-set -l red f4676a
+set -l red df8284
 set -l green 93c68c
 set -l yellow e8ce9b
 set -l orange f4a582
-set -l blue 88a2ff
+set -l blue 76a8f9
 set -l magenta e397bb
-set -l purple a293ff
-set -l cyan 73cfdd
-set -l gray 5a648c
+set -l purple aea7fd
+set -l cyan 83dde8
+set -l gray 7d8c9b
 
 # Syntax Highlighting
 set -g fish_color_normal $fg
