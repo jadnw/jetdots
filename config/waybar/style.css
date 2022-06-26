@@ -5,6 +5,7 @@
 }
 
 window#waybar {
+  border: 1px solid @bg1;
   border-radius: 6px;
   background-color: @bg0;
 }
