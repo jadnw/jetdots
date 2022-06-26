@@ -67,6 +67,7 @@ paru -S --noconfirm --needed \
   sddm-sugar-candy-git \
   stylua \
   tree \
+  ttf-roboto \
   unzip \
   vscode \
   xdg-utils \
@@ -94,7 +95,7 @@ mkdir -p ~/.local/share/{themes,fonts}
 git clone https://github.com/jadnw/iosevka-custom.git
 rsync iosevka-custom/patched/* ~/.local/share/fonts/
 rm -rf iosevka-custom
-sudo rsync --recursive ./fonts/system /usr/share/fonts/
+sudo rsync ./fonts/* ~/.local/share/fonts/
 fc-cache -r
 echo "Copy fonts to ~/.local/share/fonts & /usr/share/fonts ... DONE"
 
