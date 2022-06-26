@@ -2,26 +2,26 @@
 
  /* ~/.config/waybar/colors.css */
 
-@define-color accent #5ed6bc;
-@define-color bg0 #080a0b;
-@define-color bg1 #1a1e22;
-@define-color bg2 #2c333a;
-@define-color bg3 #374048;
-@define-color bg4 #434d56;
+@define-color accent #40caac;
+@define-color bg0 #121418;
+@define-color bg1 #1f2228;
+@define-color bg2 #2a2e36;
+@define-color bg3 #363b45;
+@define-color bg4 #414754;
 
-@define-color fg0 #e2e6e9;
-@define-color fg1 #c5ccd3;
-@define-color fg2 #b7bfc8;
-@define-color fg3 #a9b3bc;
-@define-color black #647482;
+@define-color fg0 #cdd1d8;
+@define-color fg1 #b4bac5;
+@define-color fg2 #a8aebb;
+@define-color fg3 #9ca3b2;
+@define-color black #626b7e;
 @define-color red #df8284;
 @define-color orange #f4a582;
 @define-color yellow #e8ce9b;
 @define-color green #93c68c;
-@define-color teal #5ed6bc;
-@define-color cyan #83dde8;
-@define-color blue #76a8f9;
+@define-color teal #40caac;
+@define-color cyan #7be0ec;
+@define-color blue #75a8f9;
 @define-color magenta #e397bb;
-@define-color purple #aea7fd;
-@define-color white #c5ccd3;
-@define-color gray #7d8c9b;
+@define-color purple #9d95f2;
+@define-color white #b4bac5;
+@define-color gray #768195;
