@@ -93,7 +93,7 @@ rm -rf ~/.local/share/{themes,fonts}
 mkdir -p ~/.local/share/{themes,fonts}
 # Fonts
 git clone https://github.com/jadnw/iosevka-custom.git
-rsync iosevka-custom/patched/* ~/.local/share/fonts/
+rsync iosevka-custom/z-shaped/patched/* ~/.local/share/fonts/
 rm -rf iosevka-custom
 sudo rsync ./fonts/* ~/.local/share/fonts/
 fc-cache -r
