@@ -22,7 +22,7 @@ function install_theme
 
   # Copy theme files to their locations
   check_then_copy $theme_dir/alacritty $config_dir/alacritty/theme.yml
-  check_then_copy $theme_dir/betterlockscreen $config_dir/betterlockscreenrc
+  cp $theme_dir/betterlockscreen $config_dir/betterlockscreenrc
   check_then_copy $theme_dir/btop $config_dir/btop/themes/theme.theme
   check_then_copy $theme_dir/bspwm $config_dir/bspwm/theme
   chmod +x $config_dir/bspwm/theme
