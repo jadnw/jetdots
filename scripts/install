@@ -91,10 +91,12 @@ sleep 1
 
 mkdir -p ~/.local/share/{themes,fonts}
 # Fonts
-rsync ./fonts/local/* ~/.local/share/fonts/
-sudo rsync ./fonts/system/* /usr/share/fonts/TTF/
+git clone https://github.com/jadnw/iosevka-custom.git
+rsync iosevka-custom/fonts/ttf/* ~/.local/share/fonts/
+rm -rf iosevka-custom
+sudo rsync --recursive ./fonts/system /usr/share/fonts/
 fc-cache -r
-echo "Copy fonts to ~/.local/share/fonts ... DONE"
+echo "Copy fonts to ~/.local/share/fonts & /usr/share/fonts ... DONE"
 
 sleep 1
 
