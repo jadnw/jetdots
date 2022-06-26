@@ -86,13 +86,13 @@ echo "Enable services ... DONE"
 sudo rsync --recursive ./extras/sddm.conf.d /etc/
 sudo rsync ./config/sddm-sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/
 
-
 sleep 1
 
+rm -rf ~/.local/share/{themes,fonts}
 mkdir -p ~/.local/share/{themes,fonts}
 # Fonts
 git clone https://github.com/jadnw/iosevka-custom.git
-rsync iosevka-custom/fonts/ttf/* ~/.local/share/fonts/
+rsync iosevka-custom/patched/* ~/.local/share/fonts/
 rm -rf iosevka-custom
 sudo rsync --recursive ./fonts/system /usr/share/fonts/
 fc-cache -r
