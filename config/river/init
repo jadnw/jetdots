@@ -172,8 +172,14 @@ for mode in normal locked
     riverctl map $mode None XF86MonBrightnessDown spawn 'light -U 5'
 end
 
-# Follow mouse cursor focus
-riverctl focus-follows-cursor normal
+# Disable mouse focus follow
+riverctl focus-follows-cursor disabled
+
+# Hide cursor when typing
+riverctl hide-cursor when-typing enabled
+
+# Hide cursor timeout
+riverctl hide-cursor timeout 5000
 
 # Colorscheme
 riverctl spawn "$HOME/.config/river/theme"
@@ -194,8 +200,15 @@ riverctl spawn "swayidle -w timeout 300 'swaylock -f' before-sleep 'swaylock -f'
 riverctl spawn "$HOME/.config/waybar/launch-river"
 
 # Make certain views start floating
-riverctl float-filter-add app-id "float"
-riverctl float-filter-add title "popup title with spaces"
+riverctl float-filter-add app-id "floating_shell_portrait"
+riverctl float-filter-add app-id "imv"
+riverctl float-filter-add app-id "nm-connection-editor"
+riverctl float-filter-add app-id "pavucontrol"
+
+riverctl float-filter-add title "btop"
+riverctl float-filter-add title "File Operation Progress"
+riverctl float-filter-add title "Picture in picture"
+riverctl float-filter-add title "Save File"
 
 # Set app-ids and titles of views which should use client side decorations
 riverctl csd-filter-add app-id "gedit"
