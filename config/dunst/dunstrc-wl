@@ -311,7 +311,7 @@
     [urgency_normal]
     background = "#121418"
     foreground = "#b4bac5"
-    frame_color = "#40caac"
+    frame_color = "#60d8a9"
     timeout = 10
 # Icon for notifications with normal urgency, uncomment to enable
     default_icon = ~/.config/dunst/icons/notification.svg

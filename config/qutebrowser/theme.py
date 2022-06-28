@@ -2,7 +2,7 @@
 # ~/.config/qutebrowser/theme.py
 
 colors = {
-    'accent': '#40caac',
+    'accent': '#60d8a9',
     'bg0': '#121418',
     'bg1': '#1f2228',
     'bg2': '#2a2e36',
@@ -17,8 +17,8 @@ colors = {
     'orange': '#f4a582',
     'yellow': '#e8ce9b',
     'green': '#93c68c',
-    'teal': '#40caac',
-    'cyan': '#7be0ec',
+    'teal': '#60d8a9',
+    'cyan': '#67c2cc',
     'blue': '#75a8f9',
     'magenta': '#e397bb',
     'purple': '#9d95f2',

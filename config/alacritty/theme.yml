@@ -8,10 +8,10 @@ colors:
     bright_foreground: '#cdd1d8'
   cursor:
     text: '#1f2228'
-    cursor: '#40caac'
+    cursor: '#60d8a9'
   vi_mode_cursor:
     text: '#1f2228'
-    cursor: '#40caac'
+    cursor: '#60d8a9'
   search:
     matches:
       foreground: '#363b45'
@@ -42,7 +42,7 @@ colors:
     yellow: '#e8ce9b'
     blue: '#75a8f9'
     magenta: '#e397bb'
-    cyan: '#7be0ec'
+    cyan: '#67c2cc'
     white: '#b4bac5'
   bright:
     black: '#626b7e'
@@ -51,5 +51,5 @@ colors:
     yellow: '#e8ce9b'
     blue: '#75a8f9'
     magenta: '#e397bb'
-    cyan: '#7be0ec'
+    cyan: '#67c2cc'
     white: '#b4bac5'

@@ -2,7 +2,7 @@
 
  /* ~/.config/waybar/colors.css */
 
-@define-color accent #40caac;
+@define-color accent #60d8a9;
 @define-color bg0 #121418;
 @define-color bg1 #1f2228;
 @define-color bg2 #2a2e36;
@@ -18,8 +18,8 @@
 @define-color orange #f4a582;
 @define-color yellow #e8ce9b;
 @define-color green #93c68c;
-@define-color teal #40caac;
-@define-color cyan #7be0ec;
+@define-color teal #60d8a9;
+@define-color cyan #67c2cc;
 @define-color blue #75a8f9;
 @define-color magenta #e397bb;
 @define-color purple #9d95f2;

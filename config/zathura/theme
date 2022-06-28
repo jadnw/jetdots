@@ -6,7 +6,7 @@ set completion-fg "#b4bac5"
 set completion-highlight-bg "#414754"
 set completion-highlight-fg "#b4bac5"
 set completion-group-bg "#1f2228"
-set completion-group-fg "#40caac"
+set completion-group-fg "#60d8a9"
 
 set statusbar-fg "#b4bac5"
 set statusbar-bg "#1f2228"
@@ -33,6 +33,6 @@ set render-loading-bg "#121418"
 set render-loading-fg "#b4bac5"
 
 set highlight-color "#414754"
-set highlight-fg "#40caac"
-set highlight-active-color "#40caac"
+set highlight-fg "#60d8a9"
+set highlight-active-color "#60d8a9"
     
