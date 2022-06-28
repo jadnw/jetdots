@@ -35,7 +35,6 @@ paru -S --noconfirm --needed \
   breeze-snow-cursor-theme \
   chromium \
   curl \
-  delve \
   docker \
   docker-compose \
   docker-machine \
@@ -67,7 +66,6 @@ paru -S --noconfirm --needed \
   sddm-sugar-candy-git \
   stylua \
   tree \
-  ttf-roboto \
   unzip \
   vscode \
   xdg-utils \
@@ -95,7 +93,8 @@ mkdir -p ~/.local/share/{themes,fonts}
 git clone https://github.com/jadnw/iosevka.git
 rsync iosevka/patched/* ~/.local/share/fonts/
 rm -rf iosevka
-sudo rsync ./fonts/* ~/.local/share/fonts/
+rsync ./fonts/local/* ~/.local/share/fonts/
+sudo rsync --recursive ./fonts/system/* /usr/share/fonts/
 fc-cache -r
 echo "Copy fonts to ~/.local/share/fonts & /usr/share/fonts ... DONE"
 
