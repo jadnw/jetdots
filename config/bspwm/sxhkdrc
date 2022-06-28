@@ -12,15 +12,15 @@ super + Return
 	alacritty
 
 # Web browser
-super + b
+super + shift + b
   qutebrowser
 
 # Firefox DE
-super + f
+super + shift + f
   firefox-developer-edition
 
 # Chromium
-super + w
+super + shift + w
   chromium --no-default-browser-check
 
 # Power menu
@@ -76,7 +76,7 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,space,shift + f}
+super + {t,shift + t,space,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
