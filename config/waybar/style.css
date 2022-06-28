@@ -6,14 +6,14 @@
 
 window#waybar {
   border: 1px solid @bg1;
-  border-radius: 6px;
+  border-radius: 4px;
   background-color: @bg0;
 }
 
 tooltip {
   font-family: "Iosevka Nerd Font";
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 1px solid @bg4;
   background-color: @bg0;
 }
@@ -229,7 +229,7 @@ tooltip label {
 /* Power Menu */
 .power,
 .power-active {
-  border-radius: 0px 6px 6px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .power {

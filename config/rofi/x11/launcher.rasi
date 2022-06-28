@@ -27,7 +27,7 @@ window {
   text-color:                     @gray;
   border:                         1px;
   border-color:                   @accent;
-  border-radius:                  10px;
+  border-radius:                  4px;
   width:                          800px;
   location:                       southeast;
   x-offset:                       -5;
@@ -39,7 +39,7 @@ prompt {
   padding:                        1% 0.75% 1% 0.75%;
   background-color:               @accent;
   text-color:                     @bg1;
-  border-radius:                  10px;
+  border-radius:                  4px;
   font:                           "Iosevka Nerd Font Semibold 11";
 }
 
@@ -68,7 +68,7 @@ inputbar {
   text-color:                     @gray;
   expand:                         false;
   border:                         0% 0% 0% 0%;
-  border-radius:                  10px;
+  border-radius:                  4px;
   border-color:                   @accent;
 }
 
@@ -97,7 +97,7 @@ element {
   background-color:               @bg1;
   text-color:                     @gray;
   orientation:                    horizontal;
-  border-radius:                  12px;
+  border-radius:                  4px;
   padding:                        10px 20px;
 }
 
@@ -123,6 +123,6 @@ element selected {
   background-color:               @accent;
   text-color:                     @bg0;
   border:                         0% 0.3% 0% 0.3%;
-  border-radius:                  12px;
+  border-radius:                  4px;
   border-color:                   @accent;
 }

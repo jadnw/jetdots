@@ -25,7 +25,7 @@ configuration {
 
 window {
   transparency:                   "real";
-  border-radius:                  8px;
+  border-radius:                  4px;
   border:                         1px;
   border-color:                   @bg2;
   location:                       southeast;
@@ -40,7 +40,7 @@ prompt {
   background-color:               @bg1;
   text-color:                     @cyan;
   border:                         0px 2px 0px 2px;
-  border-radius:                  10px;
+  border-radius:                  4px;
   border-color:                   @cyan;
 }
 
@@ -50,7 +50,7 @@ textbox-prompt-colon {
   background-color:               @cyan;
   text-color:                     @bg0;
   padding:                        10px;
-  border-radius:                  10px;
+  border-radius:                  4px;
 }
 
 inputbar {
@@ -87,7 +87,7 @@ element {
   background-color:               @bg1;
   text-color:                     @gray;
   orientation:                    vertical;
-  border-radius:                  12px;
+  border-radius:                  4px;
 }
 
 element-text {
@@ -103,7 +103,7 @@ element-text {
 element normal.urgent,
 element alternate.urgent {
   text-color:                     @bg0;
-  border-radius:                  12px;
+  border-radius:                  4px;
 }
 
 element normal.active,
@@ -116,6 +116,6 @@ element selected {
   background-color:               @cyan;
   text-color:                     @bg0;
   border:                         0px 2px 0px 2px;
-  border-radius:                  12px;
+  border-radius:                  4px;
   border-color:                   @cyan;
 }
