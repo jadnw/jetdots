@@ -3,16 +3,16 @@
  /* ~/.config/waybar/colors.css */
 
 @define-color accent #60d8a9;
-@define-color bg0 #121418;
-@define-color bg1 #1f2228;
-@define-color bg2 #2a2e36;
-@define-color bg3 #363b45;
+@define-color bg0 #121317;
+@define-color bg1 #21242b;
+@define-color bg2 #2c3039;
+@define-color bg3 #373c48;
 @define-color bg4 #414754;
 
-@define-color fg0 #cdd1d8;
-@define-color fg1 #b4bac5;
-@define-color fg2 #a8aebb;
-@define-color fg3 #9ca3b2;
+@define-color fg0 #dadce2;
+@define-color fg1 #c1c5cf;
+@define-color fg2 #b5bac6;
+@define-color fg3 #a9afbd;
 @define-color black #626b7e;
 @define-color red #df8284;
 @define-color orange #f4a582;
@@ -23,5 +23,5 @@
 @define-color blue #75a8f9;
 @define-color magenta #e397bb;
 @define-color purple #9d95f2;
-@define-color white #b4bac5;
+@define-color white #c1c5cf;
 @define-color gray #768195;

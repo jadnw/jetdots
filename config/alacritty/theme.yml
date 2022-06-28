@@ -2,38 +2,38 @@
 # ~/.config/alacritty/theme.yml
 colors:
   primary:
-    background: '#1f2228'
-    foreground: '#b4bac5'
-    dim_foreground: '#a8aebb'
-    bright_foreground: '#cdd1d8'
+    background: '#21242b'
+    foreground: '#c1c5cf'
+    dim_foreground: '#b5bac6'
+    bright_foreground: '#dadce2'
   cursor:
-    text: '#1f2228'
+    text: '#21242b'
     cursor: '#60d8a9'
   vi_mode_cursor:
-    text: '#1f2228'
+    text: '#21242b'
     cursor: '#60d8a9'
   search:
     matches:
-      foreground: '#363b45'
+      foreground: '#373c48'
       background: '#9d95f2'
     focused_match:
       foreground: '#9d95f2'
-      background: '#363b45'
+      background: '#373c48'
     bar:
-      foreground: '#363b45'
+      foreground: '#373c48'
       background: '#9d95f2'
   hints:
     start:
-      foreground: '#363b45'
+      foreground: '#373c48'
       background: '#e8ce9b'
     end:
       foreground: '#e8ce9b'
-      background: '#363b45'
+      background: '#373c48'
   line_indicator:
     foreground: None
     background: None
   selection:
-    text: '#b4bac5'
+    text: '#c1c5cf'
     background: '#414754'
   normal:
     black: '#626b7e'
@@ -43,7 +43,7 @@ colors:
     blue: '#75a8f9'
     magenta: '#e397bb'
     cyan: '#67c2cc'
-    white: '#b4bac5'
+    white: '#c1c5cf'
   bright:
     black: '#626b7e'
     red: '#df8284'
@@ -52,4 +52,4 @@ colors:
     blue: '#75a8f9'
     magenta: '#e397bb'
     cyan: '#67c2cc'
-    white: '#b4bac5'
+    white: '#c1c5cf'

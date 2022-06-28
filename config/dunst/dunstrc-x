@@ -301,24 +301,24 @@
     [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2a2e36"
-    foreground = "#b4bac5"
+    background = "#2c3039"
+    foreground = "#c1c5cf"
     frame_color = "#414754"
     timeout = 10
 # Icon for notifications with low urgency, uncomment to enable
     default_icon = ~/.config/dunst/icons/notification.svg
 
     [urgency_normal]
-    background = "#121418"
-    foreground = "#b4bac5"
+    background = "#121317"
+    foreground = "#c1c5cf"
     frame_color = "#60d8a9"
     timeout = 10
 # Icon for notifications with normal urgency, uncomment to enable
     default_icon = ~/.config/dunst/icons/notification.svg
 
     [urgency_critical]
-    background = "#121418"
-    foreground = "#b4bac5"
+    background = "#121317"
+    foreground = "#c1c5cf"
     frame_color = "#df8284"
     timeout = 0
 # Icon for notifications with critical urgency, uncomment to enable

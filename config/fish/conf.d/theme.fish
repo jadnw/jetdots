@@ -2,7 +2,7 @@
 # ~/.config/fish/conf.d/theme.fish
 
 # --> special
-set -l fg b4bac5
+set -l fg c1c5cf
 set -l sel 414754
 
 # --> palette

@@ -4,15 +4,15 @@
 * {
   none:     #00000000;
   accent:   #60d8a9;
-  bg0:      #121418;
-  bg1:      #1f2228;
-  bg2:      #2a2e36;
-  bg3:      #363b45;
+  bg0:      #121317;
+  bg1:      #21242b;
+  bg2:      #2c3039;
+  bg3:      #373c48;
   bg4:      #414754;
-  fg0:      #cdd1d8;
-  fg1:      #b4bac5;
-  fg2:      #a8aebb;
-  fg3:      #9ca3b2;
+  fg0:      #dadce2;
+  fg1:      #c1c5cf;
+  fg2:      #b5bac6;
+  fg3:      #a9afbd;
   black:    #626b7e;
   red:      #df8284;
   orange:   #f4a582;
@@ -23,7 +23,7 @@
   blue:     #75a8f9;
   magenta:  #e397bb;
   purple:   #9d95f2;
-  white:    #b4bac5;
+  white:    #c1c5cf;
   gray:     #768195;
 }
     
