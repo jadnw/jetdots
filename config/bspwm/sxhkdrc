@@ -15,13 +15,9 @@ super + Return
 super + shift + b
   qutebrowser
 
-# Firefox DE
-super + shift + f
-  firefox-developer-edition
-
 # Chromium
 super + shift + w
-  chromium --no-default-browser-check
+  brave --no-default-browser-check
 
 # Power menu
 super + shift + q

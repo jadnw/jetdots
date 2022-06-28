@@ -64,8 +64,9 @@ set $right l
 # Programs
 set $term foot
 set $browser qutebrowser
-set $firefox MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
-set $chromium chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check
+# set $firefox MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
+# set $chromium chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check
+set $brave brave --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check
 set $launcher $HOME/.config/waybar/scripts/launcher toggle
 set $powermenu $HOME/.config/waybar/scripts/power toggle
 set $waybartoggle $HOME/.config/sway/scripts/waybar-toggle
@@ -126,11 +127,8 @@ input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
     # Start web browser
     bindsym $mod+Shift+b exec $browser
 
-    # Start Firefox DE
-    bindsym $mod+Shift+f exec $firefox
-
-    # Start Chromium
-    bindsym $mod+Shift+w exec $chromium
+    # Start Brave
+    bindsym $mod+Shift+w exec $brave
 
     # Open Launcher
     bindsym $mod+o exec $launcher
