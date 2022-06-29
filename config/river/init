@@ -28,16 +28,16 @@ set waybartoggle "$HOME/.config/river/scripts/waybar-toggle"
 set screenshot "$HOME/.config/river/scripts/screenshot"
 
 # Super+Shift+Return to start an instance of term
-riverctl map normal Super+Shift Return spawn $term
+riverctl map normal Super Return spawn $term
 
 # Super+Shift+B to start an instance of web browser
-riverctl map normal Super+Shift B spawn $browser
+riverctl map normal Super B spawn $browser
 
 # Super+Shift+F to start Firefox DE
-riverctl map normal Super+Shift F spawn $firefox
+riverctl map normal Super F spawn $firefox
 
 # Super+Shift+W to start Chromium
-riverctl map normal Super+Shift W spawn $chromium
+riverctl map normal Super W spawn $chromium
 
 # Super+Shift+X to toggle waybar
 riverctl map normal Super+Shift X spawn $waybartoggle
@@ -72,7 +72,7 @@ riverctl map normal Super+Shift Period send-to-output next
 riverctl map normal Super+Shift Comma send-to-output previous
 
 # Super+Return to bump the focused view to the top of the layout stack
-riverctl map normal Super Return zoom
+riverctl map normal Super+Shift Return zoom
 
 # Super+H and Super+L to decrease/increase the main ratio of rivertile(1)
 riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
@@ -132,7 +132,7 @@ riverctl map normal Super+Shift 0 set-view-tags $all_tags
 riverctl map normal Super Space toggle-float
 
 # Super+F to toggle fullscreen
-riverctl map normal Super F toggle-fullscreen
+riverctl map normal Super+Shift F toggle-fullscreen
 
 # Super+{Up,Right,Down,Left} to change layout orientation
 riverctl map normal Super Up    send-layout-cmd rivertile "main-location top"

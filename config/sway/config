@@ -121,16 +121,16 @@ input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Shift+Return exec $term
+    bindsym $mod+Return exec $term
 
     # Start web browser
-    bindsym $mod+Shift+b exec $browser
+    bindsym $mod+b exec $browser
 
     # Start Firefox DE
-    bindsym $mod+Shift+f exec $firefox
+    bindsym $mod+f exec $firefox
 
     # Start Chromium
-    bindsym $mod+Shift+w exec $chromium
+    bindsym $mod+w exec $chromium
 
     # Open Launcher
     bindsym $mod+o exec $launcher
@@ -179,8 +179,8 @@ input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
     bindsym $mod+alt+$right resize grow width 10px
 
     # Split horizontal, vertical
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+Shift+b splith
+    bindsym $mod+Shift+v splitv
 
 #
 # Workspaces:
@@ -204,12 +204,12 @@ input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
 # Layout stuff:
 #
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+Shift+s layout stacking
+    bindsym $mod+Shift+w layout tabbed
+    bindsym $mod+Shift+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod+Shift+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+space floating toggle
@@ -218,7 +218,7 @@ input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
     bindsym $mod+Shift+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym $mod+Shift+a focus parent
 #
 # Scratchpad:
 #
