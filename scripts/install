@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/usr/bin/sudo fish
 
 sudo pacman -S --noconfirm --needed base-devel git fish rustup
 
