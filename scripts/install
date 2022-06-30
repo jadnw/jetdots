@@ -189,6 +189,7 @@ function install_hyprland
   # Needed packages for Wayland (River)
   paru -S --noconfirm --needed \
     foot \
+    firefox-developer-edition \
     glfw-wayland \
     grim \
     imagemagick \
@@ -249,7 +250,7 @@ end
 
 # Choose a tiling windows manager
 # You can completely install another WM by run this script again
-echo -e "Choose your tiling windows manager that you want to install?\n\t1 - RiverWM (Wayland)\n\t2 - SwayWM (Wayland)\n\t3 - BSPWM (X11)\n\t4 - RiverWM (Wayland) & BSPWM (X11)\n\t5 - SwayWM (Wayland) & BSPWM (X11)\n\t6 - RiverWM, SwayWM (Wayland) & BSPWM (X11)"
+echo -e "Choose your tiling windows manager that you want to install?\n\t1 - RiverWM (Wayland)\n\t2 - SwayWM (Wayland)\n\t3 - HyprlandWM (Wayland)\n\t4 - BSPWM (X11)\n\t5 - RiverWM (Wayland) & BSPWM (X11)\n\t6 - SwayWM (Wayland) & BSPWM (X11)\n\t7 - Hyprland (Wayland) & BSPWM (X11)"
 read -l -P "Your option? (default=1): " wm
 echo "Install tiling window managers ..."
 
