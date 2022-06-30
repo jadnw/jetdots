@@ -7,7 +7,7 @@
 # Use "start", "mid" and "end" for three color gradient
 
 # Main background, empty for terminal default, need to be empty if you want transparent background
-theme[main_bg]="#2d353e"
+theme[main_bg]="#1f242a"
 
 # Main text color
 theme[main_fg]="#ccd3da"

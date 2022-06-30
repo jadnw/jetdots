@@ -11,7 +11,7 @@ def gen_template(theme):
 # Use "start", "mid" and "end" for three color gradient
 
 # Main background, empty for terminal default, need to be empty if you want transparent background
-theme[main_bg]="{pal["bg2"]}"
+theme[main_bg]="{pal["bg1"]}"
 
 # Main text color
 theme[main_fg]="{pal["fg1"]}"
