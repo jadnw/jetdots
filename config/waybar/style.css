@@ -114,8 +114,8 @@ tooltip label {
   padding-top: 2px;
   border-radius: 4px;
   font-family: "Iosevka Custom";
-  font-size: 16px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 700;
   color: @fg0;
 }
 
