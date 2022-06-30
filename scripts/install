@@ -119,9 +119,9 @@ echo "[DONE] Config files copied."
 
 # Install GTK themes
 echo "Downloading & copying Manhattan GTK themes"
-git clone https://github.com/jadnw/manhattan-gtk.git
-cp -R manhattan-gtk/themes/* ~/.local/share/themes/
-rm -rf manhattan-gtk
+git clone https://github.com/jadnw/manhattan.gtk.git
+cp -R manhattan.gtk/themes/* ~/.local/share/themes/
+rm -rf manhattan.gtk
 echo "[DONE] GTK themes copied."
 
 sleep 1
