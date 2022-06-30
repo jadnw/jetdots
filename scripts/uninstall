@@ -5,8 +5,6 @@ set installed_wms (cat ~/.config/jetdots.txt)
 # Remove common packages
 paru -R \
   alacritty \
-  sddm \
-  sddm-sugar-candy-git \
   btop \
   dunst \
   fnm-bin \
@@ -57,8 +55,24 @@ if contains swaywm $installed_wms
     wl-clipboard
 end
 
+if contains hyprlandwm $installed_wms
+  paru -R --noconfirm \
+    glfw-wayland \
+    grim \
+    imagemagick \
+    imv \
+    slurp \
+    swaybg \
+    swaylock-effects-git \
+    waybar-experimental-git \
+    wf-recorder \
+    wlr-randr \
+    wlsunset \
+    wl-clipboard
+end
+
 # Remove configs and other relational files
 rm -rf ~/{.config,Pictures/screenshots,Videos/recordings,.local/share/fonts,.local/share/themes,.fehbg}
 
 # Disable SDDM login manager
-sudo systemctl disable sddm.service
+# sudo systemctl disable sddm.service

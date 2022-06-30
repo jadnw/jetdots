@@ -17,7 +17,7 @@ else
   echo "Installing paru ..."
   git clone https://aur.archlinux.org/paru.git
   pushd paru
-  makepkg -si
+  makepkg -si --noconfirm
   popd
   rm -rf paru
   echo "[DONE] Paru installed."
@@ -154,7 +154,7 @@ function install_river
     wlsunset \
     wl-clipboard \
     xorg-xwayland \
-    xorg-xlsclients \
+    xorg-xlsclients
   
   # Copy Wayland configs to $HOME/.config/
   rsync --recursive ./config/{foot,river,imv,swaylock,waybar} ~/.config/
@@ -181,7 +181,7 @@ function install_sway
     wlsunset \
     wl-clipboard \
     xorg-xwayland \
-    xorg-xlsclients \
+    xorg-xlsclients
   
   # Copy Wayland configs to $HOME/.config/
   rsync --recursive ./config/{foot,imv,sway,swaylock,waybar} ~/.config/
@@ -209,7 +209,7 @@ function install_hyprland
     wlsunset \
     wl-clipboard \
     xorg-xwayland \
-    xorg-xlsclients \
+    xorg-xlsclients
   
   # Copy executables
   curl -LO https://github.com/hyprwm/Hyprland/releases/download/v0.6.2beta/v0.6.2beta.tar.gz 
@@ -241,7 +241,7 @@ function install_bspwm
     xorg-xrandr \
     xorg-xsetroot \
     xcolor \
-    sxhkd \
+    sxhkd
    
   # Copy X11 configurations to $HOME/.config/
   rsync --recursive ./config/{alacritty,bspwm,picom,polybar,betterlockscreenrc} ~/.config/
