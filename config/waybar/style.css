@@ -99,15 +99,13 @@ tooltip label {
 }
 
 #cpu {
-  border-left: 1px solid @bg2;
-  background-color: @green;
-  color: @bg1;
+  background-color: @bg1;
+  color: @green;
 }
 
 #memory {
-  border-right: 1px solid @bg2;
-  background-color: @red;
-  color: @bg1;
+  background-color: @bg1;
+  color: @red;
 }
 
 /* Clock */
@@ -123,7 +121,7 @@ tooltip label {
 
 /* Idle Inhibitor */
 #idle_inhibitor {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @cyan;
 }
 
@@ -137,7 +135,7 @@ tooltip label {
 #network.linked,
 #network.ethernet,
 #network.wifi {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @magenta;
 }
 
@@ -149,7 +147,7 @@ tooltip label {
 
 /* Pulseaudio */
 #pulseaudio {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @teal;
 }
 
@@ -186,7 +184,7 @@ tooltip label {
 
 /* Idle Inhibitor (River)*/
 .custom_idle_inhibitor {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @cyan;
 }
 
@@ -197,7 +195,7 @@ tooltip label {
 
 /* Nightlight */
 .nightlight {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @purple;
 }
 
@@ -208,12 +206,12 @@ tooltip label {
 
 /* Notifications */
 .notification {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @yellow;
 }
 
 .none {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @orange;
 }
 
@@ -228,7 +226,7 @@ tooltip label {
 }
 
 .power {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @red;
 }
 
@@ -239,7 +237,7 @@ tooltip label {
 
 /* Recorder */
 .recorder {
-  background-color: @bg2;
+  background-color: @bg1;
   color: @magenta;
 }
 
