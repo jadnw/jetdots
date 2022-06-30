@@ -1,29 +1,29 @@
-/* Batwing colorscheme for Rofi */
+/* Manhattan colorscheme for Rofi */
 /* ~/.config/rofi/theme.rasi */
 
 * {
   none:     #00000000;
-  accent:   #60d8a9;
-  bg0:      #121317;
-  bg1:      #21242b;
-  bg2:      #2c3039;
-  bg3:      #373c48;
-  bg4:      #414754;
-  fg0:      #dadce2;
-  fg1:      #c1c5cf;
-  fg2:      #b5bac6;
-  fg3:      #a9afbd;
-  black:    #626b7e;
-  red:      #df8284;
+  accent:   #56c6b2;
+  bg0:      #121519;
+  bg1:      #1f242a;
+  bg2:      #2d353e;
+  bg3:      #3c4652;
+  bg4:      #4b5766;
+  fg0:      #e5e9ec;
+  fg1:      #ccd3da;
+  fg2:      #b3bdc8;
+  fg3:      #a7b3bf;
+  black:    #101215;
+  red:      #f46d7e;
   orange:   #f4a582;
   yellow:   #e8ce9b;
   green:    #93c68c;
-  teal:     #60d8a9;
-  cyan:     #67c2cc;
-  blue:     #75a8f9;
+  teal:     #56c6b2;
+  cyan:     #7ac6db;
+  blue:     #60aafb;
   magenta:  #e397bb;
-  purple:   #9d95f2;
-  white:    #c1c5cf;
-  gray:     #768195;
+  purple:   #b196f0;
+  white:    #e5e9ec;
+  gray:     #617184;
 }
     

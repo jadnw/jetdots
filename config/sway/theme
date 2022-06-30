@@ -1,7 +1,7 @@
 # window decorations
 # class                 border              background          text                indicator           child_border
-client.focused          #60d8a9     #414754        #c1c5cf        #df8284        #60d8a9
-client.focused_inactive #414754        #414754        #c1c5cf        #df8284        #414754
-client.unfocused        #21242b        #21242b        #c1c5cf        #df8284        #21242b
-client.urgent           #df8284        #df8284        #21242b        #df8284        #df8284
+client.focused          #56c6b2     #4b5766        #ccd3da        #f46d7e        #56c6b2
+client.focused_inactive #4b5766        #4b5766        #ccd3da        #f46d7e        #4b5766
+client.unfocused        #1f242a        #1f242a        #ccd3da        #f46d7e        #1f242a
+client.urgent           #f46d7e        #f46d7e        #1f242a        #f46d7e        #f46d7e
     

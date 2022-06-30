@@ -9,6 +9,7 @@ from templates.btop import btop
 from templates.dunst import dunst_wl, dunst_x
 from templates.fish import fish
 from templates.foot import foot
+from templates.hyprland import hyprland
 from templates.imv import imv
 from templates.polybar import polybar
 from templates.qutebrowser import qutebrowser
@@ -20,7 +21,7 @@ from templates.swaylock import swaylock
 from templates.waybar import waybar
 from templates.zathura import zathura
 
-modules = [ alacritty, betterlockscreen, bspwm, btop, dunst_wl, dunst_x, fish, foot, imv, polybar, qutebrowser, river, rofi, sddm_sugar_candy, sway, swaylock, waybar, zathura ]
+modules = [ alacritty, betterlockscreen, bspwm, btop, dunst_wl, dunst_x, fish, foot, hyprland, imv, polybar, qutebrowser, river, rofi, sddm_sugar_candy, sway, swaylock, waybar, zathura ]
 
 def read_theme_from_schema(schema_path):
     f = open(schema_path, "r")
@@ -35,7 +36,7 @@ def write_template(theme, module, dest_path):
         f.close()
 
 def generate(modules):
-    SCHEMA_NAME = "batwing"
+    SCHEMA_NAME = "manhattan"
     SCHEMA_PATH = path.abspath("theme-generator/schemas/" + SCHEMA_NAME + ".json")
     theme = read_theme_from_schema(SCHEMA_PATH)
     GEN_DIRNAME = "themes/" + theme["name"].lower()

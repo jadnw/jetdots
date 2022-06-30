@@ -40,7 +40,7 @@ colors:
     text: '{pal["fg1"]}'
     background: '{pal["bg4"]}'
   normal:
-    black: '{pal["black"]}'
+    black: '{pal["gray"]}'
     red: '{pal["red"]}'
     green: '{pal["green"]}'
     yellow: '{pal["yellow"]}'
@@ -49,7 +49,7 @@ colors:
     cyan: '{pal["cyan"]}'
     white: '{pal["white"]}'
   bright:
-    black: '{pal["black"]}'
+    black: '{pal["gray"]}'
     red: '{pal["red"]}'
     green: '{pal["green"]}'
     yellow: '{pal["yellow"]}'

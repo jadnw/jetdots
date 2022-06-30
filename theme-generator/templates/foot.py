@@ -19,7 +19,7 @@ foreground={pal["fg1"]}
 background={pal["bg1"]}
 
 # Normal/regular colors (color palette 0-7)
-regular0={pal["black"]}  # black
+regular0={pal["gray"]}  # black
 regular1={pal["red"]}  # red
 regular2={pal["green"]}  # green
 regular3={pal["yellow"]}  # yellow
@@ -29,7 +29,7 @@ regular6={pal["cyan"]}  # cyan
 regular7={pal["white"]}  # white
 
 # Bright colors (color palette 8-15)
-bright0={pal["black"]}  # black
+bright0={pal["gray"]}  # black
 bright1={pal["red"]}  # red
 bright2={pal["green"]}  # green
 bright3={pal["yellow"]}  # yellow

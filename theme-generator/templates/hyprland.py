@@ -1,4 +1,9 @@
-# VARIABLES
+from classes.module import Module
+from lib.util import remove_hash_from_pal
+
+def gen_template(theme):
+    pal = remove_hash_from_pal(theme["palette"])
+    template = f"""# VARIABLES
 $term=foot
 $browser=qutebrowser
 $devbrowser=MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
@@ -13,7 +18,7 @@ $powermenu=$HOME/.config/waybar/scripts/power-hyprland toggle
 monitor=HDMI-A-1,1920x1080@60,0x0,1
 workspace=HDMI-A-1,1
 
-input {
+input {{
   kb_layout=us
   kb_variant=
   kb_model=
@@ -22,21 +27,21 @@ input {
   follow_mouse=0
   repeat_delay=450
   repeat_rate=60
-}
+}}
 
-general {
+general {{
   sensitivity=1.0 # for mouse cursor
   main_mod=SUPER
   gaps_in=3
   gaps_out=5
   border_size=2
-  col.active_border=0xff56c6b2
-  col.inactive_border=0xff3c4652
+  col.active_border=0xff{pal["accent"]}
+  col.inactive_border=0xff{pal["bg3"]}
   apply_sens_to_raw=0 # whether to apply the sensitivity to raw input (e.g. used by games where you aim using your mouse)
   damage_tracking=full # leave it on full unless you hate your GPU and want to make it suffer
-}
+}}
 
-decoration {
+decoration {{
   rounding=1
   blur=0
   blur_size=8 # minimum 1
@@ -44,19 +49,19 @@ decoration {
   # Your blur "amount" is blur_size * blur_passes, but high blur_size (over around 5-ish) will produce artifacts.
   # if you want heavy blur, you need to up the blur_passes.
   # the more passes, the more you can up the blur_size without noticing artifacts.
-}
+}}
 
-animations {
+animations {{
   enabled=1
   animation=windows,1,6,default
   animation=borders,1,6,default
   animation=fadein,1,6,default
   animation=workspaces,1,6,default
-}
+}}
 
-dwindle {
+dwindle {{
   pseudotile=0 # enable pseudotiling on dwindle
-}
+}}
 
 # WINDOW RULES
 # for windows named/classed as abc and xyz
@@ -160,4 +165,7 @@ exec-once=swaybg -i ~/.config/wallpapers/wallpaper.jpg
 exec-once=dunst -conf ~/.config/dunst/dunstrc-wl
 exec-once=swayidle -w timeout 300 'swaylock -f' before-sleep 'swaylock -f'
 exec-once=$HOME/.config/waybar/launch-hyprland
-    
+    """
+    return template
+
+hyprland = Module("hyprland", gen_template)

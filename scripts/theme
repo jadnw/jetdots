@@ -31,6 +31,7 @@ function install_theme
   check_then_copy $theme_dir/fish $config_dir/fish/conf.d/theme.fish
   check_then_copy $theme_dir/foot $config_dir/foot/theme.ini
   check_then_copy $theme_dir/imv $config_dir/imv/config
+  check_then_copy $theme_dir/hyprland $config_dir/hypr/hyprland.conf
   check_then_copy $theme_dir/polybar $config_dir/polybar/theme.ini
   check_then_copy $theme_dir/qutebrowser $config_dir/qutebrowser/theme.py
   check_then_copy $theme_dir/river $config_dir/river/theme

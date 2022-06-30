@@ -1,0 +1,27 @@
+{
+  "name": "Manhattan",
+  "palette": {
+    "bg0": "#121519",
+    "bg1": "#1f242a",
+    "bg2": "#2d353e",
+    "bg3": "#3c4652",
+    "bg4": "#4b5766",
+    "fg0": "#e5e9ec",
+    "fg1": "#ccd3da",
+    "fg2": "#b3bdc8",
+    "fg3": "#a7b3bf",
+    "accent": "#56c6b2",
+    "black": "#101215",
+    "white": "#e5e9ec",
+    "red": "#f46d7e",
+    "green": "#93c68c",
+    "blue": "#60aafb",
+    "orange": "#f4a582",
+    "yellow": "#e8ce9b",
+    "cyan": "#7ac6db",
+    "teal": "#56c6b2",
+    "magenta": "#e397bb",
+    "purple": "#b196f0",
+    "gray": "#617184"
+  }
+}

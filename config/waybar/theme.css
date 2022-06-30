@@ -1,27 +1,27 @@
-/* Batwing Colorscheme for GTK CSS */
+/* Manhattan Colorscheme for GTK CSS */
 
  /* ~/.config/waybar/colors.css */
 
-@define-color accent #60d8a9;
-@define-color bg0 #121317;
-@define-color bg1 #21242b;
-@define-color bg2 #2c3039;
-@define-color bg3 #373c48;
-@define-color bg4 #414754;
+@define-color accent #56c6b2;
+@define-color bg0 #121519;
+@define-color bg1 #1f242a;
+@define-color bg2 #2d353e;
+@define-color bg3 #3c4652;
+@define-color bg4 #4b5766;
 
-@define-color fg0 #dadce2;
-@define-color fg1 #c1c5cf;
-@define-color fg2 #b5bac6;
-@define-color fg3 #a9afbd;
-@define-color black #626b7e;
-@define-color red #df8284;
+@define-color fg0 #e5e9ec;
+@define-color fg1 #ccd3da;
+@define-color fg2 #b3bdc8;
+@define-color fg3 #a7b3bf;
+@define-color black #101215;
+@define-color red #f46d7e;
 @define-color orange #f4a582;
 @define-color yellow #e8ce9b;
 @define-color green #93c68c;
-@define-color teal #60d8a9;
-@define-color cyan #67c2cc;
-@define-color blue #75a8f9;
+@define-color teal #56c6b2;
+@define-color cyan #7ac6db;
+@define-color blue #60aafb;
 @define-color magenta #e397bb;
-@define-color purple #9d95f2;
-@define-color white #c1c5cf;
-@define-color gray #768195;
+@define-color purple #b196f0;
+@define-color white #e5e9ec;
+@define-color gray #617184;

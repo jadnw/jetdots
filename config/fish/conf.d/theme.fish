@@ -1,20 +1,20 @@
-# Batwing colorscheme for Fish
+# Manhattan colorscheme for Fish
 # ~/.config/fish/conf.d/theme.fish
 
 # --> special
-set -l fg c1c5cf
-set -l sel 414754
+set -l fg ccd3da
+set -l sel 4b5766
 
 # --> palette
-set -l red df8284
+set -l red f46d7e
 set -l green 93c68c
 set -l yellow e8ce9b
 set -l orange f4a582
-set -l blue 75a8f9
+set -l blue 60aafb
 set -l magenta e397bb
-set -l purple 9d95f2
-set -l cyan 7be0ec
-set -l gray 768195
+set -l purple b196f0
+set -l cyan 7ac6db
+set -l gray 617184
 
 # Syntax Highlighting
 set -g fish_color_normal $fg
