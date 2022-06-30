@@ -107,7 +107,7 @@
     "interval": "once",
     "signal": 6,
     "exec": "~/.config/waybar/scripts/recorder",
-    "exec-if": "which rofi",
+    "exec-if": "pgrep wf-recorder",
     "on-click": "~/.config/waybar/scripts/recorder toggle"
   }
 }
