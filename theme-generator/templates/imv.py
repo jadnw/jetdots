@@ -21,7 +21,7 @@ overlay = true
 overlay_text_color = {pal["fg1"]}
 overlay_background_color = {pal["bg2"]}
 overlay_background_alpha = ff
-overlay_font = Iosevka Nerd Font:11
+overlay_font = Iosevka Custom:11
 overlay_position_bottom = false
 
 # bindings

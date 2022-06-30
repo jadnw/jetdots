@@ -25,7 +25,7 @@ map <C-k> zoom out
 
 # OPTIONS
 # fonts
-set font "Iosevka Nerd Font 11"
+set font "Iosevka Custom 11"
 
 # fit width
 set adjust-open "best-fit"

@@ -11,7 +11,7 @@
 
 configuration {
   show-icons:                     false;
-  font:                           "Iosevka Nerd Font Semibold 11";
+  font:                           "Iosevka Custom Semibold 11";
   disable-history:                false;
   sidebar-mode:                   false;
 }

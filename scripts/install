@@ -258,6 +258,8 @@ read -l -P "Your option? (default=1): " wm
 echo "Installing your Tiling Window Managers ..."
 
 switch $wm
+case ''
+install_river
   case 1
     install_river
   case 2

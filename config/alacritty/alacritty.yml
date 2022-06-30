@@ -26,16 +26,16 @@ scrolling:
 
 font:
   normal:
-    family: Iosevka Nerd Font
+    family: Iosevka Custom
     style: Semibold
   bold:
-    family: Iosevka Nerd Font
+    family: Iosevka Custom
     style: Extrabold
   italic:
-    family: Iosevka Nerd Font
+    family: Iosevka Custom
     style: Semibold Italic
   bold_italic:
-    family: Iosevka Nerd Font
+    family: Iosevka Custom
     style: Extrabold Italic
   size: 11.0
   offset:
