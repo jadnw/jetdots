@@ -68,7 +68,7 @@ set $browser qutebrowser
 # set $chromium chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check
 set $brave brave --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check
 set $waybartoggle $HOME/.config/sway/scripts/waybar-toggle
-set $powermenu $HOME/.config/waybar/scripts/power toggle
+set $powermenu $HOME/.config/waybar/scripts/power-sway toggle
 set $launcher $HOME/.config/sway/scripts/launcher toggle
 set $colorpicker $HOME/.config/sway/scripts/colorpicker toggle
 set $documents $HOME/.config/sway/scripts/documents toggle

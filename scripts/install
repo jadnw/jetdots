@@ -3,29 +3,29 @@
 sudo pacman -S --noconfirm --needed base-devel git fish rustup
 
 # Install rustup toolchain
-echo "Installing rustup toolchain (to build paru) ..."
+echo "Installing rustup with its stable toolchain ..."
 rustup install stable
 rustup default stable
-echo "Rustup installed!"
+echo "[DONE] Rustup installed."
 
 sleep 1
 
 # Install Paru
 if which paru
-  echo "Paru AUR package manager detected ... DONE"
+  echo "[DONE] Paru detected."
 else
-  echo "Installing AUR package manager: paru ..."
+  echo "Installing paru ..."
   git clone https://aur.archlinux.org/paru.git
   pushd paru
   makepkg -si
   popd
   rm -rf paru
-  echo "Installing AUR package manager: paru ... DONE"
+  echo "[DONE] Paru installed."
 end
 
 sleep 1
 
-echo "Update system & Installing necessary packages with paru ..."
+echo "Refreshing repositories & Installing common packages with paru ..."
 paru -Syy --noconfirm
 paru -Sy --noconfirm archlinux-keyring
 
@@ -63,6 +63,7 @@ paru -S --noconfirm --needed \
   rustup \
   sddm \
   sddm-sugar-candy-git \
+  starship \
   stylua \
   tree \
   unzip \
@@ -70,56 +71,58 @@ paru -S --noconfirm --needed \
   xdg-utils \
   xdg-user-dirs \
   zathura \
-  zathura-pdf-poppler \
- 
-echo "Update system & Installing necessary packages with paru ... DONE"
+  zathura-pdf-poppler
+
+echo "[DONE] Common packages has been installed"
 
 sleep 1
 
 # Enable systemd services
+echo "Enabling services ..."
 sudo systemctl enable sddm.service
-echo "Enable services ... DONE"
+echo "[DONE] System services enabled."
 
 # SDDM
+echo "Configuring SDDM.."
 sudo rsync --recursive ./extras/sddm.conf.d /etc/
 sudo rsync ./config/sddm-sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/
+echo "[DONE] SDDM configured."
 
 sleep 1
 
+# Fonts
+echo "Downloading & copying fonts to directories ..."
 rm -rf ~/.local/share/{themes,fonts}
 mkdir -p ~/.local/share/{themes,fonts}
-# Fonts
 git clone https://github.com/jadnw/iosevka.git
 rsync iosevka/patched/* ~/.local/share/fonts/
 rm -rf iosevka
 rsync ./fonts/local/* ~/.local/share/fonts/
 sudo rsync --recursive ./fonts/system/* /usr/share/fonts/
 fc-cache -r
-echo "Copy fonts to ~/.local/share/fonts & /usr/share/fonts ... DONE"
+echo "[DONE] Fonts copied to ~/.local/share/fonts & /usr/share/fonts."
+
+# Run Docker with current user privileges
+sudo usermod -aG docker $USER
 
 sleep 1
 
+echo "Copying configuration files to their locations ..."
 # Copy common configs
 rm -rf ~/.config
 mkdir -p ~/.config
 rsync --recursive ./config/{btop,dunst,fish,fontconfig,gtk-3.0,gtk-4.0,qutebrowser,rofi,zathura,starship.toml} ~/.config/
-echo "Copy configurations to ~/.config ... DONE"
-
 # Copy common extra configs
 rsync ./extras/.gitconfig ~/
 sudo rsync --recursive ./extras/reflector /etc/xdg/
+echo "[DONE] Config files copied."
 
 # Install GTK themes
-git clone https://github.com/jadnw/batwing-gtk.git
-cp -R batwing-gtk/themes/* ~/.local/share/themes/
-rm -rf batwing-gtk
-
-sleep 1
-
-# Starship Prompt
-echo "Installing starship ..."
-sh -c "curl -sS https://starship.rs/install.sh | sh"
-echo "Installing starship ... DONE"
+echo "Downloading & copying Manhattan GTK themes"
+git clone https://github.com/jadnw/manhattan-gtk.git
+cp -R manhattan-gtk/themes/* ~/.local/share/themes/
+rm -rf manhattan-gtk
+echo "[DONE] GTK themes copied."
 
 sleep 1
 
@@ -252,7 +255,7 @@ end
 # You can completely install another WM by run this script again
 echo -e "Choose your tiling windows manager that you want to install?\n\t1 - RiverWM (Wayland)\n\t2 - SwayWM (Wayland)\n\t3 - HyprlandWM (Wayland)\n\t4 - BSPWM (X11)\n\t5 - RiverWM (Wayland) & BSPWM (X11)\n\t6 - SwayWM (Wayland) & BSPWM (X11)\n\t7 - Hyprland (Wayland) & BSPWM (X11)"
 read -l -P "Your option? (default=1): " wm
-echo "Install tiling window managers ..."
+echo "Installing your Tiling Window Managers ..."
 
 switch $wm
   case 1
@@ -277,31 +280,35 @@ switch $wm
     exit 1
 end
 
-echo "Install tiling window managers ... DONE"
+echo "[DONE] Tiling Window Managers installed."
 
 sleep 1
 
 # Set greeting wallpaper
+echo "Setting wallpapers ..."
 mkdir -p ~/.config/wallpapers
 rsync ./wallpapers/{wallpaper.jpg,lockscreen.jpg} ~/.config/wallpapers/
 sudo rsync ./wallpapers/greeting.jpg /usr/share/sddm/themes/sugar-candy/
+echo "[DONE] Wallpapers set."
 
 # Install node
+echo "Install Node v18 ..."
 fnm install v18
+echo "[DONE] Node installed."
 
 # Install pylint
 # python -m pip install pylint
 
 # Remove build dependencies
+echo "Removing build dependencies ..."
 set i3_installed (paru -Qs i3-wm | grep "local/")
 if test -n "$i3_installed"
   paru -Rns --noconfirm i3-wm
 end
-echo "Remove i3-wm ... DONE"
 
 sleep 1
 
 paru -Rns --noconfirm (paru -Qdtq)
-echo "Remove unused packages ... DONE"
+echo "[DONE] Dependencies removed."
 
 sleep 1

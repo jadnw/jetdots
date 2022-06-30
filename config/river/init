@@ -20,7 +20,7 @@
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 set term foot
 set launcher "$HOME/.config/river/scripts/launcher toggle"
-set powermenu "$HOME/.config/waybar/scripts/power toggle"
+set powermenu "$HOME/.config/waybar/scripts/power-river toggle"
 set browser qutebrowser
 # set firefox "MOZ_ENABLE_WAYLAND=1 firefox-developer-edition"
 # set chromium "chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check"
