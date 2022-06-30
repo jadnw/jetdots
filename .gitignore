@@ -1,6 +1,12 @@
 # Ignore themes directory
 /themes
 
+# Ignore hyprland temp
+/hyprland
+
+# Ignore fonts
+/iosevka
+
 # LunarVim plugins
 **/lvim/plugin
 

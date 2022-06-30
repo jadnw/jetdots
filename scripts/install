@@ -184,6 +184,41 @@ function install_sway
   rsync --recursive ./config/{foot,imv,sway,swaylock,waybar} ~/.config/
 end
 
+function install_hyprland
+  echo "hyprlandwm" >> $metadata_file
+  # Needed packages for Wayland (River)
+  paru -S --noconfirm --needed \
+    foot \
+    glfw-wayland \
+    grim \
+    imagemagick \
+    imv \
+    qt5-wayland \
+    qt6-wayland \
+    slurp \
+    swaybg \
+    swayidle \
+    swaylock-effects-git \
+    waybar-experimental-git \
+    wf-recorder \
+    wlr-randr \
+    wlsunset \
+    wl-clipboard \
+    xorg-xwayland \
+    xorg-xlsclients \
+  
+  # Copy executables
+  curl -LO https://github.com/hyprwm/Hyprland/releases/download/v0.6.2beta/v0.6.2beta.tar.gz 
+  mkdir hyprland && tar -xvzf v0.6.2beta.tar.gz -C ./hyprland
+  sudo rsync ./hyprland/{hyprctl,Hyprland} /usr/bin
+  sudo rsync ./hyprland/libwlroots.so.11032 /usr/lib/
+  sudo mkdir /usr/share/wayland-sessions/
+  sudo rsync ./hyprland/example/hyprland.desktop /usr/share/wayland-sessions/
+  rm -rf hyprland
+  # Copy Wayland configs to $HOME/.config/
+  rsync --recursive ./config/{foot,river,imv,swaylock,waybar} ~/.config/
+end
+
 function install_bspwm
   echo "bspwm" >> $metadata_file
   # Needed packages for X11 (bspwm)
@@ -224,16 +259,17 @@ switch $wm
   case 2
     install_sway
   case 3
-    install_bspwm
+    install_hyprland
   case 4
-    install_river
     install_bspwm
   case 5
-    install_sway
+    install_river
     install_bspwm
   case 6
-    install_river
     install_sway
+    install_bspwm
+  case 7
+    install_hyprland
     install_bspwm
   case '*'
     echo "You donot want to install a tiling window manager. That's fine!"
