@@ -1,6 +1,56 @@
 #!/bin/fish
 
+set marker /tmp/waybar-screenshot
+set theme ~/.config/rofi/wayland/screenshot.rasi
 set savepath (xdg-user-dir PICTURES)/screenshots
 mkdir -p $savepath
-grim $savepath/(date +%Y%m%d_%H%M%S.png)
-notify-send "Screenshot saved $savepath"
+
+function markup
+  if test -e $marker
+    echo '{ "text": "", "tooltip": "Close Overlay", "class": "screenshot-active" }'
+  else
+    echo '{ "text": "", "tooltip": "Screenshot", "class": "screenshot" }'
+  end
+end
+
+function toggle
+  if test -e $marker
+    rm -f $marker; and pkill -SIGRTMIN+5 waybar
+    killall -q rofi
+  else
+    touch $marker; and pkill -SIGRTMIN+5 waybar
+    killall -q rofi
+
+    # Options
+    set normal ""
+    set crop ""
+
+    # Variables passed to dmenu
+    set options "$normal\n$crop"
+
+    set opt (echo -e $options | rofi -dmenu -p "grim" -theme $theme)
+
+    if test -z $opt
+      rm -f $marker; and pkill -SIGRTMIN+5 waybar
+      exit 0
+    end
+
+    switch $opt
+      case $normal
+        grim $savepath/(date +%Y%m%d_%H%M%S.png)
+        notify-send "Screenshot All Monitor saved $savepath"
+      case $crop
+        grim -g (slurp) $savepath/(date +%Y%m%d_%H%M%S.png)
+        notify-send "Screenshot Crop Region saved $savepath"
+    end
+
+    rm -f $marker; and pkill -SIGRTMIN+5 waybar
+  end
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

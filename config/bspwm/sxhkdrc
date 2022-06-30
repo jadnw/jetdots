@@ -25,17 +25,29 @@ super + shift + q
 
 # Launcher
 super + o
-  $HOME/.config/polybar/scripts/launcher
+  $HOME/.config/bspwm/scripts/launcher
+
+# Color Picker
+super + c
+  $HOME/.config/bspwm/scripts/colorpicker
+
+# Documents
+super + d
+  $HOME/.config/bspwm/scripts/documents
+
+# Recorder
+super + r
+  $HOME/.config/bspwm/scripts/recorder
 
 # Windows
 super + slash
-  $HOME/.config/polybar/scripts/windows
+  $HOME/.config/bspwm/scripts/windows
 
 # Toggle bar
 super + shift + x
   $HOME/.config/bspwm/scripts/bar-toggle
 
-# Take a screenshot
+# Screenshot
 super + p
   $HOME/.config/bspwm/scripts/screenshot
 

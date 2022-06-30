@@ -19,14 +19,17 @@
 
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 set term foot
-set launcher "$HOME/.config/waybar/scripts/launcher toggle"
+set launcher "$HOME/.config/river/scripts/launcher toggle"
 set powermenu "$HOME/.config/waybar/scripts/power toggle"
 set browser qutebrowser
 # set firefox "MOZ_ENABLE_WAYLAND=1 firefox-developer-edition"
 # set chromium "chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check"
 set brave "brave --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check"
 set waybartoggle "$HOME/.config/river/scripts/waybar-toggle"
-set screenshot "$HOME/.config/river/scripts/screenshot"
+set colorpicker "$HOME/.config/river/scripts/colorpicker toggle"
+set documents "$HOME/.config/river/scripts/documents toggle"
+set recorder "$HOME/.config/river/scripts/recorder toggle"
+set screenshot "$HOME/.config/river/scripts/screenshot toggle"
 
 # Super+Shift+Return to start an instance of term
 riverctl map normal Super Return spawn $term
@@ -42,6 +45,15 @@ riverctl map normal Super+Shift X spawn $waybartoggle
 
 # Super+O to toggle launcher
 riverctl map normal Super O spawn $launcher
+
+# Super+C to toggle Color Picker
+riverctl map normal Super C spawn $colorpicker
+
+# Super+D to toggle Documents
+riverctl map normal Super D spawn $documents
+
+# Super+R to toggle Recorder
+riverctl map normal Super R spawn $recorder
 
 # Super+P to take a screenshot
 riverctl map normal Super P spawn $screenshot

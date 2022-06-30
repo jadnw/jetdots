@@ -1,0 +1,136 @@
+#!/bin/fish
+
+set marker /tmp/waybar-colorpicker
+set theme ~/.config/rofi/wayland/colorpicker.rasi
+
+function markup
+  if test -e $marker
+    echo '{ "text": "", "tooltip": "Close Overlay", "class": "colorpicker-active" }'
+  else
+    echo '{ "text": "", "tooltip": "Color Picker", "class": "colorpicker" }'
+  end
+end
+
+function toggle
+  if test -e $marker
+    rm -f $marker; and pkill -SIGRTMIN+3 waybar
+    killall -q rofi
+  else
+    touch $marker; and pkill -SIGRTMIN+3 waybar
+    killall -q rofi
+
+    # Options
+    set hex_opt ""
+    set rgb_opt ""
+    set hsl_opt ""
+
+    # Variables passed to dmenu
+    set options "$hex_opt\n$rgb_opt\n$hsl_opt"
+
+    set opt (echo -e $options | rofi -dmenu -p "grim & ImageMagick" -theme $theme)
+
+    if test -z $opt
+      rm -f $marker; and pkill -SIGRTMIN+3 waybar
+      exit 0
+    end
+
+    set outputs (grim -g (slurp -p) -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-)[2]
+    set hex (echo $outputs | awk '{print $3}')
+    set rgb_val (echo $outputs | awk '{print $2}')
+    set rgb_val (string split "," (string replace -a -r "(\(|\))" "" $rgb_val))
+    set rgb "rgb($rgb_val[1], $rgb_val[2], $rgb_val[3])"
+
+    ### RGB to HSL
+    function max_num
+      set -l max $argv[1]
+
+      for x in $argv
+        if test $x -gt $max
+          set max $x
+        end
+      end
+
+      echo $max
+    end
+
+    function min_num
+      set -l min $argv[1]
+
+      for x in $argv
+        if test $x -lt $min
+          set min $x
+        end
+      end
+
+      echo $min
+    end
+
+    function convert_rgb_to_hsl
+      # Make r, g, b fractions of 1
+      set -l r (math $argv[1] / 255)
+      set -l g (math $argv[2] / 255)
+      set -l b (math $argv[3] / 255)
+
+      # Find greatest and smallest channel values
+      set -l min (min_num $r $g $b)
+      set -l max (max_num $r $g $b)
+      set -l delta (math $max - $min)
+      set -l h 0
+      set -l s 0
+      set -l l (math "($max + $min) / 2")
+
+      # Calculate H (hue)
+      # no difference
+      if test $delta -eq 0
+        set h 0
+      else if test $max -eq $r
+        set h (math "(($g - $b) / $delta) % 6")
+      else if test $max -eq $g
+        set h (math "($b - $r) / $delta + 2")
+      else
+        set h (math "($r - $g) / $delta + 4")
+      end
+
+      set h (math round "$h * 60")
+
+      if test $h -lt 0
+        set h (math "$h + 360")
+      end
+
+      # Calculate S (saturation)
+      if test $delta -eq 0
+        set s 0
+      else
+        set -l denominator (math abs "2 * $l - 1")
+        set s (math "$delta / (1 - $denominator)")
+      end
+
+      set s (math floor (math "$s * 100"))
+      set l (math floor (math "$l * 100"))
+
+      echo "hsl($h, $s%, $l%)"
+    end
+
+    switch $opt
+      case $hex_opt
+        wl-copy $hex
+        notify-send "$hex copied"
+      case $rgb_opt
+        wl-copy $rgb
+        notify-send "$rgb copied"
+      case $hsl_opt
+        set hsl (convert_rgb_to_hsl $rgb_val)
+        wl-copy $hsl
+        notify-send "$hsl copied"
+    end
+
+    rm -f $marker; and pkill -SIGRTMIN+3 waybar
+  end
+end
+
+switch $argv[1]
+  case ''
+    markup
+  case toggle
+    toggle
+end

@@ -36,7 +36,7 @@ window {
 
 prompt {
   enabled:                        true;
-  padding:                        10px 10px;
+  padding:                        5px;
   background-color:               @bg1;
   text-color:                     @red;
   border:                         0px 2px 0px 2px;
@@ -49,7 +49,7 @@ textbox-prompt-colon {
   str:                            "Recorder";
   background-color:               @red;
   text-color:                     @bg0;
-  padding:                        10px;
+  padding:                        5px;
   border-radius:                  4px;
 }
 

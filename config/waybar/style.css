@@ -22,52 +22,59 @@ tooltip label {
   color: @fg1;
 }
 
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 4px;
+}
+
 /* River Tags */
 #tags {
-  margin-left: 16px;
+  border-radius: 4px;
 }
 
 #tags button {
-  min-width: 40px;
-  font-family: "Material Icons Outlined";
-  font-size: 24px;
+  margin: 0px 8px;
+  font-family: "Material Icons Round";
+  font-size: 26px;
   color: @bg4;
 }
 
 #tags button.occupied {
-  font-family: "Material Icons Outlined";
   color: @yellow;
 }
 
 #tags button.urgent {
-  font-family: "Material Icons Outlined";
   color: @red;
 }
 
 #tags button.focused {
-  font-family: "Material Icons Round";
   color: @accent;
 }
 
 /* Sway Workspaces */
 #workspaces {
-  margin-left: 16px;
+  border-radius: 4px;
 }
 
 #workspaces button {
-  min-width: 40px;
-  font-family: "Material Icons Outlined";
-  font-size: 24px;
+  margin: 0px 8px;
+  font-family: "Material Icons Round";
+  font-size: 26px;
   color: @bg4;
 }
 
 #workspaces button.urgent {
-  font-family: "Material Icons Outlined";
   color: @red;
 }
 
 #workspaces button.focused {
-  font-family: "Material Icons Round";
+  color: @accent;
+}
+
+#workspaces button.active {
   color: @accent;
 }
 
@@ -83,40 +90,46 @@ tooltip label {
 /* CPU & Memory */
 #cpu,
 #memory {
-  min-width: 80px;
-  padding-top: 4px;
+  margin: 4px;
+  padding: 0px 16px;
+  border-radius: 4px;
   font-family: "Iosevka Nerd Font";
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 #cpu {
   border-left: 1px solid @bg2;
-  color: @green;
+  background-color: @green;
+  color: @bg1;
 }
 
 #memory {
   border-right: 1px solid @bg2;
-  color: @red;
+  background-color: @red;
+  color: @bg1;
 }
 
 /* Clock */
 #clock {
-  min-width: 60px;
-  padding-top: 4px;
+  padding: 0px 16px;
+  padding-top: 2px;
+  border-radius: 4px;
   font-family: "Iosevka Nerd Font";
-  font-size: 18px;
-  font-weight: 700;
-  color: @fg3;
+  font-size: 16px;
+  font-weight: 900;
+  color: @fg0;
 }
 
 /* Idle Inhibitor */
 #idle_inhibitor {
-  color: @bg4;
+  background-color: @bg2;
+  color: @cyan;
 }
 
 #idle_inhibitor.activated {
-  color: @cyan;
+  background-color: @cyan;
+  color: @bg1;
 }
 
 /* Network */
@@ -124,25 +137,30 @@ tooltip label {
 #network.linked,
 #network.ethernet,
 #network.wifi {
+  background-color: @bg2;
   color: @magenta;
 }
 
 #network.disabled,
 #network.disconnected {
-  color: @bg4;
+  background-color: @magenta;
+  color: @bg1;
 }
 
 /* Pulseaudio */
 #pulseaudio {
-  color: @fg1;
+  background-color: @bg2;
+  color: @teal;
 }
 
 #pulseaudio.bluetooth {
-  color: @blue;
+  background-color: @blue;
+  color: @bg1;
 }
 
 #pulseaudio.muted {
-  color: @bg4;
+  background-color: @red;
+  color: @bg1;
 }
 
 /* CUSTOM MODULES */
@@ -159,114 +177,73 @@ tooltip label {
 #custom-recorder,
 #custom-screenshot,
 #custom-windows {
-  min-width: 50px;
-  padding-top: 2px;
+  margin: 4px;
+  padding: 0px 16px;
+  border-radius: 4px;
   font-family: "Material Icons Round";
   font-size: 18px;
 }
 
-/* Color Picker */
-.colorpicker {
-  color: @cyan;
-}
-
-.colorpicker-active {
-  background-color: @cyan;
-  color: @bg0;
-}
-
-/* Documents */
-.documents {
-  color: @purple;
-}
-
-.documents-active {
-  background-color: @purple;
-  color: @bg0;
-}
-
 /* Idle Inhibitor (River)*/
 .custom_idle_inhibitor {
-  color: @bg4;
+  background-color: @bg2;
+  color: @cyan;
 }
 
 .custom_idle_inhibitor-active {
-  color: @cyan;
-}
-
-/* Launcher */
-.launcher {
-  color: @accent;
-}
-
-.launcher-active {
-  background-color: @accent;
-  color: @bg0;
+  background-color: @cyan;
+  color: @bg1;
 }
 
 /* Nightlight */
 .nightlight {
-  color: @bg4;
+  background-color: @bg2;
+  color: @purple;
 }
 
 .nightlight-active {
-  color: @teal;
+  background-color: @purple;
+  color: @bg1;
 }
 
 /* Notifications */
 .notification {
+  background-color: @bg2;
   color: @yellow;
 }
 
 .none {
+  background-color: @bg2;
   color: @orange;
 }
 
 .dnd {
-  color: @bg4;
+  background-color: @orange;
+  color: @bg1;
 }
 
 /* Power Menu */
-.power,
-.power-active {
-  border-radius: 0px 4px 4px 0px;
+#custom-power {
+  margin-right: 0;
 }
 
 .power {
+  background-color: @bg2;
   color: @red;
 }
 
 .power-active {
   background-color: @red;
-  color: @bg0;
+  color: @bg1;
 }
 
 /* Recorder */
 .recorder {
-  color: @red;
+  background-color: @bg2;
+  color: @magenta;
 }
 
 .recorder-active {
-  background-color: @red;
-  color: @bg0;
-}
-
-/* Screenshot */
-.screenshot {
-  color: @yellow;
-}
-
-.screenshot-active {
-  background-color: @yellow;
-  color: @bg0;
-}
-
-/* Windows */
-.windows {
-  color: @teal;
-}
-
-.windows-active {
-  background-color: @teal;
-  color: @bg0;
+  background-color: @magenta;
+  color: @bg1;
 }

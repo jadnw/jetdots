@@ -67,11 +67,14 @@ set $browser qutebrowser
 # set $firefox MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
 # set $chromium chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check
 set $brave brave --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check
-set $launcher $HOME/.config/waybar/scripts/launcher toggle
-set $powermenu $HOME/.config/waybar/scripts/power toggle
 set $waybartoggle $HOME/.config/sway/scripts/waybar-toggle
-set $screenshot $HOME/.config/sway/scripts/screenshot
-
+set $powermenu $HOME/.config/waybar/scripts/power toggle
+set $launcher $HOME/.config/sway/scripts/launcher toggle
+set $colorpicker $HOME/.config/sway/scripts/colorpicker toggle
+set $documents $HOME/.config/sway/scripts/documents toggle
+set $recorder $HOME/.config/sway/scripts/recorder toggle
+set $screenshot $HOME/.config/sway/scripts/screenshot toggle
+set $windows $HOME/.config/sway/scripts/windows toggle
 
 ############################################################
 ### OUTPUT CONFIGURATION
@@ -138,6 +141,18 @@ input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
 
     # Toggle Waybar
     bindsym $mod+Shift+x exec $waybartoggle
+
+    # Color Picker
+    bindsym $mod+c exec $colorpicker
+
+    # Documents
+    bindsym $mod+d exec $documents
+
+    # Documents
+    bindsym $mod+r exec $recorder
+
+    # Windows
+    bindsym $mod+Slash exec $windows
 
     # Take a screenshot
     bindsym $mod+p exec $screenshot
@@ -242,7 +257,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
 
 ############################################################
 ### STYLES
