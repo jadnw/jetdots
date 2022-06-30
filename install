@@ -1,4 +1,4 @@
-#!/usr/bin/sudo fish
+#!/bin/fish
 
 echo -e "Choose your tiling windows manager that you want to install?\n\t1 - RiverWM (Wayland)\n\t2 - SwayWM (Wayland)\n\t3 - HyprlandWM (Wayland)\n\t4 - BSPWM (X11)\n\t5 - RiverWM (Wayland) & BSPWM (X11)\n\t6 - SwayWM (Wayland) & BSPWM (X11)\n\t7 - Hyprland (Wayland) & BSPWM (X11)"
 read -l -P "Your option? (default=1): " opt
