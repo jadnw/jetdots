@@ -54,10 +54,10 @@ MainColor="{pal["fg1"]}"
 AccentColor="{pal["accent"]}"
 ## Used for elements in focus/hover/pressed. Should be contrasting to the background and the MainColor to achieve the best effect.
 
-BackgroundColor="{pal["bg2"]}"
+BackgroundColor="{pal["bg1"]}"
 ## Used for the user and session selection background as well as for ScreenPadding and FormBackground when either is true. If PartialBlur and FormBackground are both enabled this color will blend with the blur effect.
 
-OverrideLoginButtonTextColor=""
+OverrideLoginButtonTextColor="{pal["bg1"]}"
 ## The text of the login button may become difficult to read depending on your color choices. Use this option to set it independently for legibility.
 
 InterfaceShadowSize="6"
@@ -72,7 +72,7 @@ RoundCorners="4"
 ScreenPadding="0"
 ## Integer in pixels. Increase or delete this to have a padding of color BackgroundColor all around your screen. This makes your login greeter appear as if it was a canvas. Cool!
 
-Font="Barlow Semi Condensed"
+Font="Barlow Semi Condensed Medium"
 ## If you want to choose a custom font it will have to be available to the X root user. See https://wiki.archlinux.org/index.php/fonts#Manual_installation
 
 FontSize=""
@@ -123,17 +123,17 @@ DateFormat="dddd, d of MMMM"
 
 ## [Translations]
 
-HeaderText="Welcome back, Jay!"
+HeaderText="Welcome to the jet, Jay!"
 ## Header can be empty to not display any greeting at all. Keep it short.
 
 ## SDDM may lack proper translation for every element. Suger defaults to SDDM translations. Please help translate SDDM as much as possible for your language: https://github.com/sddm/sddm/wiki/Localization. These are in order as they appear on screen.
 
 TranslatePlaceholderUsername=""
 TranslatePlaceholderPassword=""
-TranslateShowPassword=""
-TranslateLogin=""
-TranslateLoginFailedWarning=""
-TranslateCapslockWarning=""
+TranslateShowPassword="I wanna see my password"
+TranslateLogin="Launch"
+TranslateLoginFailedWarning="Oops! You have entered a wrong password. Is that you, Jay?"
+TranslateCapslockWarning="Hmm. CAPSLOCK is on. Do you really need it?"
 TranslateSession=""
 TranslateSuspend=""
 TranslateHibernate=""
