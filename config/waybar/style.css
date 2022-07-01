@@ -110,12 +110,14 @@ tooltip label {
 
 /* Clock */
 #clock {
+  margin: 4px;
   padding: 0px 16px;
   padding-top: 2px;
   border-radius: 4px;
   font-family: "Iosevka Custom";
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: @bg2;
   color: @fg0;
 }
 

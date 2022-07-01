@@ -15,7 +15,7 @@
   "clock": {
     "timezone": "Asia/Ho_Chi_Minh",
     "interval": 60,
-    "format": "{:%H:%M}",
+    "format": "{:%a, %b %d  %H:%M}",
     "max-length": 25,
   },
   "cpu": {
