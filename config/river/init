@@ -183,7 +183,7 @@ for mode in normal locked
 end
 
 # Disable mouse focus follow
-riverctl focus-follows-cursor disabled
+riverctl focus-follows-cursor normal
 
 # Hide cursor when typing
 riverctl hide-cursor when-typing enabled
