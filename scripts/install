@@ -43,6 +43,7 @@ paru -S --noconfirm --needed \
   docker-machine \
   dunst \
   fd \
+  firefox-developer-edition \
   fish \
   fnm-bin \
   git \
