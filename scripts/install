@@ -34,7 +34,6 @@ paru -Sy --noconfirm archlinux-keyring
 
 paru -S --noconfirm --needed \
   base-devel \
-  brave-bin \
   btop \
   breeze-snow-cursor-theme \
   curl \
@@ -43,7 +42,6 @@ paru -S --noconfirm --needed \
   docker-machine \
   dunst \
   fd \
-  firefox-developer-edition \
   fish \
   fnm-bin \
   git \
@@ -52,6 +50,7 @@ paru -S --noconfirm --needed \
   gtk3 \
   gtk4 \
   jq \
+  librewolf-bin \
   luacheck \
   man \
   neovim \
@@ -197,7 +196,6 @@ function install_hyprland
   # Needed packages for Wayland (River)
   paru -S --noconfirm --needed \
     foot \
-    firefox-developer-edition \
     glfw-wayland \
     grim \
     imagemagick \

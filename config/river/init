@@ -22,9 +22,7 @@ set term foot
 set launcher "$HOME/.config/river/scripts/launcher toggle"
 set powermenu "$HOME/.config/waybar/scripts/power-river toggle"
 set browser qutebrowser
-set firefox "MOZ_ENABLE_WAYLAND=1 firefox-developer-edition"
-# set chromium "chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check"
-set brave "brave --enable-features=UseOzonePlatform --ozone-platform=wayland --no-default-browser-check"
+set devbrowser "MOZ_ENABLE_WAYLAND=1 librewolf"
 set waybartoggle "$HOME/.config/river/scripts/waybar-toggle"
 set colorpicker "$HOME/.config/river/scripts/colorpicker toggle"
 set documents "$HOME/.config/river/scripts/documents toggle"
@@ -37,11 +35,8 @@ riverctl map normal Super Return spawn $term
 # Super+Shift+B to start an instance of web browser
 riverctl map normal Super+Shift B spawn $browser
 
-# Super+Shift+W to start Brave
-riverctl map normal Super+Shift W spawn $brave
-
-# Super+Shift+F to start Firefox DE
-riverctl map normal Super+Shift F spawn $firefox
+# Super+Shift+W to start dev browser
+riverctl map normal Super+Shift W spawn $devbrowser
 
 # Super+Shift+X to toggle waybar
 riverctl map normal Super+Shift X spawn $waybartoggle
