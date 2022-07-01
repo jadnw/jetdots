@@ -26,6 +26,7 @@
 # Ignore compressed files
 **/*.zip
 **/*.tar.xz
+**/*.tar.gz
 
 # pycache
 **/__pycache__/

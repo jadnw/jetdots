@@ -220,11 +220,11 @@ function install_hyprland
   mkdir hyprland && tar -xvzf v0.6.2beta.tar.gz -C ./hyprland
   sudo rsync ./hyprland/{hyprctl,Hyprland} /usr/bin
   sudo rsync ./hyprland/libwlroots.so.11032 /usr/lib/
-  sudo mkdir /usr/share/wayland-sessions/
+  sudo mkdir -p /usr/share/wayland-sessions/
   sudo rsync ./hyprland/example/hyprland.desktop /usr/share/wayland-sessions/
   rm -rf hyprland
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{foot,river,imv,swaylock,waybar} ~/.config/
+  rsync --recursive ./config/{foot,river,imv,swaylock,waybar,hypr} ~/.config/
 end
 
 function install_bspwm
