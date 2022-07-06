@@ -102,7 +102,7 @@ git clone https://github.com/jadnw/iosevka.git
 rsync iosevka/patched/* ~/.local/share/fonts/
 rm -rf iosevka
 rsync ./fonts/local/* ~/.local/share/fonts/
-# sudo rsync --recursive ./fonts/system/* /usr/share/fonts/
+sudo rsync --recursive ./fonts/system/* /usr/share/fonts/
 fc-cache -r
 echo "[DONE] Fonts copied to ~/.local/share/fonts & /usr/share/fonts."
 
