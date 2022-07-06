@@ -98,7 +98,7 @@ echo "Downloading & copying fonts to directories ..."
 rm -rf ~/.local/share/{themes,fonts}
 mkdir -p ~/.local/share/{themes,fonts}
 git clone https://github.com/jadnw/iosevka.git
-rsync iosevka/curly-02/patched/* ~/.local/share/fonts/
+rsync iosevka/patched/* ~/.local/share/fonts/
 rm -rf iosevka
 rsync ./fonts/local/* ~/.local/share/fonts/
 sudo rsync --recursive ./fonts/system/* /usr/share/fonts/
