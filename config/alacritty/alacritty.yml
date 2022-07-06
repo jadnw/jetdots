@@ -26,16 +26,16 @@ scrolling:
 
 font:
   normal:
-    family: Iosevka Custom
+    family: Iosevka Jaden
     style: Semibold
   bold:
-    family: Iosevka Custom
+    family: Iosevka Jaden
     style: Extrabold
   italic:
-    family: Iosevka Custom
+    family: Iosevka Jaden
     style: Semibold Italic
   bold_italic:
-    family: Iosevka Custom
+    family: Iosevka Jaden
     style: Extrabold Italic
   size: 11.0
   offset:
