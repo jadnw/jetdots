@@ -102,8 +102,8 @@ exec swayidle -w \
 ############################################################
 
 input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
-  repeat_delay 250
-  repeat_rate 50
+  repeat_delay 350
+  repeat_rate 40
 }
 
 #   input "2:14:SynPS/2_Synaptics_TouchPad" {
