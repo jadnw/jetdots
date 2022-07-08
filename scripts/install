@@ -161,7 +161,8 @@ function install_river
     xorg-xlsclients
   
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{foot,river,imv,swaylock,waybar} ~/.config/
+  rsync --recursive ./config/{foot,river,imv,swaylock} ~/.config/
+  rsync --recursive ./config/waybar/{scripts,river,style.css,theme.css} ~/.config/waybar/
 end
 
 function install_sway
@@ -188,7 +189,8 @@ function install_sway
     xorg-xlsclients
   
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{foot,imv,sway,swaylock,waybar} ~/.config/
+  rsync --recursive ./config/{foot,imv,sway,swaylock} ~/.config/
+  rsync --recursive ./config/waybar/{scripts,sway,style.css,theme.css} ~/.config/waybar/
 end
 
 function install_hyprland
@@ -222,8 +224,10 @@ function install_hyprland
   sudo mkdir -p /usr/share/wayland-sessions/
   sudo rsync ./hyprland/example/hyprland.desktop /usr/share/wayland-sessions/
   rm -rf hyprland
+
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{foot,river,imv,swaylock,waybar,hypr} ~/.config/
+  rsync --recursive ./config/{foot,river,imv,swaylock,hypr} ~/.config/
+  rsync --recursive ./config/waybar/{scripts,hyprland,style.css,theme.css} ~/.config/waybar/
 end
 
 function install_bspwm

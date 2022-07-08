@@ -1,0 +1,4 @@
+#!/bin/fish
+
+killall -q waybar
+waybar -c ~/.config/waybar/hyprland/config.json -s ~/.config/waybar/style.css &

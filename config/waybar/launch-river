@@ -1,4 +1,0 @@
-#!/bin/fish
-
-killall -q waybar
-waybar -c ~/.config/waybar/config-river.json -s ~/.config/waybar/style.css &

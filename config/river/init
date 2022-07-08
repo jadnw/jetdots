@@ -205,7 +205,7 @@ riverctl spawn "$HOME/.config/river/scripts/import-gsettings"
 if test -e ~/.config/wallpapers/wallpaper.jpg; riverctl spawn "swaybg -i ~/.config/wallpapers/wallpaper.jpg"; end
 riverctl spawn "dunst -conf ~/.config/dunst/dunstrc-wl"
 riverctl spawn "swayidle -w timeout 300 'swaylock -f' before-sleep 'swaylock -f'"
-riverctl spawn "$HOME/.config/waybar/launch-river"
+riverctl spawn "$HOME/.config/waybar/river/launch"
 
 # Make certain views start floating
 riverctl float-filter-add app-id "floating_shell_portrait"
