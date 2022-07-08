@@ -261,7 +261,7 @@ bindsym $mod+Shift+r mode "resize"
 ### STYLES
 ############################################################
 # Title bar
-font pango:Iosevka Jaden Bold 0px
+font pango:Jetevka Bold 0px
 smart_borders on
 default_border pixel 2
 gaps inner 5
