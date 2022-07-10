@@ -23,7 +23,7 @@ tooltip label {
 }
 
 .modules-left {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 .modules-right {
@@ -36,9 +36,9 @@ tooltip label {
 }
 
 #tags button {
-  margin: 0px 8px;
-  font-family: "Material Icons Round";
-  font-size: 26px;
+  padding: 0px 10px;
+  font-family: "Material Icons Outlined";
+  font-size: 24px;
   color: @bg4;
 }
 
@@ -52,6 +52,7 @@ tooltip label {
 
 #tags button.focused {
   color: @accent;
+  font-family: "Material Icons Round";
 }
 
 /* Sway Workspaces */
@@ -61,7 +62,7 @@ tooltip label {
 
 #workspaces button {
   margin: 0px 8px;
-  font-family: "Material Icons Round";
+  font-family: "Material Icons Outlined";
   font-size: 26px;
   color: @bg4;
 }
@@ -72,6 +73,7 @@ tooltip label {
 
 #workspaces button.focused {
   color: @accent;
+  font-family: "Material Icons Round";
 }
 
 #workspaces button.active {
@@ -80,7 +82,7 @@ tooltip label {
 
 /* Sway Window */
 #window {
-  margin-left: 20px;
+  margin-left: 8px;
   padding-top: 2px;
   font-family: "Jetevka";
   font-weight: 600;
@@ -90,7 +92,7 @@ tooltip label {
 /* CPU & Memory */
 #cpu,
 #memory {
-  margin: 4px;
+  margin: 5px 3px;
   padding: 0px 16px;
   border-radius: 4px;
   font-family: "Jetevka";
@@ -110,7 +112,7 @@ tooltip label {
 
 /* Clock */
 #clock {
-  margin: 4px;
+  margin: 5px 3px;
   padding: 0px 16px;
   padding-top: 2px;
   border-radius: 4px;
@@ -177,7 +179,7 @@ tooltip label {
 #custom-recorder,
 #custom-screenshot,
 #custom-windows {
-  margin: 4px;
+  margin: 5px 3px;
   padding: 0px 16px;
   border-radius: 4px;
   font-family: "Material Icons Round";
