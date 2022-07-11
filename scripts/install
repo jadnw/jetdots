@@ -51,7 +51,6 @@ paru -S --noconfirm --needed \
   gtk3 \
   gtk4 \
   jq \
-  librewolf-bin \
   luacheck \
   man \
   neovim \
@@ -116,7 +115,7 @@ echo "Copying configuration files to their locations ..."
 # Copy common configs
 rm -rf ~/.config
 mkdir -p ~/.config
-rsync --recursive ./config/{btop,dunst,fish,fontconfig,gtk-3.0,gtk-4.0,qutebrowser,rofi,zathura,starship.toml} ~/.config/
+rsync --recursive ./config/{btop,dunst,fish,fontconfig,gtk-3.0,gtk-4.0,qutebrowser,rofi,zathura,starship.toml,chromium-flags.conf,chrome-flags.conf} ~/.config/
 # Copy common extra configs
 rsync ./extras/.gitconfig ~/
 sudo rsync --recursive ./extras/reflector /etc/xdg/
@@ -203,6 +202,7 @@ function install_hyprland
     grim \
     imagemagick \
     imv \
+    librewolf-bin \
     qt5-wayland \
     qt6-wayland \
     slurp \

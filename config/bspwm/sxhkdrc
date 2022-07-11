@@ -15,9 +15,9 @@ super + Return
 super + shift + b
   qutebrowser
 
-# Dev browser: LibreWolf
+# Dev browser
 super + shift + w
-  librewolf
+  chromium
 
 # Power menu
 super + shift + q
