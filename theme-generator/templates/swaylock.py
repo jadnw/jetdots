@@ -5,7 +5,7 @@ def gen_template(theme):
     template = f"""ignore-empty-password
 disable-caps-lock-text
 image=$HOME/.config/wallpapers/lockscreen.jpg
-font=Nerko One
+font=Jolly Lodger
 
 text-ver-color=00000000
 text-wrong-color=00000000
@@ -33,10 +33,10 @@ indicator
 clock
 timestr=%H:%M
 datestr=%A | %d %B %y
-indicator-x-position=1700
-indicator-y-position=1000
-indicator-radius=160
-font-size=156
+indicator-x-position=20
+indicator-y-position=930
+indicator-radius=320
+font-size=192
 text-color={pal["fg1"]}
     """
     return template
