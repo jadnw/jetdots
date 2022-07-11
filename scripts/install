@@ -70,6 +70,7 @@ paru -S --noconfirm --needed \
   starship \
   stylua \
   tree \
+  ttf-fira-sans \
   unzip \
   vscode \
   xdg-utils \
@@ -102,7 +103,7 @@ git clone https://github.com/jadnw/Josevka.git
 rsync Josevka/patched/* ~/.local/share/fonts/
 rm -rf Josevka
 rsync ./fonts/local/* ~/.local/share/fonts/
-sudo rsync --recursive ./fonts/system/* /usr/share/fonts/
+# sudo rsync --recursive ./fonts/system/* /usr/share/fonts/
 fc-cache -r
 echo "[DONE] Fonts copied to ~/.local/share/fonts & /usr/share/fonts."
 
