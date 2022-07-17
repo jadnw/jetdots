@@ -26,16 +26,16 @@ scrolling:
 
 font:
   normal:
-    family: Josevka Curly
+    family: Josevka Curve
     style: Semibold
   bold:
-    family: Josevka Curly
+    family: Josevka Curve
     style: Extrabold
   italic:
-    family: Josevka Curly
+    family: Josevka Curve
     style: Semibold Italic
   bold_italic:
-    family: Josevka Curly
+    family: Josevka Curve
     style: Extrabold Italic
   size: 11.0
   offset:

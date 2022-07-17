@@ -10,7 +10,7 @@
  */
 
 configuration {
-  font:                           "Josevka Curly Semibold 11";
+  font:                           "Josevka Curve Semibold 11";
   show-icons:                     true;
   icon-theme:                     "Papirus-Dark";
   display-drun:                   "Applications";
@@ -40,7 +40,7 @@ prompt {
   background-color:               @accent;
   text-color:                     @bg0;
   border-radius:                  4px;
-  font:                           "Josevka Curly Semibold 11";
+  font:                           "Josevka Curve Semibold 11";
 }
 
 textbox-prompt-colon {

@@ -25,7 +25,7 @@ map <C-k> zoom out
 
 # OPTIONS
 # fonts
-set font "Josevka Curly 11"
+set font "Josevka Curve 11"
 
 # fit width
 set adjust-open "best-fit"
