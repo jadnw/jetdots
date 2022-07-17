@@ -28,6 +28,7 @@
       "activated": "",
       "deactivated": "",
     },
+    "tooltip": false
   },
   "memory": {
     "interval": 2,

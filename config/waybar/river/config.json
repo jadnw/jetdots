@@ -71,7 +71,8 @@
     "signal": 10,
     "exec": "~/.config/waybar/scripts/idle-inhibitor",
     "exec-if": "which swayidle",
-    "on-click": "~/.config/waybar/scripts/idle-inhibitor toggle"
+    "on-click": "~/.config/waybar/scripts/idle-inhibitor toggle",
+    "tooltip": false
   },
   "custom/nightlight": {
     "format": "{}",
