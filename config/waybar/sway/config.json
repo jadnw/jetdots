@@ -61,7 +61,7 @@
   },
   "sway/window": {
     "format": "{}",
-    "max-length": 50,
+    "max-length": 100,
     "align": 0
   },
   "sway/workspaces": {

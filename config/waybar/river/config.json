@@ -62,7 +62,8 @@
     "disable-click": false
   },
   "river/window": {
-    "format": "{}"
+    "format": "{}",
+    "max-length": 100
   },
   "custom/idle-inhibitor": {
     "format": "{}",
