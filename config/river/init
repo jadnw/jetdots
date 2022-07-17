@@ -18,7 +18,7 @@
 # documentation.
 
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
-set term foot
+set term alacritty
 set launcher "$HOME/.config/river/scripts/launcher toggle"
 set powermenu "$HOME/.config/waybar/scripts/power-river toggle"
 set browser qutebrowser

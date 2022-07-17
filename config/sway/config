@@ -62,7 +62,7 @@ set $up k
 set $right l
 
 # Programs
-set $term foot
+set $term alacritty
 set $browser qutebrowser
 set $devbrowser chromium
 set $waybartoggle $HOME/.config/sway/scripts/waybar-toggle

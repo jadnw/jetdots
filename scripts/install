@@ -140,7 +140,7 @@ function install_river
   echo "riverwm" >> $metadata_file
   # Needed packages for Wayland (River)
   paru -S --noconfirm --needed \
-    foot \
+    alacritty \
     glfw-wayland \
     grim \
     imagemagick \
@@ -161,7 +161,7 @@ function install_river
     xorg-xlsclients
   
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{foot,river,imv,swaylock} ~/.config/
+  rsync --recursive ./config/{alacritty,river,imv,swaylock} ~/.config/
   rsync --recursive ./config/waybar/{scripts,river,style.css,theme.css} ~/.config/waybar/
 end
 
@@ -169,7 +169,7 @@ function install_sway
   echo "swaywm" >> $metadata_file
   # Needed packages for Wayland (Sway)
   paru -S --noconfirm --needed \
-    foot \
+    alacritty \
     glfw-wayland \
     grim \
     imagemagick \
@@ -189,7 +189,7 @@ function install_sway
     xorg-xlsclients
   
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{foot,imv,sway,swaylock} ~/.config/
+  rsync --recursive ./config/{alacritty,imv,sway,swaylock} ~/.config/
   rsync --recursive ./config/waybar/{scripts,sway,style.css,theme.css} ~/.config/waybar/
 end
 
@@ -197,7 +197,7 @@ function install_hyprland
   echo "hyprlandwm" >> $metadata_file
   # Needed packages for Wayland (River)
   paru -S --noconfirm --needed \
-    foot \
+    alacritty \
     glfw-wayland \
     grim \
     imagemagick \
@@ -227,7 +227,7 @@ function install_hyprland
   rm -rf hyprland
 
   # Copy Wayland configs to $HOME/.config/
-  rsync --recursive ./config/{foot,river,imv,swaylock,hypr} ~/.config/
+  rsync --recursive ./config/{alacritty,river,imv,swaylock,hypr} ~/.config/
   rsync --recursive ./config/waybar/{scripts,hyprland,style.css,theme.css} ~/.config/waybar/
 end
 
