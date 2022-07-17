@@ -102,7 +102,7 @@ exec swayidle -w \
 ############################################################
 
 input "7847:2:2.4G_RF_Keyboard_&_Mouse" {
-  repeat_delay 350
+  repeat_delay 300
   repeat_rate 40
 }
 
