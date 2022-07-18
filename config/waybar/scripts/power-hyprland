@@ -21,16 +21,16 @@ function toggle
     killall -q rofi
 
     # options
-    set shutdown ""
-    set reboot ""
     set logout ""
     set lock ""
     set suspend ""
+    set reboot ""
+    set shutdown ""
 
     # variables passed to dmenu
-    set options "$shutdown\n$reboot\n$logout\n$lock\n$suspend"
+    set options "$logout\n$lock\n$suspend\n$reboot\n$shutdown"
 
-    set opt (echo -e $options | rofi -dmenu -p "Uptime: $uptime" -theme $theme -selected-row 2)
+    set opt (echo -e $options | rofi -dmenu -p "Uptime: $uptime" -theme $theme)
 
     if test -z $opt
       rm -f $marker; and pkill -SIGRTMIN+1 waybar
