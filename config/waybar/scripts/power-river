@@ -43,7 +43,6 @@ function toggle
       case $reboot
         reboot
       case $logout
-        # swaymsg exit # Uncomment this line if you use Sway
         riverctl exit
       case $lock
         swaylock
