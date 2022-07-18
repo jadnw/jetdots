@@ -3,7 +3,10 @@ from classes.module import Module
 def gen_template_by_protocol(protocol):
     def gen_template(theme):
         pal = theme["palette"]
-        padding_bottom = 5 if protocol == "wayland" else 50
+        gap = 2
+        waybar_height = 36
+        x_offset = gap
+        y_offset = gap if protocol == "wayland" else (gap + waybar_height)
         template = f"""# ·▄▄▄▄  ▄• ▄▌ ▐ ▄ .▄▄ · ▄▄▄▄▄
 # ██▪ ██ █▪██▌•█▌▐█▐█ ▀. •██  
 # ▐█· ▐█▌█▌▐█▌▐█▐▐▌▄▀▀▀█▄ ▐█.▪
@@ -46,7 +49,7 @@ def gen_template_by_protocol(protocol):
     origin = bottom-right
 
 # Offset from the origin
-    offset = 5x{padding_bottom}
+    offset = {x_offset}x{y_offset}
 
 # Scale factor. It is auto-detected if value is 0.
     scale = 0

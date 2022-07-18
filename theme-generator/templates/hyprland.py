@@ -32,8 +32,8 @@ input {{
 general {{
   sensitivity=1.0 # for mouse cursor
   main_mod=SUPER
-  gaps_in=3
-  gaps_out=5
+  gaps_in=2
+  gaps_out=2
   border_size=2
   col.active_border=0xff{pal["accent"]}
   col.inactive_border=0xff{pal["bg3"]}

@@ -30,8 +30,8 @@ window {
   border-radius:                  4px;
   width:                          360px;
   location:                       southeast;
-  x-offset:                       -5px;
-  y-offset:                       -5px;
+  x-offset:                       -2px;
+  y-offset:                       -2px;
 }
 
 prompt {
