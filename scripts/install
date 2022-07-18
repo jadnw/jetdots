@@ -51,10 +51,10 @@ paru -S --noconfirm --needed \
   gtk3 \
   gtk4 \
   jq \
+  lf \
   luacheck \
   man \
   neovim \
-  nnn \
   papirus-icon-theme \
   pdfjs \
   python-adblock \
