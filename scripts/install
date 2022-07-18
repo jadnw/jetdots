@@ -94,6 +94,12 @@ echo "[DONE] SDDM configured."
 
 sleep 1
 
+echo "Create default user directories..."
+xdg-user-dirs-update
+echo "[DONE] Default dirs created."
+
+sleep 1
+
 # Fonts
 echo "Downloading & copying fonts to directories ..."
 rm -rf ~/.local/share/{themes,fonts}
