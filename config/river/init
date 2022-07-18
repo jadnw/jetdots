@@ -189,6 +189,9 @@ riverctl hide-cursor when-typing enabled
 # Hide cursor timeout
 riverctl hide-cursor timeout 5000
 
+# Style
+riverctl border-width 1
+
 # Colorscheme
 riverctl spawn "$HOME/.config/river/theme"
 

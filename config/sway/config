@@ -263,7 +263,7 @@ bindsym $mod+Shift+r mode "resize"
 # Title bar
 font pango:Josevka Bold 0px
 smart_borders on
-default_border pixel 2
+default_border pixel 1
 gaps inner 2
 
 # Colors
