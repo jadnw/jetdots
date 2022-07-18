@@ -1,4 +1,4 @@
 #!/bin/fish
 
-set time (TZ=Asia/Ho_Chi_Minh date +%H:%M)
+set time (TZ=Asia/Ho_Chi_Minh date "+%a, %b %d  %H:%M")
 echo $time

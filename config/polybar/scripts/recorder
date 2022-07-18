@@ -20,7 +20,7 @@ if test $count -eq 0
   # Variables passed to rofi
   set options "$sound\n$soundmic\n$silent"
 
-  set selected (echo -e "$options" | rofi -x11 -dmenu -theme $theme -p "ffmpeg" -selected-row 1)
+  set selected (echo -e "$options" | rofi -x11 -dmenu -theme $theme -p "ffmpeg")
 
   # Create directory if needed
   if not test -e $dir

@@ -1,5 +1,0 @@
-#!/bin/fish
-
-set theme "$HOME/.config/rofi/x11/launcher.rasi"
-
-rofi -x11 -no-lazy-grab -show drun -modi drun -theme $theme

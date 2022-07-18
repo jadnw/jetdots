@@ -1,5 +1,0 @@
-#!/bin/fish
-
-set theme "$HOME/.config/rofi/x11/windows.rasi"
-
-rofi -x11 -no-lazy-grab -show window -modi window -theme $theme

@@ -10,7 +10,7 @@ set hsl_opt ""
 # Variables passed to rofi
 set options "$hex_opt\n$rgb_opt\n$hsl_opt"
 
-set opt (echo -e "$options" | rofi -x11 -dmenu -theme $theme -p "xcolor" -selected-row 1)
+set opt (echo -e "$options" | rofi -x11 -dmenu -theme $theme -p "xcolor")
 
 switch $opt
   case $hex_opt
