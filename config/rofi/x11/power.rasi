@@ -46,7 +46,7 @@ prompt {
 
 textbox-prompt-colon {
   expand:                         false;
-  str:                            "Goodbye, Jay!";
+  str:                            "See you, Jay!";
   background-color:               @red;
   text-color:                     @bg0;
   padding:                        5px;
