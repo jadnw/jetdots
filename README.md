@@ -1,4 +1,7 @@
 <h1 align="center">JETDOTS</h1>
+<p align="center">
+  My glorious dotfiles for Arch Linux setup (BSPWM, SwayWM, RiverWM) with custom theme generator
+</p>
 
 <br /><br />
 <div align="center">
@@ -18,9 +21,8 @@
   <a href="https://github.com/jadnw/jetdots/network/members"><img src="https://img.shields.io/github/forks/jadnw/jetdots?colorA=1b2125&colorB=b3a8f9&style=for-the-badge"></a>
 </p>
 
-<p align="center">
-  My glorious dotfiles for Arch Linux setup (BSPWM, SwayWM, RiverWM) with custom theme generator
-</p>
+<p align="center"></p>
+
 
 ### Table of contents
 - [Overview](#overview)
@@ -33,7 +35,9 @@
 
 ## Overview
 
-Some fancy screenshots. They look cool, right?
+Some fancy screenshots on River. They look cool, right? Jetdots comes with a slogan
+"Do not waste any pixels for the gaps on your tiling window managers". Because of
+that, it has no gaps.
 
 <div align="center">
   <img
@@ -68,12 +72,10 @@ Tiling Window Managers:
 Applications:
 - [alacritty](https://github.com/alacritty/alacritty) - Terminal emulator (Wayland & X)
 - [btop](https://github.com/aristocratos/btop) - System monitor (Wayland & X)
-- [chromium](https://github.com/chromium/chromium) - Browser (Wayland & X - alternative)
 - [dunst](https://github.com/dunst-project/dunst) - Notification daemon (Wayland & X)
 - [feh](https://github.com/derf/feh) - Image viewer (X)
 - [ffmpeg](https://github.com/FFmpeg/FFmpeg) - Screen recorder (X)
 - [fish](https://github.com/fish-shell/fish-shell) - Shell
-- [foot](https://codeberg.org/dnkl/foot) - Terminal emulator (Wayland - alternative)
 - [flameshot](https://github.com/flameshot-org/flameshot) - Screenshot application
 - [grim](https://github.com/emersion/grim) - Screenshot application/Color picker(with [ImageMagick](https://github.com/ImageMagick/ImageMagick6)) (Wayland)
 - [imv](https://sr.ht/~exec64/imv/) - Image viewer (Wayland)
@@ -92,19 +94,22 @@ Clipboard Managers:
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard) - Clipboard manager (Wayland)
 
 Screen Lockers:
-- [swaylock-effects-git](https://github.com/mortie/swaylock-effects) - Screen locker (Wayland)
+- [swaylock-effects](https://github.com/mortie/swaylock-effects) - Screen locker (Wayland)
 - [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen) - Screen Locker (X)
 
 Bars:
 - [Waybar](https://github.com/Alexays/Waybar) - A highly customizable bar (Wayland)
-- [Polybar](https://github.com/polybar/polybar) - A fast and easy-to-use status bar
+- [Polybar](https://github.com/polybar/polybar) - A fast and easy-to-use status bar (X)
+
+Fonts:
+- [Josevka](https://github.com/jadnw/Josevka) - A custom Iosevka fonts built from source
 
 ## Requirements
 
 - [Arch Linux](https://archlinux.org)
-- [python 3.10+](https://www.python.org)
 - [git](https://git-scm.com)
-- [fish shell](https://fishshell.com)
+- [fish](https://fishshell.com)
+- [python 3.10+](https://www.python.org) (Optional) - For theme generator
 
 ## Installation
 
@@ -142,37 +147,7 @@ You can **generate your own theme** (colorscheme) for Jetdots with these steps.
 
 1. Create a new schema json file at *jetdots/theme-generator/schemas/\<**your-theme-name**\>.json*
 
-For example, this is gemstones.json (Jetdots default theme)
-
-```json
-{
-  "name": "Gemstones",
-  "palette": {
-    "bg0": "#15191c",
-    "bg1": "#20262a",
-    "bg2": "#2b3339",
-    "bg3": "#3c4750",
-    "bg4": "#4e5c67",
-    "fg0": "#d2d9de",
-    "fg1": "#c6ced4",
-    "fg2": "#b3bec7",
-    "fg3": "#a5b2bd",
-    "accent": "#93c68c",
-    "black": "#53605c",
-    "white": "#c6ced4",
-    "red": "#f08789",
-    "green": "#93c68c",
-    "blue": "#80b1d6",
-    "orange": "#f4a582",
-    "yellow": "#e8ce9b",
-    "cyan": "#80c2c5",
-    "teal": "#6dc5aa",
-    "magenta": "#e397bb",
-    "purple": "#b3a8f9",
-    "gray": "#667a8a"
-  }
-}
-```
+Check the example of a json schema in `theme-generator/schemas/manhattan.json`
 
 > Note: If there is a missing key, theme generator will cause an error.
 
