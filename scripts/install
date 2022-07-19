@@ -36,6 +36,7 @@ paru -S --noconfirm --needed \
   base-devel \
   btop \
   breeze-snow-cursor-theme \
+  clang \
   curl \
   docker \
   docker-compose \
