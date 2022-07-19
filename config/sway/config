@@ -64,7 +64,7 @@ set $right l
 # Programs
 set $term alacritty
 set $browser qutebrowser
-set $devbrowser chromium
+set $devbrowser MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
 set $waybartoggle $HOME/.config/sway/scripts/waybar-toggle
 set $powermenu $HOME/.config/waybar/scripts/power-sway toggle
 set $launcher $HOME/.config/sway/scripts/launcher toggle

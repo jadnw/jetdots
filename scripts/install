@@ -36,13 +36,13 @@ paru -S --noconfirm --needed \
   base-devel \
   btop \
   breeze-snow-cursor-theme \
-  chromium \
   curl \
   docker \
   docker-compose \
   docker-machine \
   dunst \
   fd \
+  firefox-developer-edition \
   fish \
   fnm-bin \
   git \

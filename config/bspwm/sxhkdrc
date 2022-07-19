@@ -17,7 +17,7 @@ super + shift + b
 
 # Dev browser
 super + shift + w
-  chromium
+  firefox-developer-edition
 
 # Power menu
 super + shift + q

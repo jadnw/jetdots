@@ -22,7 +22,7 @@ set term alacritty
 set launcher "$HOME/.config/river/scripts/launcher toggle"
 set powermenu "$HOME/.config/waybar/scripts/power-river toggle"
 set browser qutebrowser
-set devbrowser "chromium"
+set devbrowser "MOZ_ENABLE_WAYLAND=1 firefox-developer-edition"
 set waybartoggle "$HOME/.config/river/scripts/waybar-toggle"
 set colorpicker "$HOME/.config/river/scripts/colorpicker toggle"
 set documents "$HOME/.config/river/scripts/documents toggle"
