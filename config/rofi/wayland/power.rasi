@@ -30,8 +30,8 @@ window {
   border-color:                   @red;
   location:                       southeast;
   width:                          500px;
-  x-offset:                       -2px;
-  y-offset:                       -2px;
+  x-offset:                       0px;
+  y-offset:                       0px;
 }
 
 prompt {

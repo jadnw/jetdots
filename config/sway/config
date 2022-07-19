@@ -264,7 +264,7 @@ bindsym $mod+Shift+r mode "resize"
 font pango:Josevka Bold 0px
 smart_borders on
 default_border pixel 1
-gaps inner 2
+gaps inner 0
 
 # Colors
 include $HOME/.config/sway/theme

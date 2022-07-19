@@ -3,7 +3,7 @@ from classes.module import Module
 def gen_template_by_protocol(protocol):
     def gen_template(theme):
         pal = theme["palette"]
-        gap = 2
+        gap = 0
         waybar_height = 36
         x_offset = gap
         y_offset = gap if protocol == "wayland" else (gap + waybar_height)
