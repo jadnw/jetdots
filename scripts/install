@@ -68,6 +68,7 @@ paru -S --noconfirm --needed \
   sddm-sugar-candy-git \
   starship \
   stylua \
+  timeshift-autosnap \
   tree \
   ttf-fira-sans \
   unzip \
@@ -125,6 +126,7 @@ rsync --recursive ./config/{btop,dunst,fish,fontconfig,gtk-3.0,gtk-4.0,qutebrows
 # Copy common extra configs
 rsync ./extras/.gitconfig ~/
 sudo rsync --recursive ./extras/reflector /etc/xdg/
+sudo rsync --recursive ./extras/timeshift /etc/
 echo "[DONE] Config files copied."
 
 # Install GTK themes
