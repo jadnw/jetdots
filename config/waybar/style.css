@@ -22,7 +22,7 @@ tooltip label {
 }
 
 .modules-left {
-  margin-left: 10px;
+  margin-left: 4px;
 }
 
 .modules-right {
@@ -90,9 +90,10 @@ tooltip label {
 
 /* CPU & Memory */
 #cpu,
+#disk,
 #memory {
   margin: 4px 2px;
-  padding: 0px 16px;
+  padding: 0px 12px;
   border-radius: 4px;
   font-family: "Josevka";
   font-size: 16px;
@@ -104,6 +105,11 @@ tooltip label {
   color: @green;
 }
 
+#disk {
+  background-color: @bg1;
+  color: @yellow;
+}
+
 #memory {
   background-color: @bg1;
   color: @red;
@@ -112,7 +118,7 @@ tooltip label {
 /* Clock */
 #clock {
   margin: 4px 2px;
-  padding: 0px 16px;
+  padding: 0px 12px;
   padding-top: 2px;
   border-radius: 4px;
   font-family: "Josevka";
@@ -179,7 +185,7 @@ tooltip label {
 #custom-screenshot,
 #custom-windows {
   margin: 4px 2px;
-  padding: 0px 16px;
+  padding: 0px 12px;
   border-radius: 4px;
   font-family: "Material Icons Round";
   font-size: 18px;

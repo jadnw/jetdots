@@ -4,7 +4,7 @@
   "height": 36,
   "modules-left": ["sway/workspaces", "sway/window"],
   "modules-center": [],
-  "modules-right": ["custom/recorder", "cpu", "memory", "network", "pulseaudio", "idle_inhibitor", "custom/nightlight", "custom/notifications", "clock", "custom/power"],
+  "modules-right": ["custom/recorder", "disk", "cpu", "memory", "network", "pulseaudio", "idle_inhibitor", "custom/nightlight", "custom/notifications", "clock", "custom/power"],
   "margin-top": 0,
   "margin-left": 0,
   "margin-right": 0,
@@ -21,6 +21,11 @@
   "cpu": {
     "interval": 2,
     "format": "<span size='13pt'> </span>{avg_frequency:0.1f} GHz  {usage:02d}%",
+    "on-click": "alacritty -t btop -e btop"
+  },
+  "disk": {
+    "interval": 60,
+    "format": "<span size='13pt'> </span>{used}  {percentage_used:02d}%",
     "on-click": "alacritty -t btop -e btop"
   },
   "idle_inhibitor": {
