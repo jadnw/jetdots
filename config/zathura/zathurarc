@@ -22,6 +22,7 @@ map <C-m> change_mode
 map <C-p> print
 map <C-j> zoom in
 map <C-k> zoom out 
+map <C-i> recolor
 
 # OPTIONS
 # fonts
@@ -34,6 +35,9 @@ set adjust-open "best-fit"
 set scroll-step 60
 set guioptions ""
 set zoom-min 50
+
+# open zathura in dark mode
+set recolor
 
 # colorscheme 
 include theme
