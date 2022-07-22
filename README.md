@@ -102,7 +102,7 @@ Bars:
 - [Polybar](https://github.com/polybar/polybar) - A fast and easy-to-use status bar (X)
 
 Fonts:
-- [Josevka](https://github.com/jadnw/Josevka) - A custom Iosevka fonts built from source
+- [Josevka Jet](https://github.com/jadnw/Josevka Jet) - A custom Iosevka fonts built from source
 
 ## Requirements
 

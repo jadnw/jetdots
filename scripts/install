@@ -106,9 +106,9 @@ sleep 1
 echo "Downloading & copying fonts to directories ..."
 rm -rf ~/.local/share/{themes,fonts}
 mkdir -p ~/.local/share/{themes,fonts}
-git clone https://github.com/jadnw/Josevka.git
-rsync Josevka/patched/* ~/.local/share/fonts/
-rm -rf Josevka
+git clone https://github.com/jadnw/Josevka Jet.git
+rsync Josevka Jet/patched/* ~/.local/share/fonts/
+rm -rf Josevka Jet
 rsync ./fonts/local/* ~/.local/share/fonts/
 # sudo rsync --recursive ./fonts/system/* /usr/share/fonts/
 fc-cache -r

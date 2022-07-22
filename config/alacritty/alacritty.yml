@@ -26,16 +26,16 @@ scrolling:
 
 font:
   normal:
-    family: Josevka
+    family: Josevka Jet
     style: Semibold
   bold:
-    family: Josevka
+    family: Josevka Jet
     style: Extrabold
   italic:
-    family: Josevka
+    family: Josevka Jet
     style: Semibold Italic
   bold_italic:
-    family: Josevka
+    family: Josevka Jet
     style: Extrabold Italic
   size: 11.0
   offset:

@@ -10,7 +10,7 @@ window#waybar {
 }
 
 tooltip {
-  font-family: "Josevka";
+  font-family: "Josevka Jet";
   font-weight: 600;
   border-radius: 4px;
   border: 1px solid @bg4;
@@ -83,7 +83,7 @@ tooltip label {
 #window {
   margin-left: 8px;
   padding-top: 2px;
-  font-family: "Josevka";
+  font-family: "Josevka Jet";
   font-weight: 600;
   font-size: 15px;
   color: @green;
@@ -96,7 +96,7 @@ tooltip label {
   margin: 4px 2px;
   padding: 0px 12px;
   border-radius: 4px;
-  font-family: "Josevka";
+  font-family: "Josevka Jet";
   font-size: 16px;
   font-weight: 600;
 }
@@ -122,7 +122,7 @@ tooltip label {
   padding: 0px 12px;
   padding-top: 2px;
   border-radius: 4px;
-  font-family: "Josevka";
+  font-family: "Josevka Jet";
   font-size: 16px;
   font-weight: 600;
   background-color: @bg2;
