@@ -27,20 +27,20 @@ scrolling:
 font:
   normal:
     family: Josevka
-    style: Medium
+    style: Semibold
   bold:
     family: Josevka
-    style: Bold
+    style: Extrabold
   italic:
     family: Josevka
-    style: Medium Italic
+    style: Semibold Italic
   bold_italic:
     family: Josevka
-    style: Bold Italic
-  size: 12.0
+    style: Extrabold Italic
+  size: 11.0
   offset:
     x: 0
-    y: 3
+    y: 2
 
 shell:
   program: /bin/fish

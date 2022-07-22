@@ -10,7 +10,7 @@
  */
 
 configuration {
-  font:                           "Josevka Medium 12";
+  font:                           "Josevka Medium 11";
   show-icons:                     true;
   icon-theme:                     "Papirus-Dark";
   display-drun:                   "Launcher";
@@ -40,7 +40,7 @@ prompt {
   background-color:               @purple;
   text-color:                     @bg0;
   border-radius:                  4px;
-  font:                           "Josevka Medium 12";
+  font:                           "Josevka Medium 11";
 }
 
 textbox-prompt-colon {
