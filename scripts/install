@@ -160,7 +160,7 @@ function install_river
     slurp \
     swaybg \
     swayidle \
-    swaylock-effects \
+    swaylock-effects-git \
     waybar \
     wf-recorder \
     wlr-randr \
@@ -188,7 +188,7 @@ function install_sway
     slurp \
     sway \
     swaybg \
-    swaylock-effects \
+    swaylock-effects-git \
     waybar \
     wf-recorder \
     wlr-randr \
@@ -217,7 +217,7 @@ function install_hyprland
     slurp \
     swaybg \
     swayidle \
-    swaylock-effects \
+    swaylock-effects-git \
     waybar-experimental-git \
     wf-recorder \
     wlr-randr \
@@ -228,7 +228,7 @@ function install_hyprland
   
   # Copy executables
   curl -LO https://github.com/hyprwm/Hyprland/releases/download/v0.6.2beta/v0.6.2beta.tar.gz 
-  mkdir hyprland && tar -xvzf v0.6.2beta.tar.gz -C ./hyprland
+  mkdir hyprland && tar -xvzf v0.7.1beta.tar.gz -C ./hyprland
   sudo rsync ./hyprland/{hyprctl,Hyprland} /usr/bin
   sudo rsync ./hyprland/libwlroots.so.11032 /usr/lib/
   sudo mkdir -p /usr/share/wayland-sessions/
