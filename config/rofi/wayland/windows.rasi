@@ -10,7 +10,7 @@
  */
 
 configuration {
-  font:                           "Josevka Semibold 11";
+  font:                           "Josevka Medium 12";
   show-icons:                     true;
   icon-theme:                     "Papirus-Dark";
   disable-history:                false;
@@ -39,7 +39,7 @@ prompt {
   background-color:               @teal;
   text-color:                     @bg0;
   border-radius:                  4px;
-  font:                           "Josevka Semibold 11";
+  font:                           "Josevka Medium 12";
 }
 
 textbox-prompt-colon {

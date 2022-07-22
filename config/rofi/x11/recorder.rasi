@@ -11,7 +11,7 @@
 
 configuration {
   show-icons:                     false;
-  font:                           "Josevka Semibold 11";
+  font:                           "Josevka Medium 12";
   disable-history:                false;
   sidebar-mode:                   false;
 }

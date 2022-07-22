@@ -37,7 +37,7 @@ tooltip label {
 #tags button {
   padding: 0px 10px;
   font-family: "Material Icons Outlined";
-  font-size: 24px;
+  font-size: 26px;
   color: @bg4;
 }
 
@@ -85,6 +85,7 @@ tooltip label {
   padding-top: 2px;
   font-family: "Josevka";
   font-weight: 600;
+  font-size: 16px;
   color: @green;
 }
 
